@@ -1,0 +1,646 @@
+
+##############################################
+Number_of_parameters: 199210
+hidden_dim: 200
+num_layers: 1
+intrinsic_dim: 750
+Epoch: 1
+Validation Accuracy: 0.7867
+Epoch: 2
+Validation Accuracy: 0.8767
+Epoch: 3
+Validation Accuracy: 0.8838
+Epoch: 4
+Validation Accuracy: 0.8904
+Epoch: 5
+Validation Accuracy: 0.8957
+Epoch: 6
+Validation Accuracy: 0.899
+Epoch: 7
+Validation Accuracy: 0.9014
+##############################################
+Number_of_parameters: 478410
+hidden_dim: 400
+num_layers: 1
+intrinsic_dim: 750
+Epoch: 1
+Validation Accuracy: 0.8353
+Epoch: 2
+Validation Accuracy: 0.8588
+Epoch: 3
+Validation Accuracy: 0.8635
+Epoch: 4
+Validation Accuracy: 0.8273
+Epoch: 5
+Validation Accuracy: 0.8669
+Epoch: 6
+Validation Accuracy: 0.861
+Epoch: 7
+Validation Accuracy: 0.8709
+Epoch: 8
+Validation Accuracy: 0.8202
+Epoch: 9
+Validation Accuracy: 0.8757
+Epoch: 10
+Validation Accuracy: 0.8792
+Epoch: 11
+Validation Accuracy: 0.8785
+Epoch: 12
+Validation Accuracy: 0.881
+Epoch: 13
+Validation Accuracy: 0.8831
+Epoch: 14
+Validation Accuracy: 0.8773
+Epoch: 15
+Validation Accuracy: 0.8851
+Epoch: 16
+Validation Accuracy: 0.8785
+Epoch: 17
+Validation Accuracy: 0.8627
+Epoch: 18
+Validation Accuracy: 0.8452
+Epoch: 19
+Validation Accuracy: 0.8737
+Epoch: 20
+Validation Accuracy: 0.8982
+Epoch: 21
+Validation Accuracy: 0.884
+Epoch: 22
+Validation Accuracy: 0.791
+Epoch: 23
+Validation Accuracy: 0.8896
+Epoch: 24
+Validation Accuracy: 0.8793
+Epoch: 25
+Validation Accuracy: 0.8758
+Epoch: 26
+Validation Accuracy: 0.897
+Epoch: 27
+Validation Accuracy: 0.8883
+Epoch: 28
+Validation Accuracy: 0.8928
+Epoch: 29
+Validation Accuracy: 0.8905
+Epoch: 30
+Validation Accuracy: 0.8742
+Epoch: 31
+Validation Accuracy: 0.8872
+Epoch: 32
+Validation Accuracy: 0.8719
+Epoch: 33
+Validation Accuracy: 0.8588
+Epoch: 34
+Validation Accuracy: 0.8862
+Epoch: 35
+Validation Accuracy: 0.8863
+Epoch: 36
+Validation Accuracy: 0.8681
+Epoch: 37
+Validation Accuracy: 0.8823
+Epoch: 38
+Validation Accuracy: 0.8895
+Epoch: 39
+Validation Accuracy: 0.8803
+Epoch: 40
+Validation Accuracy: 0.8783
+Epoch: 41
+Validation Accuracy: 0.8823
+Epoch: 42
+Validation Accuracy: 0.8784
+Epoch: 43
+Validation Accuracy: 0.8781
+Epoch: 44
+Validation Accuracy: 0.8949
+Epoch: 45
+Validation Accuracy: 0.8361
+Epoch: 46
+Validation Accuracy: 0.8674
+Epoch: 47
+Validation Accuracy: 0.8885
+Epoch: 48
+Validation Accuracy: 0.8612
+Epoch: 49
+Validation Accuracy: 0.8933
+Epoch: 50
+Validation Accuracy: 0.8595
+Epoch: 51
+Validation Accuracy: 0.8832
+Epoch: 52
+Validation Accuracy: 0.8932
+Epoch: 53
+Validation Accuracy: 0.8937
+Epoch: 54
+Validation Accuracy: 0.8867
+Epoch: 55
+Validation Accuracy: 0.8176
+Epoch: 56
+Validation Accuracy: 0.8672
+Epoch: 57
+Validation Accuracy: 0.8871
+Epoch: 58
+Validation Accuracy: 0.8651
+Epoch: 59
+Validation Accuracy: 0.8778
+Epoch: 60
+Validation Accuracy: 0.8094
+Epoch: 61
+Validation Accuracy: 0.8834
+Epoch: 62
+Validation Accuracy: 0.8753
+Epoch: 63
+Validation Accuracy: 0.8768
+Epoch: 64
+Validation Accuracy: 0.8768
+Epoch: 65
+Validation Accuracy: 0.8945
+Epoch: 66
+Validation Accuracy: 0.8707
+Epoch: 67
+Validation Accuracy: 0.876
+Epoch: 68
+Validation Accuracy: 0.8233
+Epoch: 69
+Validation Accuracy: 0.8854
+Epoch: 70
+Validation Accuracy: 0.8912
+Epoch: 71
+Validation Accuracy: 0.8854
+Epoch: 72
+Validation Accuracy: 0.8796
+Epoch: 73
+Validation Accuracy: 0.8828
+Epoch: 74
+Validation Accuracy: 0.8995
+Epoch: 75
+Validation Accuracy: 0.8813
+Epoch: 76
+Validation Accuracy: 0.8822
+Epoch: 77
+Validation Accuracy: 0.8607
+Epoch: 78
+Validation Accuracy: 0.8869
+Epoch: 79
+Validation Accuracy: 0.7978
+Epoch: 80
+Validation Accuracy: 0.8631
+Epoch: 81
+Validation Accuracy: 0.8671
+Epoch: 82
+Validation Accuracy: 0.8797
+Epoch: 83
+Validation Accuracy: 0.8147
+Epoch: 84
+Validation Accuracy: 0.8773
+Epoch: 85
+Validation Accuracy: 0.8693
+Epoch: 86
+Validation Accuracy: 0.8671
+Epoch: 87
+Validation Accuracy: 0.8877
+Epoch: 88
+Validation Accuracy: 0.8405
+Epoch: 89
+Validation Accuracy: 0.885
+Epoch: 90
+Validation Accuracy: 0.8875
+Epoch: 91
+Validation Accuracy: 0.8738
+Epoch: 92
+Validation Accuracy: 0.8863
+Epoch: 93
+Validation Accuracy: 0.8895
+Epoch: 94
+Validation Accuracy: 0.8867
+Epoch: 95
+Validation Accuracy: 0.8602
+Epoch: 96
+Validation Accuracy: 0.8926
+Epoch: 97
+Validation Accuracy: 0.8313
+Epoch: 98
+Validation Accuracy: 0.8962
+Epoch: 99
+Validation Accuracy: 0.8822
+Epoch: 100
+Validation Accuracy: 0.8871
+##############################################
+Number_of_parameters: 89610
+hidden_dim: 100
+num_layers: 1
+intrinsic_dim: 750
+Epoch: 1
+Validation Accuracy: 0.8689
+Epoch: 2
+Validation Accuracy: 0.8838
+Epoch: 3
+Validation Accuracy: 0.8896
+Epoch: 4
+Validation Accuracy: 0.8969
+Epoch: 5
+Validation Accuracy: 0.8848
+Epoch: 6
+Validation Accuracy: 0.9037
+##############################################
+Number_of_parameters: 42310
+hidden_dim: 50
+num_layers: 1
+intrinsic_dim: 750
+Epoch: 1
+Validation Accuracy: 0.8694
+Epoch: 2
+Validation Accuracy: 0.8893
+Epoch: 3
+Validation Accuracy: 0.8948
+Epoch: 4
+Validation Accuracy: 0.8992
+Epoch: 5
+Validation Accuracy: 0.8991
+Epoch: 6
+Validation Accuracy: 0.8983
+Epoch: 7
+Validation Accuracy: 0.9037
+##############################################
+Number_of_parameters: 478410
+hidden_dim: 400
+num_layers: 1
+intrinsic_dim: 850
+Epoch: 1
+Validation Accuracy: 0.869
+Epoch: 2
+Validation Accuracy: 0.8768
+Epoch: 3
+Validation Accuracy: 0.8596
+Epoch: 4
+Validation Accuracy: 0.8862
+Epoch: 5
+Validation Accuracy: 0.8818
+Epoch: 6
+Validation Accuracy: 0.8936
+Epoch: 7
+Validation Accuracy: 0.8975
+Epoch: 8
+Validation Accuracy: 0.8868
+Epoch: 9
+Validation Accuracy: 0.9053
+##############################################
+Number_of_parameters: 478410
+hidden_dim: 400
+num_layers: 1
+intrinsic_dim: 800
+Epoch: 1
+Validation Accuracy: 0.8401
+Epoch: 2
+Validation Accuracy: 0.8622
+Epoch: 3
+Validation Accuracy: 0.8615
+Epoch: 4
+Validation Accuracy: 0.8604
+Epoch: 5
+Validation Accuracy: 0.7865
+Epoch: 6
+Validation Accuracy: 0.8849
+Epoch: 7
+Validation Accuracy: 0.8632
+Epoch: 8
+Validation Accuracy: 0.8831
+Epoch: 9
+Validation Accuracy: 0.8588
+Epoch: 10
+Validation Accuracy: 0.843
+Epoch: 11
+Validation Accuracy: 0.8891
+Epoch: 12
+Validation Accuracy: 0.8825
+Epoch: 13
+Validation Accuracy: 0.8829
+Epoch: 14
+Validation Accuracy: 0.9054
+##############################################
+Number_of_parameters: 478410
+hidden_dim: 400
+num_layers: 1
+intrinsic_dim: 775
+Epoch: 1
+Validation Accuracy: 0.8722
+Epoch: 2
+Validation Accuracy: 0.8225
+Epoch: 3
+Validation Accuracy: 0.8535
+Epoch: 4
+Validation Accuracy: 0.8743
+Epoch: 5
+Validation Accuracy: 0.8687
+Epoch: 6
+Validation Accuracy: 0.883
+Epoch: 7
+Validation Accuracy: 0.8826
+Epoch: 8
+Validation Accuracy: 0.7625
+Epoch: 9
+Validation Accuracy: 0.8779
+Epoch: 10
+Validation Accuracy: 0.8751
+Epoch: 11
+Validation Accuracy: 0.8822
+Epoch: 12
+Validation Accuracy: 0.8522
+Epoch: 13
+Validation Accuracy: 0.8805
+Epoch: 14
+Validation Accuracy: 0.8705
+Epoch: 15
+Validation Accuracy: 0.8747
+Epoch: 16
+Validation Accuracy: 0.8964
+Epoch: 17
+Validation Accuracy: 0.8623
+Epoch: 18
+Validation Accuracy: 0.8872
+Epoch: 19
+Validation Accuracy: 0.8863
+Epoch: 20
+Validation Accuracy: 0.8875
+Epoch: 21
+Validation Accuracy: 0.8833
+Epoch: 22
+Validation Accuracy: 0.8635
+Epoch: 23
+Validation Accuracy: 0.8905
+Epoch: 24
+Validation Accuracy: 0.8441
+Epoch: 25
+Validation Accuracy: 0.8704
+Epoch: 26
+Validation Accuracy: 0.8934
+Epoch: 27
+Validation Accuracy: 0.8814
+Epoch: 28
+Validation Accuracy: 0.8904
+Epoch: 29
+Validation Accuracy: 0.8951
+Epoch: 30
+Validation Accuracy: 0.8919
+Epoch: 31
+Validation Accuracy: 0.8631
+Epoch: 32
+Validation Accuracy: 0.8891
+Epoch: 33
+Validation Accuracy: 0.8702
+Epoch: 34
+Validation Accuracy: 0.8906
+Epoch: 35
+Validation Accuracy: 0.8929
+Epoch: 36
+Validation Accuracy: 0.8695
+Epoch: 37
+Validation Accuracy: 0.8795
+Epoch: 38
+Validation Accuracy: 0.8662
+Epoch: 39
+Validation Accuracy: 0.848
+Epoch: 40
+Validation Accuracy: 0.8814
+Epoch: 41
+Validation Accuracy: 0.8968
+Epoch: 42
+Validation Accuracy: 0.8936
+Epoch: 43
+Validation Accuracy: 0.8627
+Epoch: 44
+Validation Accuracy: 0.8766
+Epoch: 45
+Validation Accuracy: 0.8529
+Epoch: 46
+Validation Accuracy: 0.8928
+Epoch: 47
+Validation Accuracy: 0.8963
+Epoch: 48
+Validation Accuracy: 0.8924
+Epoch: 49
+Validation Accuracy: 0.8921
+Epoch: 50
+Validation Accuracy: 0.9015
+##############################################
+Number_of_parameters: 44860
+hidden_dim: 50
+num_layers: 2
+intrinsic_dim: 750
+Epoch: 1
+Validation Accuracy: 0.8612
+Epoch: 2
+Validation Accuracy: 0.8745
+Epoch: 3
+Validation Accuracy: 0.8864
+Epoch: 4
+Validation Accuracy: 0.8948
+Epoch: 5
+Validation Accuracy: 0.8851
+Epoch: 6
+Validation Accuracy: 0.8836
+Epoch: 7
+Validation Accuracy: 0.9052
+##############################################
+Number_of_parameters: 638810
+hidden_dim: 400
+num_layers: 2
+intrinsic_dim: 750
+Epoch: 1
+Validation Accuracy: 0.8097
+Epoch: 2
+Validation Accuracy: 0.729
+Epoch: 3
+Validation Accuracy: 0.7597
+Epoch: 4
+Validation Accuracy: 0.8255
+Epoch: 5
+Validation Accuracy: 0.859
+Epoch: 6
+Validation Accuracy: 0.6047
+Epoch: 7
+Validation Accuracy: 0.8046
+Epoch: 8
+Validation Accuracy: 0.8712
+Epoch: 9
+Validation Accuracy: 0.7644
+Epoch: 10
+Validation Accuracy: 0.7942
+Epoch: 11
+Validation Accuracy: 0.704
+Epoch: 12
+Validation Accuracy: 0.8265
+Epoch: 13
+Validation Accuracy: 0.7999
+Epoch: 14
+Validation Accuracy: 0.825
+Epoch: 15
+Validation Accuracy: 0.8215
+Epoch: 16
+Validation Accuracy: 0.851
+Epoch: 17
+Validation Accuracy: 0.719
+Epoch: 18
+Validation Accuracy: 0.8322
+Epoch: 19
+Validation Accuracy: 0.855
+Epoch: 20
+Validation Accuracy: 0.8599
+Epoch: 21
+Validation Accuracy: 0.8765
+Epoch: 22
+Validation Accuracy: 0.8035
+Epoch: 23
+Validation Accuracy: 0.8335
+Epoch: 24
+Validation Accuracy: 0.8741
+Epoch: 25
+Validation Accuracy: 0.8629
+Epoch: 26
+Validation Accuracy: 0.76
+Epoch: 27
+Validation Accuracy: 0.8047
+Epoch: 28
+Validation Accuracy: 0.8549
+Epoch: 29
+Validation Accuracy: 0.865
+Epoch: 30
+Validation Accuracy: 0.8452
+Epoch: 31
+Validation Accuracy: 0.8045
+Epoch: 32
+Validation Accuracy: 0.8507
+Epoch: 33
+Validation Accuracy: 0.8549
+Epoch: 34
+Validation Accuracy: 0.8341
+Epoch: 35
+Validation Accuracy: 0.7962
+Epoch: 36
+Validation Accuracy: 0.8748
+Epoch: 37
+Validation Accuracy: 0.8484
+Epoch: 38
+Validation Accuracy: 0.7509
+Epoch: 39
+Validation Accuracy: 0.8277
+Epoch: 40
+Validation Accuracy: 0.8689
+Epoch: 41
+Validation Accuracy: 0.8478
+Epoch: 42
+Validation Accuracy: 0.8592
+Epoch: 43
+Validation Accuracy: 0.8072
+Epoch: 44
+Validation Accuracy: 0.8232
+Epoch: 45
+Validation Accuracy: 0.8088
+Epoch: 46
+Validation Accuracy: 0.8416
+Epoch: 47
+Validation Accuracy: 0.7193
+Epoch: 48
+Validation Accuracy: 0.8102
+Epoch: 49
+Validation Accuracy: 0.8489
+Epoch: 50
+Validation Accuracy: 0.8551
+Epoch: 51
+Validation Accuracy: 0.8424
+Epoch: 52
+Validation Accuracy: 0.8723
+Epoch: 53
+Validation Accuracy: 0.872
+Epoch: 54
+Validation Accuracy: 0.8699
+Epoch: 55
+Validation Accuracy: 0.8604
+Epoch: 56
+Validation Accuracy: 0.8591
+Epoch: 57
+Validation Accuracy: 0.8379
+Epoch: 58
+Validation Accuracy: 0.7317
+Epoch: 59
+Validation Accuracy: 0.8513
+Epoch: 60
+Validation Accuracy: 0.7743
+Epoch: 61
+Validation Accuracy: 0.8781
+Epoch: 62
+Validation Accuracy: 0.8375
+Epoch: 63
+Validation Accuracy: 0.8659
+Epoch: 64
+Validation Accuracy: 0.7277
+Epoch: 65
+Validation Accuracy: 0.856
+Epoch: 66
+Validation Accuracy: 0.7935
+Epoch: 67
+Validation Accuracy: 0.8344
+Epoch: 68
+Validation Accuracy: 0.8577
+Epoch: 69
+Validation Accuracy: 0.8713
+Epoch: 70
+Validation Accuracy: 0.8787
+Epoch: 71
+Validation Accuracy: 0.8631
+Epoch: 72
+Validation Accuracy: 0.8478
+Epoch: 73
+Validation Accuracy: 0.8727
+Epoch: 74
+Validation Accuracy: 0.8769
+Epoch: 75
+Validation Accuracy: 0.7792
+Epoch: 76
+Validation Accuracy: 0.8447
+Epoch: 77
+Validation Accuracy: 0.8288
+Epoch: 78
+Validation Accuracy: 0.7492
+Epoch: 79
+Validation Accuracy: 0.8647
+Epoch: 80
+Validation Accuracy: 0.805
+Epoch: 81
+Validation Accuracy: 0.8417
+Epoch: 82
+Validation Accuracy: 0.8614
+Epoch: 83
+Validation Accuracy: 0.8732
+Epoch: 84
+Validation Accuracy: 0.8753
+Epoch: 85
+Validation Accuracy: 0.8545
+Epoch: 86
+Validation Accuracy: 0.7367
+Epoch: 87
+Validation Accuracy: 0.8277
+Epoch: 88
+Validation Accuracy: 0.8751
+Epoch: 89
+Validation Accuracy: 0.8687
+Epoch: 90
+Validation Accuracy: 0.7517
+Epoch: 91
+Validation Accuracy: 0.8226
+Epoch: 92
+Validation Accuracy: 0.8097
+Epoch: 93
+Validation Accuracy: 0.842
+Epoch: 94
+Validation Accuracy: 0.8597
+Epoch: 95
+Validation Accuracy: 0.8298
+Epoch: 96
+Validation Accuracy: 0.7479
+Epoch: 97
+Validation Accuracy: 0.8582
+Epoch: 98
+Validation Accuracy: 0.8781
+Epoch: 99
+Validation Accuracy: 0.7144
+Epoch: 100
+Validation Accuracy: 0.7806
