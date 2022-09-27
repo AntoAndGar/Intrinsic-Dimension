@@ -1,0 +1,29 @@
+{
+    "fc_lenet_model_id100_lr0.01": {
+        "number_parameter": 3640574,
+        "intrinsic_dimension": 100,
+        "epoch": 100,
+        "validation_accuracy": 0.5217,
+        "learning_rate": 0.01,
+        "best_epoch": 74,
+        "best_accuracy": 0.5781
+    },
+    "fc_lenet_model_id200_lr0.01": {
+        "number_parameter": 3640574,
+        "intrinsic_dimension": 200,
+        "epoch": 100,
+        "validation_accuracy": 0.734,
+        "learning_rate": 0.01,
+        "best_epoch": 72,
+        "best_accuracy": 0.7447
+    },
+    "fc_lenet_model_id300_lr0.01": {
+        "number_parameter": 3640574,
+        "intrinsic_dimension": 300,
+        "epoch": 100,
+        "validation_accuracy": 0.7691,
+        "learning_rate": 0.01,
+        "best_epoch": 98,
+        "best_accuracy": 0.7937
+    }
+}

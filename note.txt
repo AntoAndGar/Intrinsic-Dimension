@@ -1,0 +1,5 @@
+per le fully connected il learning rate è variato da 0.1 per alcuni modelli ad un layer e quelli da 50/100 di hidden dimension a 0.09 per la maggior parte dei modelli a 2/3 layer fino a 0.07 per il modello da 400 di hidden dim a 3 e 0.06 per il 4 layer.
+
+un interessante situazione si sviluppa con il learning rate, la stessa rete, ad es. la rete con 5 layer e 50 di hidden dimension, performa in modo differente con lr diversi: con lr 0.1 e 0.9 è non trova la intrinsic dimension attorno 750 invece con lr uguale o minore di 0.8 riesce a trovare l'intrinsic dimension attorno 750.
+stessa cosa per la rete con hidden dimension da 100 e 5 layer con lr da 0.1 a 0.06 non trova la intrinsic dimension a 750 invece con lr a 0.05 riesce a trovarla
+stessa cosa per la rete con hidden dimension da 200 e 5 layer con lr da 0.1 a 0.04 non trova la intrinsic dimension a 750 invece con lr a 0.05 riesce a trovarla
