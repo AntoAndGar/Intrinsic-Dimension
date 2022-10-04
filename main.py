@@ -49,7 +49,7 @@ if __name__ == "__main__":
         CHANNEL_IN = 3
         INPUT_DIM = 32 * 32 * CHANNEL_IN
         OUTPUT_DIM = 10
-        VAL_GLOBAL_ACCURACY = 0.85
+        VAL_GLOBAL_ACCURACY = 0.46
     else:
         raise Exception("Name of dataset not in: [MNIST, CIFAR10]")
 
@@ -125,8 +125,14 @@ if __name__ == "__main__":
         VAL_GLOBAL_ACCURACY,
     )
 
+    result_path = (
+                    f"./{args.model_result_path}/{args.architecture}/"
+                )
+    if not os.path.exists(result_path):
+        os.makedirs(result_path)
+
     # Create the file to store results, if it does not exist
-    json_file = f"results_{args.architecture}_{args.dataset}.json"
+    json_file = f"{result_path}results_{args.architecture}_{args.dataset}.json"
     if not os.path.exists(json_file):
         f = open(json_file, "w")
         f.write("{}")

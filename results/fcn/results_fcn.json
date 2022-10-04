@@ -1,0 +1,498 @@
+{
+    "fcn_model_h200_id750_lay1": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 750,
+        "epoch": 7,
+        "validation_accuracy": 0.9014
+    },
+    "fcn_model_h400_id750_lay1": {
+        "number_parameter": 478410,
+        "hidden_dimension": 400,
+        "number_layers": 1,
+        "intrinsic_dimension": 750,
+        "epoch": 100,
+        "validation_accuracy": 0.8871
+    },
+    "fcn_model_h100_id750_lay1": {
+        "number_parameter": 89610,
+        "hidden_dimension": 100,
+        "number_layers": 1,
+        "intrinsic_dimension": 750,
+        "epoch": 6,
+        "validation_accuracy": 0.9037
+    },
+    "fcn_model_h50_id750_lay1": {
+        "number_parameter": 42310,
+        "hidden_dimension": 50,
+        "number_layers": 1,
+        "intrinsic_dimension": 750,
+        "epoch": 7,
+        "validation_accuracy": 0.9037
+    },
+    "fcn_model_h400_id850_lay1": {
+        "number_parameter": 478410,
+        "hidden_dimension": 400,
+        "number_layers": 1,
+        "intrinsic_dimension": 850,
+        "epoch": 9,
+        "validation_accuracy": 0.9053
+    },
+    "fcn_model_h400_id800_lay1": {
+        "number_parameter": 478410,
+        "hidden_dimension": 400,
+        "number_layers": 1,
+        "intrinsic_dimension": 800,
+        "epoch": 14,
+        "validation_accuracy": 0.9054
+    },
+    "fcn_model_h50_id750_lay2": {
+        "number_parameter": 44860,
+        "hidden_dimension": 50,
+        "number_layers": 2,
+        "intrinsic_dimension": 750,
+        "epoch": 7,
+        "validation_accuracy": 0.9052
+    },
+    "fcn_model_h400_id750_lay2": {
+        "number_parameter": 638810,
+        "hidden_dimension": 400,
+        "number_layers": 2,
+        "intrinsic_dimension": 750,
+        "epoch": 100,
+        "validation_accuracy": 0.7806
+    },
+    "fcn_model_h100_id750_lay2": {
+        "number_parameter": 99710,
+        "hidden_dimension": 100,
+        "number_layers": 2,
+        "intrinsic_dimension": 750,
+        "epoch": 11,
+        "validation_accuracy": 0.9089
+    },
+    "fcn_model_h200_id750_lay2": {
+        "number_parameter": 239410,
+        "hidden_dimension": 200,
+        "number_layers": 2,
+        "intrinsic_dimension": 750,
+        "epoch": 100,
+        "validation_accuracy": 0.8866
+    },
+    "fcn_model_h200_id800_lay2": {
+        "number_parameter": 239410,
+        "hidden_dimension": 200,
+        "number_layers": 2,
+        "intrinsic_dimension": 800,
+        "epoch": 6,
+        "validation_accuracy": 0.9007
+    },
+    "fcn_model_h200_id775_lay2": {
+        "number_parameter": 239410,
+        "hidden_dimension": 200,
+        "number_layers": 2,
+        "intrinsic_dimension": 775,
+        "epoch": 94,
+        "validation_accuracy": 0.9021
+    },
+    "fcn_model_h400_id800_lay2": {
+        "number_parameter": 638810,
+        "hidden_dimension": 400,
+        "number_layers": 2,
+        "intrinsic_dimension": 800,
+        "epoch": 100,
+        "validation_accuracy": 0.7424
+    },
+    "fcn_model_h400_id850_lay2": {
+        "number_parameter": 638810,
+        "hidden_dimension": 400,
+        "number_layers": 2,
+        "intrinsic_dimension": 850,
+        "epoch": 100,
+        "validation_accuracy": 0.874
+    },
+    "fcn_model_h400_id900_lay2": {
+        "number_parameter": 638810,
+        "hidden_dimension": 400,
+        "number_layers": 2,
+        "intrinsic_dimension": 900,
+        "epoch": 100,
+        "validation_accuracy": 0.8571
+    },
+    "fcn_model_h400_id950_lay2": {
+        "number_parameter": 638810,
+        "hidden_dimension": 400,
+        "number_layers": 2,
+        "intrinsic_dimension": 950,
+        "epoch": 100,
+        "validation_accuracy": 0.8647
+    },
+    "fcn_model_h400_id1000_lay2": {
+        "number_parameter": 638810,
+        "hidden_dimension": 400,
+        "number_layers": 2,
+        "intrinsic_dimension": 1000,
+        "epoch": 84,
+        "validation_accuracy": 0.9006
+    },
+    "fcn_model_h400_id985_lay2": {
+        "number_parameter": 638810,
+        "hidden_dimension": 400,
+        "number_layers": 2,
+        "intrinsic_dimension": 985,
+        "epoch": 81,
+        "validation_accuracy": 0.9017
+    },
+    "fcn_model_h400_id970_lay2": {
+        "number_parameter": 638810,
+        "hidden_dimension": 400,
+        "number_layers": 2,
+        "intrinsic_dimension": 970,
+        "epoch": 12,
+        "validation_accuracy": 0.9022
+    },
+    "fcn_model_h50_id750_lay3": {
+        "number_parameter": 47410,
+        "hidden_dimension": 50,
+        "number_layers": 3,
+        "intrinsic_dimension": 750,
+        "epoch": 16,
+        "validation_accuracy": 0.9011
+    },
+    "fcn_model_h100_id750_lay3": {
+        "number_parameter": 109810,
+        "hidden_dimension": 100,
+        "number_layers": 3,
+        "intrinsic_dimension": 750,
+        "epoch": 100,
+        "validation_accuracy": 0.8754
+    },
+    "fcn_model_h100_id800_lay3": {
+        "number_parameter": 109810,
+        "hidden_dimension": 100,
+        "number_layers": 3,
+        "intrinsic_dimension": 800,
+        "epoch": 17,
+        "validation_accuracy": 0.9021
+    },
+    "fcn_model_h200_id750_lay3": {
+        "number_parameter": 279610,
+        "hidden_dimension": 200,
+        "number_layers": 3,
+        "intrinsic_dimension": 750,
+        "epoch": 100,
+        "validation_accuracy": 0.8609
+    },
+    "fcn_model_h200_id800_lay3": {
+        "number_parameter": 279610,
+        "hidden_dimension": 200,
+        "number_layers": 3,
+        "intrinsic_dimension": 800,
+        "epoch": 100,
+        "validation_accuracy": 0.8762
+    },
+    "fcn_model_h200_id850_lay3": {
+        "number_parameter": 279610,
+        "hidden_dimension": 200,
+        "number_layers": 3,
+        "intrinsic_dimension": 850,
+        "epoch": 63,
+        "validation_accuracy": 0.9016
+    },
+    "fcn_model_h400_id1000_lay3": {
+        "number_parameter": 799210,
+        "hidden_dimension": 400,
+        "number_layers": 3,
+        "intrinsic_dimension": 1000,
+        "epoch": 100,
+        "validation_accuracy": 0.8825
+    },
+    "fcn_model_h400_id1100_lay3": {
+        "number_parameter": 799210,
+        "hidden_dimension": 400,
+        "number_layers": 3,
+        "intrinsic_dimension": 1100,
+        "epoch": 47,
+        "validation_accuracy": 0.9014
+    },
+    "fcn_model_h50_id750_lay4": {
+        "number_parameter": 49960,
+        "hidden_dimension": 50,
+        "number_layers": 4,
+        "intrinsic_dimension": 750,
+        "epoch": 100,
+        "validation_accuracy": 0.8816
+    },
+    "fcn_model_h50_id775_lay4": {
+        "number_parameter": 49960,
+        "hidden_dimension": 50,
+        "number_layers": 4,
+        "intrinsic_dimension": 775,
+        "epoch": 100,
+        "validation_accuracy": 0.8698
+    },
+    "fcn_model_h50_id800_lay4": {
+        "number_parameter": 49960,
+        "hidden_dimension": 50,
+        "number_layers": 4,
+        "intrinsic_dimension": 800,
+        "epoch": 53,
+        "validation_accuracy": 0.9012
+    },
+    "fcn_model_h100_id800_lay4": {
+        "number_parameter": 119910,
+        "hidden_dimension": 100,
+        "number_layers": 4,
+        "intrinsic_dimension": 800,
+        "epoch": 100,
+        "validation_accuracy": 0.8801
+    },
+    "fcn_model_h100_id850_lay4": {
+        "number_parameter": 119910,
+        "hidden_dimension": 100,
+        "number_layers": 4,
+        "intrinsic_dimension": 850,
+        "epoch": 100,
+        "validation_accuracy": 0.8748
+    },
+    "fcn_model_h100_id900_lay4": {
+        "number_parameter": 119910,
+        "hidden_dimension": 100,
+        "number_layers": 4,
+        "intrinsic_dimension": 900,
+        "epoch": 36,
+        "validation_accuracy": 0.9022
+    },
+    "fcn_model_h100_id875_lay4": {
+        "number_parameter": 119910,
+        "hidden_dimension": 100,
+        "number_layers": 4,
+        "intrinsic_dimension": 875,
+        "epoch": 59,
+        "validation_accuracy": 0.901
+    },
+    "fcn_model_h200_id850_lay4": {
+        "number_parameter": 319810,
+        "hidden_dimension": 200,
+        "number_layers": 4,
+        "intrinsic_dimension": 850,
+        "epoch": 100,
+        "validation_accuracy": 0.8391
+    },
+    "fcn_model_h200_id900_lay4": {
+        "number_parameter": 319810,
+        "hidden_dimension": 200,
+        "number_layers": 4,
+        "intrinsic_dimension": 900,
+        "epoch": 100,
+        "validation_accuracy": 0.8744
+    },
+    "fcn_model_h200_id950_lay4": {
+        "number_parameter": 319810,
+        "hidden_dimension": 200,
+        "number_layers": 4,
+        "intrinsic_dimension": 950,
+        "epoch": 100,
+        "validation_accuracy": 0.8301
+    },
+    "fcn_model_h200_id1000_lay4": {
+        "number_parameter": 319810,
+        "hidden_dimension": 200,
+        "number_layers": 4,
+        "intrinsic_dimension": 1000,
+        "epoch": 100,
+        "validation_accuracy": 0.8739
+    },
+    "fcn_model_h200_id1100_lay4": {
+        "number_parameter": 319810,
+        "hidden_dimension": 200,
+        "number_layers": 4,
+        "intrinsic_dimension": 1100,
+        "epoch": 39,
+        "validation_accuracy": 0.9005
+    },
+    "fcn_model_h200_id1050_lay4": {
+        "number_parameter": 319810,
+        "hidden_dimension": 200,
+        "number_layers": 4,
+        "intrinsic_dimension": 1050,
+        "epoch": 98,
+        "validation_accuracy": 0.9
+    },
+    "fcn_model_h400_id1100_lay4": {
+        "number_parameter": 959610,
+        "hidden_dimension": 400,
+        "number_layers": 4,
+        "intrinsic_dimension": 1100,
+        "epoch": 100,
+        "validation_accuracy": 0.8604
+    },
+    "fcn_model_h400_id1200_lay4": {
+        "number_parameter": 959610,
+        "hidden_dimension": 400,
+        "number_layers": 4,
+        "intrinsic_dimension": 1200,
+        "epoch": 100,
+        "validation_accuracy": 0.8178
+    },
+    "fcn_model_h400_id1300_lay4": {
+        "number_parameter": 959610,
+        "hidden_dimension": 400,
+        "number_layers": 4,
+        "intrinsic_dimension": 1300,
+        "epoch": 22,
+        "validation_accuracy": 0.9066
+    },
+    "fcn_model_h400_id1250_lay4": {
+        "number_parameter": 959610,
+        "hidden_dimension": 400,
+        "number_layers": 4,
+        "intrinsic_dimension": 1250,
+        "epoch": 76,
+        "validation_accuracy": 0.9016
+    },
+    "fcn_model_h400_id1225_lay4": {
+        "number_parameter": 959610,
+        "hidden_dimension": 400,
+        "number_layers": 4,
+        "intrinsic_dimension": 1225,
+        "epoch": 37,
+        "validation_accuracy": 0.9023
+    },
+    "fcn_model_h50_id750_lay5": {
+        "number_parameter": 52510,
+        "hidden_dimension": 50,
+        "number_layers": 5,
+        "intrinsic_dimension": 750,
+        "epoch": 90,
+        "validation_accuracy": 0.9011
+    },
+    "fcn_model_h100_id750_lay5": {
+        "number_parameter": 130010,
+        "hidden_dimension": 100,
+        "number_layers": 5,
+        "intrinsic_dimension": 750,
+        "epoch": 74,
+        "validation_accuracy": 0.9022
+    },
+    "fcn_model_h200_id750_lay5": {
+        "number_parameter": 360010,
+        "hidden_dimension": 200,
+        "number_layers": 5,
+        "intrinsic_dimension": 750,
+        "epoch": 74,
+        "validation_accuracy": 0.9
+    },
+    "fcn_model_h200_id1100_lay5": {
+        "number_parameter": 360010,
+        "hidden_dimension": 200,
+        "number_layers": 5,
+        "intrinsic_dimension": 1100,
+        "epoch": 100,
+        "validation_accuracy": 0.8635
+    },
+    "fcn_model_h200_id1200_lay5": {
+        "number_parameter": 360010,
+        "hidden_dimension": 200,
+        "number_layers": 5,
+        "intrinsic_dimension": 1200,
+        "epoch": 100,
+        "validation_accuracy": 0.8567
+    },
+    "fcn_model_h200_id1300_lay5": {
+        "number_parameter": 360010,
+        "hidden_dimension": 200,
+        "number_layers": 5,
+        "intrinsic_dimension": 1300,
+        "epoch": 69,
+        "validation_accuracy": 0.9016
+    },
+    "fcn_model_h200_id1250_lay5": {
+        "number_parameter": 360010,
+        "hidden_dimension": 200,
+        "number_layers": 5,
+        "intrinsic_dimension": 1250,
+        "epoch": 62,
+        "validation_accuracy": 0.9
+    },
+    "fcn_model_h200_id1225_lay5": {
+        "number_parameter": 360010,
+        "hidden_dimension": 200,
+        "number_layers": 5,
+        "intrinsic_dimension": 1225,
+        "epoch": 100,
+        "validation_accuracy": 0.8555
+    },
+    "fcn_model_h400_id1300_lay5": {
+        "number_parameter": 1120010,
+        "hidden_dimension": 400,
+        "number_layers": 5,
+        "intrinsic_dimension": 1300,
+        "epoch": 100,
+        "validation_accuracy": 0.8599
+    },
+    "fcn_model_h400_id1350_lay5": {
+        "number_parameter": 1120010,
+        "hidden_dimension": 400,
+        "number_layers": 5,
+        "intrinsic_dimension": 1350,
+        "epoch": 100,
+        "validation_accuracy": 0.8696
+    },
+    "fcn_model_h50_id750_lay0": {
+        "number_parameter": 39760,
+        "hidden_dimension": 50,
+        "number_layers": 0,
+        "intrinsic_dimension": 750,
+        "epoch": 4,
+        "validation_accuracy": 0.9005
+    },
+    "fcn_model_h100_id750_lay0": {
+        "number_parameter": 79510,
+        "hidden_dimension": 100,
+        "number_layers": 0,
+        "intrinsic_dimension": 750,
+        "epoch": 5,
+        "validation_accuracy": 0.9037
+    },
+    "fcn_model_h200_id750_lay0": {
+        "number_parameter": 159010,
+        "hidden_dimension": 200,
+        "number_layers": 0,
+        "intrinsic_dimension": 750,
+        "epoch": 4,
+        "validation_accuracy": 0.9015
+    },
+    "fcn_model_h400_id750_lay0": {
+        "number_parameter": 318010,
+        "hidden_dimension": 400,
+        "number_layers": 0,
+        "intrinsic_dimension": 750,
+        "epoch": 8,
+        "validation_accuracy": 0.9039
+    },
+    "fcn_model_h200_id600_lay1": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 600,
+        "epoch": 83,
+        "validation_accuracy": 0.902
+    },
+    "fcn_model_h200_id700_lay1": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 700,
+        "epoch": 31,
+        "validation_accuracy": 0.9004
+    },
+    "fcn_model_h200_id675_lay1": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 675,
+        "epoch": 84,
+        "validation_accuracy": 0.9002
+    }
+}

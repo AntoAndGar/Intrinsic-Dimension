@@ -1,4 +1,4 @@
-$dims = 0, 9500, 10000
+$dims = 0, 10, 500, 1000, 1500, 2000
 # $hidden_dims = 50,100,200,400
 #$nums_layers = 1
 #foreach ($num_layer in $nums_layers) 

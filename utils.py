@@ -91,8 +91,8 @@ def get_input_args():
         "-msp",
         "--model_save_path",
         type=str,
-        help="a string for the path to save the model",
-        default="model/",
+        help="a string for the path (folders) to save the model",
+        default="model",
     )
     parser.add_argument(
         "-trf",
@@ -107,6 +107,13 @@ def get_input_args():
         type=str,
         help="a string for the projection method, can be in [dense, fastfood]",
         default="dense",
+    )
+    parser.add_argument(
+        "-mrp",
+        "--model_result_path",
+        type=str,
+        help="a string for the path (folders) to save the model result file",
+        default="results",
     )
 
     return parser.parse_args()

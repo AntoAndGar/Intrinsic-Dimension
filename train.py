@@ -119,7 +119,7 @@ def fit(
             best_epoch = epoch
             if best_acc >= val_global_accuracy:
                 saving_path = (
-                    f"./{args.model_save_path}{args.architecture}/{args.dataset}/"
+                    f"./{args.model_save_path}/{args.architecture}/{args.dataset}/"
                 )
                 if not os.path.exists(saving_path):
                     os.makedirs(saving_path)
