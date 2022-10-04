@@ -178,5 +178,41 @@
         "learning_rate": 0.01,
         "best_epoch": 71,
         "best_accuracy": 0.9892
+    },
+    "lenet_model_id170_lr0.01": {
+        "number_parameter": 44426,
+        "intrinsic_dimension": 170,
+        "epoch": 100,
+        "validation_accuracy": 0.8747,
+        "learning_rate": 0.01,
+        "best_epoch": 97,
+        "best_accuracy": 0.9028
+    },
+    "lenet_model_id165_lr0.01": {
+        "number_parameter": 44426,
+        "intrinsic_dimension": 165,
+        "epoch": 100,
+        "validation_accuracy": 0.8841,
+        "learning_rate": 0.01,
+        "best_epoch": 83,
+        "best_accuracy": 0.8901
+    },
+    "lenet_model_id160_lr0.01": {
+        "number_parameter": 44426,
+        "intrinsic_dimension": 160,
+        "epoch": 100,
+        "validation_accuracy": 0.8598,
+        "learning_rate": 0.01,
+        "best_epoch": 51,
+        "best_accuracy": 0.8903
+    },
+    "lenet_model_id180_lr0.01": {
+        "number_parameter": 44426,
+        "intrinsic_dimension": 180,
+        "epoch": 100,
+        "validation_accuracy": 0.8682,
+        "learning_rate": 0.01,
+        "best_epoch": 79,
+        "best_accuracy": 0.8931
     }
 }

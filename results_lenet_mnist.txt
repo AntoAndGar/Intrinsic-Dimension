@@ -3343,3 +3343,1523 @@ Validation Accuracy: 0.9869
 Epoch: 100
 Validation Average Loss: 0.0003349229381317855
 Validation Accuracy: 0.9879
+##############################################
+Number_of_parameters: 44426
+type: LeNet
+intrinsic_dim: 170
+Epoch: 1
+Validation Average Loss: 0.017974395895004273
+Validation Accuracy: 0.4132
+Epoch: 2
+Validation Average Loss: 0.005322509503364563
+Validation Accuracy: 0.7837
+Epoch: 3
+Validation Average Loss: 0.004096932995319366
+Validation Accuracy: 0.8377
+Epoch: 4
+Validation Average Loss: 0.004171732395887375
+Validation Accuracy: 0.8319
+Epoch: 5
+Validation Average Loss: 0.003726441329717636
+Validation Accuracy: 0.8616
+Epoch: 6
+Validation Average Loss: 0.003628754976391792
+Validation Accuracy: 0.8642
+Epoch: 7
+Validation Average Loss: 0.004018250551819801
+Validation Accuracy: 0.8432
+Epoch: 8
+Validation Average Loss: 0.0033078202545642854
+Validation Accuracy: 0.8727
+Epoch: 9
+Validation Average Loss: 0.00311258440464735
+Validation Accuracy: 0.8829
+Epoch: 10
+Validation Average Loss: 0.003255293147265911
+Validation Accuracy: 0.876
+Epoch: 11
+Validation Average Loss: 0.003911018255352974
+Validation Accuracy: 0.8461
+Epoch: 12
+Validation Average Loss: 0.003019468493759632
+Validation Accuracy: 0.8838
+Epoch: 13
+Validation Average Loss: 0.0032658641636371614
+Validation Accuracy: 0.8755
+Epoch: 14
+Validation Average Loss: 0.002911937589943409
+Validation Accuracy: 0.8884
+Epoch: 15
+Validation Average Loss: 0.0028612841263413427
+Validation Accuracy: 0.8898
+Epoch: 16
+Validation Average Loss: 0.0030712534964084624
+Validation Accuracy: 0.8834
+Epoch: 17
+Validation Average Loss: 0.003175701933354139
+Validation Accuracy: 0.8794
+Epoch: 18
+Validation Average Loss: 0.003200819385051727
+Validation Accuracy: 0.8787
+Epoch: 19
+Validation Average Loss: 0.0030176225408911706
+Validation Accuracy: 0.8841
+Epoch: 20
+Validation Average Loss: 0.0034690843671560286
+Validation Accuracy: 0.8686
+Epoch: 21
+Validation Average Loss: 0.002900540165603161
+Validation Accuracy: 0.8881
+Epoch: 22
+Validation Average Loss: 0.002967319057881832
+Validation Accuracy: 0.8867
+Epoch: 23
+Validation Average Loss: 0.0037703252226114273
+Validation Accuracy: 0.8492
+Epoch: 24
+Validation Average Loss: 0.002945390360057354
+Validation Accuracy: 0.8897
+Epoch: 25
+Validation Average Loss: 0.0028663787826895713
+Validation Accuracy: 0.8906
+Epoch: 26
+Validation Average Loss: 0.0030138926178216933
+Validation Accuracy: 0.8876
+Epoch: 27
+Validation Average Loss: 0.0031156685277819634
+Validation Accuracy: 0.8868
+Epoch: 28
+Validation Average Loss: 0.0031697118103504182
+Validation Accuracy: 0.8778
+Epoch: 29
+Validation Average Loss: 0.0026471766084432604
+Validation Accuracy: 0.8992
+Epoch: 30
+Validation Average Loss: 0.003228559345006943
+Validation Accuracy: 0.8739
+Epoch: 31
+Validation Average Loss: 0.003306770458817482
+Validation Accuracy: 0.8708
+Epoch: 32
+Validation Average Loss: 0.0028578115001320838
+Validation Accuracy: 0.8871
+Epoch: 33
+Validation Average Loss: 0.003100523303821683
+Validation Accuracy: 0.8772
+Epoch: 34
+Validation Average Loss: 0.002972688779234886
+Validation Accuracy: 0.8861
+Epoch: 35
+Validation Average Loss: 0.0029077139556407928
+Validation Accuracy: 0.8886
+Epoch: 36
+Validation Average Loss: 0.0028831684678792954
+Validation Accuracy: 0.8903
+Epoch: 37
+Validation Average Loss: 0.0028743150994181635
+Validation Accuracy: 0.8892
+Epoch: 38
+Validation Average Loss: 0.0027349331483244896
+Validation Accuracy: 0.894
+Epoch: 39
+Validation Average Loss: 0.0028061780914664268
+Validation Accuracy: 0.8952
+Epoch: 40
+Validation Average Loss: 0.0027660801485180856
+Validation Accuracy: 0.8946
+Epoch: 41
+Validation Average Loss: 0.0029967230319976807
+Validation Accuracy: 0.8835
+Epoch: 42
+Validation Average Loss: 0.003577766790986061
+Validation Accuracy: 0.86
+Epoch: 43
+Validation Average Loss: 0.002720104241371155
+Validation Accuracy: 0.8982
+Epoch: 44
+Validation Average Loss: 0.0027792648732662202
+Validation Accuracy: 0.8908
+Epoch: 45
+Validation Average Loss: 0.0031779079377651214
+Validation Accuracy: 0.8787
+Epoch: 46
+Validation Average Loss: 0.003926927438378334
+Validation Accuracy: 0.8459
+Epoch: 47
+Validation Average Loss: 0.0031014957681298255
+Validation Accuracy: 0.8782
+Epoch: 48
+Validation Average Loss: 0.0032098597958683966
+Validation Accuracy: 0.8777
+Epoch: 49
+Validation Average Loss: 0.0029358744069933893
+Validation Accuracy: 0.8867
+Epoch: 50
+Validation Average Loss: 0.0027907654464244844
+Validation Accuracy: 0.8934
+Epoch: 51
+Validation Average Loss: 0.0027859229132533073
+Validation Accuracy: 0.8921
+Epoch: 52
+Validation Average Loss: 0.0029592711135745047
+Validation Accuracy: 0.8854
+Epoch: 53
+Validation Average Loss: 0.002925852116942406
+Validation Accuracy: 0.8837
+Epoch: 54
+Validation Average Loss: 0.002690402142703533
+Validation Accuracy: 0.8961
+Epoch: 55
+Validation Average Loss: 0.003090131711959839
+Validation Accuracy: 0.8807
+Epoch: 56
+Validation Average Loss: 0.0028282147869467737
+Validation Accuracy: 0.8924
+Epoch: 57
+Validation Average Loss: 0.002629629431664944
+Validation Accuracy: 0.9012
+Epoch: 58
+Validation Average Loss: 0.0026590785428881646
+Validation Accuracy: 0.9008
+Epoch: 59
+Validation Average Loss: 0.0027853784814476966
+Validation Accuracy: 0.8923
+Epoch: 60
+Validation Average Loss: 0.002894035619497299
+Validation Accuracy: 0.8858
+Epoch: 61
+Validation Average Loss: 0.003195189182460308
+Validation Accuracy: 0.8765
+Epoch: 62
+Validation Average Loss: 0.003106534221768379
+Validation Accuracy: 0.8773
+Epoch: 63
+Validation Average Loss: 0.00281888797134161
+Validation Accuracy: 0.8932
+Epoch: 64
+Validation Average Loss: 0.0028946894317865373
+Validation Accuracy: 0.8925
+Epoch: 65
+Validation Average Loss: 0.0032291603952646257
+Validation Accuracy: 0.8718
+Epoch: 66
+Validation Average Loss: 0.00273609778881073
+Validation Accuracy: 0.8993
+Epoch: 67
+Validation Average Loss: 0.0029414903953671454
+Validation Accuracy: 0.8899
+Epoch: 68
+Validation Average Loss: 0.0031039022743701936
+Validation Accuracy: 0.8843
+Epoch: 69
+Validation Average Loss: 0.002970770080387592
+Validation Accuracy: 0.8871
+Epoch: 70
+Validation Average Loss: 0.0031549363300204278
+Validation Accuracy: 0.8778
+Epoch: 71
+Validation Average Loss: 0.0026249738559126854
+Validation Accuracy: 0.9018
+Epoch: 72
+Validation Average Loss: 0.003412303361296654
+Validation Accuracy: 0.8686
+Epoch: 73
+Validation Average Loss: 0.0027691371873021127
+Validation Accuracy: 0.8924
+Epoch: 74
+Validation Average Loss: 0.0026050983488559725
+Validation Accuracy: 0.9023
+Epoch: 75
+Validation Average Loss: 0.0027703177466988564
+Validation Accuracy: 0.8972
+Epoch: 76
+Validation Average Loss: 0.0032283865302801134
+Validation Accuracy: 0.8747
+Epoch: 77
+Validation Average Loss: 0.003946535062789917
+Validation Accuracy: 0.852
+Epoch: 78
+Validation Average Loss: 0.003070559071004391
+Validation Accuracy: 0.8829
+Epoch: 79
+Validation Average Loss: 0.002673492703586817
+Validation Accuracy: 0.9022
+Epoch: 80
+Validation Average Loss: 0.002679152023792267
+Validation Accuracy: 0.895
+Epoch: 81
+Validation Average Loss: 0.0029843321785330773
+Validation Accuracy: 0.8838
+Epoch: 82
+Validation Average Loss: 0.002969007183611393
+Validation Accuracy: 0.8836
+Epoch: 83
+Validation Average Loss: 0.002732253423333168
+Validation Accuracy: 0.8942
+Epoch: 84
+Validation Average Loss: 0.002783309910446405
+Validation Accuracy: 0.8949
+Epoch: 85
+Validation Average Loss: 0.0026969078913331034
+Validation Accuracy: 0.8973
+Epoch: 86
+Validation Average Loss: 0.00294848749935627
+Validation Accuracy: 0.8904
+Epoch: 87
+Validation Average Loss: 0.0029822955831885337
+Validation Accuracy: 0.8856
+Epoch: 88
+Validation Average Loss: 0.00299902725815773
+Validation Accuracy: 0.8854
+Epoch: 89
+Validation Average Loss: 0.0028312739104032515
+Validation Accuracy: 0.8908
+Epoch: 90
+Validation Average Loss: 0.0029456943437457086
+Validation Accuracy: 0.8894
+Epoch: 91
+Validation Average Loss: 0.0030959332123398783
+Validation Accuracy: 0.8853
+Epoch: 92
+Validation Average Loss: 0.0038579662203788757
+Validation Accuracy: 0.8519
+Epoch: 93
+Validation Average Loss: 0.0034873364239931108
+Validation Accuracy: 0.8611
+Epoch: 94
+Validation Average Loss: 0.0027050408989191055
+Validation Accuracy: 0.9002
+Epoch: 95
+Validation Average Loss: 0.0026795051962137223
+Validation Accuracy: 0.8998
+Epoch: 96
+Validation Average Loss: 0.0026027732435613873
+Validation Accuracy: 0.8998
+Epoch: 97
+Validation Average Loss: 0.0026148851852864025
+Validation Accuracy: 0.9028
+Epoch: 98
+Validation Average Loss: 0.0026094119012355804
+Validation Accuracy: 0.9027
+Epoch: 99
+Validation Average Loss: 0.0028182847931981087
+Validation Accuracy: 0.8906
+Epoch: 100
+Validation Average Loss: 0.0032607315108180044
+Validation Accuracy: 0.8747
+##############################################
+Number_of_parameters: 44426
+type: LeNet
+intrinsic_dim: 165
+Epoch: 1
+Validation Average Loss: 0.017945873165130615
+Validation Accuracy: 0.3615
+Epoch: 2
+Validation Average Loss: 0.005248394480347633
+Validation Accuracy: 0.787
+Epoch: 3
+Validation Average Loss: 0.0033961510628461836
+Validation Accuracy: 0.8651
+Epoch: 4
+Validation Average Loss: 0.0034519471257925035
+Validation Accuracy: 0.8668
+Epoch: 5
+Validation Average Loss: 0.0031531412795186044
+Validation Accuracy: 0.8724
+Epoch: 6
+Validation Average Loss: 0.0032357853159308433
+Validation Accuracy: 0.8695
+Epoch: 7
+Validation Average Loss: 0.0030271200895309446
+Validation Accuracy: 0.8804
+Epoch: 8
+Validation Average Loss: 0.003044878613948822
+Validation Accuracy: 0.8802
+Epoch: 9
+Validation Average Loss: 0.002994778697192669
+Validation Accuracy: 0.8818
+Epoch: 10
+Validation Average Loss: 0.0034864263892173766
+Validation Accuracy: 0.8692
+Epoch: 11
+Validation Average Loss: 0.0032930301696062086
+Validation Accuracy: 0.8655
+Epoch: 12
+Validation Average Loss: 0.0030411304622888565
+Validation Accuracy: 0.8764
+Epoch: 13
+Validation Average Loss: 0.0028823403000831603
+Validation Accuracy: 0.8858
+Epoch: 14
+Validation Average Loss: 0.003274357383698225
+Validation Accuracy: 0.8644
+Epoch: 15
+Validation Average Loss: 0.003568505172431469
+Validation Accuracy: 0.8585
+Epoch: 16
+Validation Average Loss: 0.003267892260849476
+Validation Accuracy: 0.8742
+Epoch: 17
+Validation Average Loss: 0.003216681155562401
+Validation Accuracy: 0.8797
+Epoch: 18
+Validation Average Loss: 0.0030195917300879956
+Validation Accuracy: 0.8826
+Epoch: 19
+Validation Average Loss: 0.006615090739727021
+Validation Accuracy: 0.7786
+Epoch: 20
+Validation Average Loss: 0.0032147178739309313
+Validation Accuracy: 0.8714
+Epoch: 21
+Validation Average Loss: 0.003020170521736145
+Validation Accuracy: 0.8807
+Epoch: 22
+Validation Average Loss: 0.0029775430530309677
+Validation Accuracy: 0.8823
+Epoch: 23
+Validation Average Loss: 0.0038093598127365113
+Validation Accuracy: 0.8467
+Epoch: 24
+Validation Average Loss: 0.003033124989271164
+Validation Accuracy: 0.8823
+Epoch: 25
+Validation Average Loss: 0.003321007984876633
+Validation Accuracy: 0.8715
+Epoch: 26
+Validation Average Loss: 0.0038922626197338103
+Validation Accuracy: 0.8451
+Epoch: 27
+Validation Average Loss: 0.0032368622779846193
+Validation Accuracy: 0.8745
+Epoch: 28
+Validation Average Loss: 0.0033991950899362566
+Validation Accuracy: 0.8648
+Epoch: 29
+Validation Average Loss: 0.003190443088114262
+Validation Accuracy: 0.8745
+Epoch: 30
+Validation Average Loss: 0.0028867806792259214
+Validation Accuracy: 0.8866
+Epoch: 31
+Validation Average Loss: 0.003041147693991661
+Validation Accuracy: 0.8823
+Epoch: 32
+Validation Average Loss: 0.0029938656494021415
+Validation Accuracy: 0.8832
+Epoch: 33
+Validation Average Loss: 0.0029016621813178064
+Validation Accuracy: 0.8875
+Epoch: 34
+Validation Average Loss: 0.003152216711640358
+Validation Accuracy: 0.8773
+Epoch: 35
+Validation Average Loss: 0.003002329942584038
+Validation Accuracy: 0.8831
+Epoch: 36
+Validation Average Loss: 0.003031100097298622
+Validation Accuracy: 0.8819
+Epoch: 37
+Validation Average Loss: 0.002864188124239445
+Validation Accuracy: 0.89
+Epoch: 38
+Validation Average Loss: 0.0033018759071826937
+Validation Accuracy: 0.8682
+Epoch: 39
+Validation Average Loss: 0.0029451449014246465
+Validation Accuracy: 0.8856
+Epoch: 40
+Validation Average Loss: 0.004339104586839676
+Validation Accuracy: 0.8285
+Epoch: 41
+Validation Average Loss: 0.003315526609122753
+Validation Accuracy: 0.8656
+Epoch: 42
+Validation Average Loss: 0.0032628875240683555
+Validation Accuracy: 0.8704
+Epoch: 43
+Validation Average Loss: 0.003595071217417717
+Validation Accuracy: 0.8536
+Epoch: 44
+Validation Average Loss: 0.003329447494447231
+Validation Accuracy: 0.8684
+Epoch: 45
+Validation Average Loss: 0.002962107013165951
+Validation Accuracy: 0.8845
+Epoch: 46
+Validation Average Loss: 0.002994438908994198
+Validation Accuracy: 0.8871
+Epoch: 47
+Validation Average Loss: 0.0034349686205387116
+Validation Accuracy: 0.8627
+Epoch: 48
+Validation Average Loss: 0.004382242542505264
+Validation Accuracy: 0.8201
+Epoch: 49
+Validation Average Loss: 0.002940555539727211
+Validation Accuracy: 0.884
+Epoch: 50
+Validation Average Loss: 0.002964708784222603
+Validation Accuracy: 0.8883
+Epoch: 51
+Validation Average Loss: 0.0030381173238158226
+Validation Accuracy: 0.8817
+Epoch: 52
+Validation Average Loss: 0.00285478196144104
+Validation Accuracy: 0.8875
+Epoch: 53
+Validation Average Loss: 0.00318943675160408
+Validation Accuracy: 0.8751
+Epoch: 54
+Validation Average Loss: 0.0033660512134432792
+Validation Accuracy: 0.8706
+Epoch: 55
+Validation Average Loss: 0.0030182208836078642
+Validation Accuracy: 0.8871
+Epoch: 56
+Validation Average Loss: 0.003316604832559824
+Validation Accuracy: 0.8711
+Epoch: 57
+Validation Average Loss: 0.0030057592585682868
+Validation Accuracy: 0.8843
+Epoch: 58
+Validation Average Loss: 0.00372587009370327
+Validation Accuracy: 0.8515
+Epoch: 59
+Validation Average Loss: 0.0032828092485666276
+Validation Accuracy: 0.8739
+Epoch: 60
+Validation Average Loss: 0.0029181821197271345
+Validation Accuracy: 0.8854
+Epoch: 61
+Validation Average Loss: 0.00297595187574625
+Validation Accuracy: 0.8815
+Epoch: 62
+Validation Average Loss: 0.00301511532664299
+Validation Accuracy: 0.8851
+Epoch: 63
+Validation Average Loss: 0.002854455986618996
+Validation Accuracy: 0.8884
+Epoch: 64
+Validation Average Loss: 0.002885470350086689
+Validation Accuracy: 0.8848
+Epoch: 65
+Validation Average Loss: 0.004025285723805428
+Validation Accuracy: 0.8303
+Epoch: 66
+Validation Average Loss: 0.0028388480007648467
+Validation Accuracy: 0.8857
+Epoch: 67
+Validation Average Loss: 0.0031310979530215265
+Validation Accuracy: 0.8755
+Epoch: 68
+Validation Average Loss: 0.0029512205630540848
+Validation Accuracy: 0.889
+Epoch: 69
+Validation Average Loss: 0.0030735305950045587
+Validation Accuracy: 0.8792
+Epoch: 70
+Validation Average Loss: 0.0030254521153867246
+Validation Accuracy: 0.8847
+Epoch: 71
+Validation Average Loss: 0.0029372467666864397
+Validation Accuracy: 0.8843
+Epoch: 72
+Validation Average Loss: 0.0034513681903481485
+Validation Accuracy: 0.8601
+Epoch: 73
+Validation Average Loss: 0.003133198744058609
+Validation Accuracy: 0.8757
+Epoch: 74
+Validation Average Loss: 0.0034878083035349847
+Validation Accuracy: 0.8616
+Epoch: 75
+Validation Average Loss: 0.0030712251380085945
+Validation Accuracy: 0.8797
+Epoch: 76
+Validation Average Loss: 0.002972356402873993
+Validation Accuracy: 0.8847
+Epoch: 77
+Validation Average Loss: 0.00300203687697649
+Validation Accuracy: 0.881
+Epoch: 78
+Validation Average Loss: 0.0031689214542508126
+Validation Accuracy: 0.8762
+Epoch: 79
+Validation Average Loss: 0.0031584145203232767
+Validation Accuracy: 0.8834
+Epoch: 80
+Validation Average Loss: 0.003410577185451984
+Validation Accuracy: 0.864
+Epoch: 81
+Validation Average Loss: 0.002974723607301712
+Validation Accuracy: 0.8824
+Epoch: 82
+Validation Average Loss: 0.0032482497841119767
+Validation Accuracy: 0.8769
+Epoch: 83
+Validation Average Loss: 0.0027912364035844804
+Validation Accuracy: 0.8901
+Epoch: 84
+Validation Average Loss: 0.0029576453924179077
+Validation Accuracy: 0.8845
+Epoch: 85
+Validation Average Loss: 0.0035522468000650405
+Validation Accuracy: 0.8587
+Epoch: 86
+Validation Average Loss: 0.003296953348815441
+Validation Accuracy: 0.8715
+Epoch: 87
+Validation Average Loss: 0.0033528465390205383
+Validation Accuracy: 0.8671
+Epoch: 88
+Validation Average Loss: 0.003056716871261597
+Validation Accuracy: 0.8828
+Epoch: 89
+Validation Average Loss: 0.0032719322860240937
+Validation Accuracy: 0.8717
+Epoch: 90
+Validation Average Loss: 0.0030260627657175063
+Validation Accuracy: 0.8874
+Epoch: 91
+Validation Average Loss: 0.003890812024474144
+Validation Accuracy: 0.8407
+Epoch: 92
+Validation Average Loss: 0.003312564095854759
+Validation Accuracy: 0.8705
+Epoch: 93
+Validation Average Loss: 0.0037818889886140823
+Validation Accuracy: 0.8524
+Epoch: 94
+Validation Average Loss: 0.002972173674404621
+Validation Accuracy: 0.8869
+Epoch: 95
+Validation Average Loss: 0.0035123498260974883
+Validation Accuracy: 0.865
+Epoch: 96
+Validation Average Loss: 0.003140286476910114
+Validation Accuracy: 0.8771
+Epoch: 97
+Validation Average Loss: 0.003258586509525776
+Validation Accuracy: 0.8709
+Epoch: 98
+Validation Average Loss: 0.003684377208352089
+Validation Accuracy: 0.8552
+Epoch: 99
+Validation Average Loss: 0.0028868590638041498
+Validation Accuracy: 0.8863
+Epoch: 100
+Validation Average Loss: 0.0029432669252157212
+Validation Accuracy: 0.8841
+##############################################
+Number_of_parameters: 44426
+type: LeNet
+intrinsic_dim: 160
+Epoch: 1
+Validation Average Loss: 0.018054604840278626
+Validation Accuracy: 0.1915
+Epoch: 2
+Validation Average Loss: 0.006247403734922409
+Validation Accuracy: 0.7581
+Epoch: 3
+Validation Average Loss: 0.003973255082964897
+Validation Accuracy: 0.8452
+Epoch: 4
+Validation Average Loss: 0.0037993239760398863
+Validation Accuracy: 0.85
+Epoch: 5
+Validation Average Loss: 0.0037486071348190307
+Validation Accuracy: 0.8564
+Epoch: 6
+Validation Average Loss: 0.003939384242892265
+Validation Accuracy: 0.8375
+Epoch: 7
+Validation Average Loss: 0.0033657407507300375
+Validation Accuracy: 0.8756
+Epoch: 8
+Validation Average Loss: 0.0036867652475833894
+Validation Accuracy: 0.8617
+Epoch: 9
+Validation Average Loss: 0.0035032130002975465
+Validation Accuracy: 0.8651
+Epoch: 10
+Validation Average Loss: 0.003342886906862259
+Validation Accuracy: 0.875
+Epoch: 11
+Validation Average Loss: 0.003226948055624962
+Validation Accuracy: 0.8745
+Epoch: 12
+Validation Average Loss: 0.003541217404603958
+Validation Accuracy: 0.859
+Epoch: 13
+Validation Average Loss: 0.003556572985649109
+Validation Accuracy: 0.8622
+Epoch: 14
+Validation Average Loss: 0.003264733462035656
+Validation Accuracy: 0.8717
+Epoch: 15
+Validation Average Loss: 0.003405007216334343
+Validation Accuracy: 0.8643
+Epoch: 16
+Validation Average Loss: 0.005974065235257149
+Validation Accuracy: 0.7862
+Epoch: 17
+Validation Average Loss: 0.0032943896189332007
+Validation Accuracy: 0.8743
+Epoch: 18
+Validation Average Loss: 0.003704334506392479
+Validation Accuracy: 0.8538
+Epoch: 19
+Validation Average Loss: 0.003495903092622757
+Validation Accuracy: 0.8621
+Epoch: 20
+Validation Average Loss: 0.003493701610714197
+Validation Accuracy: 0.8611
+Epoch: 21
+Validation Average Loss: 0.00333633121997118
+Validation Accuracy: 0.8686
+Epoch: 22
+Validation Average Loss: 0.0032460611194372177
+Validation Accuracy: 0.8739
+Epoch: 23
+Validation Average Loss: 0.003406165820360184
+Validation Accuracy: 0.8659
+Epoch: 24
+Validation Average Loss: 0.002983259925246239
+Validation Accuracy: 0.8817
+Epoch: 25
+Validation Average Loss: 0.0035312532782554628
+Validation Accuracy: 0.859
+Epoch: 26
+Validation Average Loss: 0.0035623036295175554
+Validation Accuracy: 0.8564
+Epoch: 27
+Validation Average Loss: 0.003565214267373085
+Validation Accuracy: 0.8612
+Epoch: 28
+Validation Average Loss: 0.0033507745280861854
+Validation Accuracy: 0.8662
+Epoch: 29
+Validation Average Loss: 0.003073029437661171
+Validation Accuracy: 0.8782
+Epoch: 30
+Validation Average Loss: 0.003027354371547699
+Validation Accuracy: 0.8841
+Epoch: 31
+Validation Average Loss: 0.0032478998914361
+Validation Accuracy: 0.8758
+Epoch: 32
+Validation Average Loss: 0.003216751405596733
+Validation Accuracy: 0.8759
+Epoch: 33
+Validation Average Loss: 0.002977227793633938
+Validation Accuracy: 0.8822
+Epoch: 34
+Validation Average Loss: 0.002994836550951004
+Validation Accuracy: 0.8823
+Epoch: 35
+Validation Average Loss: 0.0035367033764719964
+Validation Accuracy: 0.8561
+Epoch: 36
+Validation Average Loss: 0.0030236200377345085
+Validation Accuracy: 0.8785
+Epoch: 37
+Validation Average Loss: 0.0030212809726595877
+Validation Accuracy: 0.8828
+Epoch: 38
+Validation Average Loss: 0.003364874915778637
+Validation Accuracy: 0.8701
+Epoch: 39
+Validation Average Loss: 0.002890135318040848
+Validation Accuracy: 0.8875
+Epoch: 40
+Validation Average Loss: 0.0030371961817145347
+Validation Accuracy: 0.886
+Epoch: 41
+Validation Average Loss: 0.003607029154896736
+Validation Accuracy: 0.8593
+Epoch: 42
+Validation Average Loss: 0.00306467349678278
+Validation Accuracy: 0.8814
+Epoch: 43
+Validation Average Loss: 0.0029802872456610205
+Validation Accuracy: 0.8866
+Epoch: 44
+Validation Average Loss: 0.003244704230129719
+Validation Accuracy: 0.8709
+Epoch: 45
+Validation Average Loss: 0.00298621589243412
+Validation Accuracy: 0.8803
+Epoch: 46
+Validation Average Loss: 0.0027981539949774744
+Validation Accuracy: 0.8866
+Epoch: 47
+Validation Average Loss: 0.0029315839126706125
+Validation Accuracy: 0.8858
+Epoch: 48
+Validation Average Loss: 0.004429332709312439
+Validation Accuracy: 0.8226
+Epoch: 49
+Validation Average Loss: 0.0029597591876983644
+Validation Accuracy: 0.885
+Epoch: 50
+Validation Average Loss: 0.0029602346211671828
+Validation Accuracy: 0.8843
+Epoch: 51
+Validation Average Loss: 0.0027715676844120027
+Validation Accuracy: 0.8903
+Epoch: 52
+Validation Average Loss: 0.0032971706464886667
+Validation Accuracy: 0.8657
+Epoch: 53
+Validation Average Loss: 0.0030959850311279295
+Validation Accuracy: 0.8822
+Epoch: 54
+Validation Average Loss: 0.003641212570667267
+Validation Accuracy: 0.8497
+Epoch: 55
+Validation Average Loss: 0.0028403927475214004
+Validation Accuracy: 0.8879
+Epoch: 56
+Validation Average Loss: 0.004877970334887505
+Validation Accuracy: 0.8026
+Epoch: 57
+Validation Average Loss: 0.0030945551484823225
+Validation Accuracy: 0.877
+Epoch: 58
+Validation Average Loss: 0.003016908475756645
+Validation Accuracy: 0.8834
+Epoch: 59
+Validation Average Loss: 0.0031106623381376266
+Validation Accuracy: 0.8831
+Epoch: 60
+Validation Average Loss: 0.003084426346421242
+Validation Accuracy: 0.8785
+Epoch: 61
+Validation Average Loss: 0.0032477070555090902
+Validation Accuracy: 0.8691
+Epoch: 62
+Validation Average Loss: 0.0039316587507724765
+Validation Accuracy: 0.8452
+Epoch: 63
+Validation Average Loss: 0.002905863709747791
+Validation Accuracy: 0.8873
+Epoch: 64
+Validation Average Loss: 0.0038915742680430414
+Validation Accuracy: 0.8411
+Epoch: 65
+Validation Average Loss: 0.003232869106531143
+Validation Accuracy: 0.869
+Epoch: 66
+Validation Average Loss: 0.004330755183100701
+Validation Accuracy: 0.8214
+Epoch: 67
+Validation Average Loss: 0.002934142850339413
+Validation Accuracy: 0.8864
+Epoch: 68
+Validation Average Loss: 0.0029401522353291513
+Validation Accuracy: 0.8825
+Epoch: 69
+Validation Average Loss: 0.0029968259885907174
+Validation Accuracy: 0.8841
+Epoch: 70
+Validation Average Loss: 0.0030072023525834083
+Validation Accuracy: 0.8792
+Epoch: 71
+Validation Average Loss: 0.003031927490234375
+Validation Accuracy: 0.8798
+Epoch: 72
+Validation Average Loss: 0.003186249376833439
+Validation Accuracy: 0.8753
+Epoch: 73
+Validation Average Loss: 0.0036500441551208496
+Validation Accuracy: 0.8615
+Epoch: 74
+Validation Average Loss: 0.002988160587847233
+Validation Accuracy: 0.8871
+Epoch: 75
+Validation Average Loss: 0.002770221833884716
+Validation Accuracy: 0.8881
+Epoch: 76
+Validation Average Loss: 0.0039315822154283525
+Validation Accuracy: 0.8448
+Epoch: 77
+Validation Average Loss: 0.00294653344899416
+Validation Accuracy: 0.8836
+Epoch: 78
+Validation Average Loss: 0.003482805061340332
+Validation Accuracy: 0.8599
+Epoch: 79
+Validation Average Loss: 0.0031126958131790163
+Validation Accuracy: 0.8758
+Epoch: 80
+Validation Average Loss: 0.003028944504261017
+Validation Accuracy: 0.8838
+Epoch: 81
+Validation Average Loss: 0.0034181677237153053
+Validation Accuracy: 0.8627
+Epoch: 82
+Validation Average Loss: 0.0029409032359719277
+Validation Accuracy: 0.8836
+Epoch: 83
+Validation Average Loss: 0.0029831165358424187
+Validation Accuracy: 0.8814
+Epoch: 84
+Validation Average Loss: 0.0032077706962823868
+Validation Accuracy: 0.865
+Epoch: 85
+Validation Average Loss: 0.002966378591954708
+Validation Accuracy: 0.8833
+Epoch: 86
+Validation Average Loss: 0.0029520024739205838
+Validation Accuracy: 0.8793
+Epoch: 87
+Validation Average Loss: 0.0031142894208431244
+Validation Accuracy: 0.8776
+Epoch: 88
+Validation Average Loss: 0.0031386649489402773
+Validation Accuracy: 0.8738
+Epoch: 89
+Validation Average Loss: 0.002899250817298889
+Validation Accuracy: 0.8851
+Epoch: 90
+Validation Average Loss: 0.002798502986133099
+Validation Accuracy: 0.8873
+Epoch: 91
+Validation Average Loss: 0.0028980204492807388
+Validation Accuracy: 0.886
+Epoch: 92
+Validation Average Loss: 0.0031832087591290473
+Validation Accuracy: 0.8705
+Epoch: 93
+Validation Average Loss: 0.003181385236978531
+Validation Accuracy: 0.8711
+Epoch: 94
+Validation Average Loss: 0.0030898106455802916
+Validation Accuracy: 0.8715
+Epoch: 95
+Validation Average Loss: 0.0029658296912908554
+Validation Accuracy: 0.8883
+Epoch: 96
+Validation Average Loss: 0.0028827805787324905
+Validation Accuracy: 0.8877
+Epoch: 97
+Validation Average Loss: 0.0031303086549043656
+Validation Accuracy: 0.8795
+Epoch: 98
+Validation Average Loss: 0.002899036595225334
+Validation Accuracy: 0.8836
+Epoch: 99
+Validation Average Loss: 0.0031145637586712837
+Validation Accuracy: 0.875
+Epoch: 100
+Validation Average Loss: 0.0036369218952953817
+Validation Accuracy: 0.8598
+##############################################
+Number_of_parameters: 44426
+type: LeNet
+intrinsic_dim: 150
+Epoch: 1
+Validation Average Loss: 0.018042376804351806
+Validation Accuracy: 0.3001
+Epoch: 2
+Validation Average Loss: 0.006151237571239471
+Validation Accuracy: 0.7546
+Epoch: 3
+Validation Average Loss: 0.0054796688109636305
+Validation Accuracy: 0.7868
+Epoch: 4
+Validation Average Loss: 0.003911524574458599
+Validation Accuracy: 0.8377
+Epoch: 5
+Validation Average Loss: 0.0034545259565114976
+Validation Accuracy: 0.8604
+Epoch: 6
+Validation Average Loss: 0.004489365807175637
+Validation Accuracy: 0.8153
+Epoch: 7
+Validation Average Loss: 0.0035390508227050306
+Validation Accuracy: 0.8553
+Epoch: 8
+Validation Average Loss: 0.0032324248299002646
+Validation Accuracy: 0.8704
+Epoch: 9
+Validation Average Loss: 0.003510341504216194
+Validation Accuracy: 0.8568
+Epoch: 10
+Validation Average Loss: 0.003228766232728958
+Validation Accuracy: 0.8702
+Epoch: 11
+Validation Average Loss: 0.0036709728211164476
+Validation Accuracy: 0.8555
+Epoch: 12
+Validation Average Loss: 0.0039123522847890856
+Validation Accuracy: 0.8376
+Epoch: 13
+Validation Average Loss: 0.00366137340515852
+Validation Accuracy: 0.8524
+Epoch: 14
+Validation Average Loss: 0.005437974387407303
+Validation Accuracy: 0.806
+Epoch: 15
+Validation Average Loss: 0.0060129469871520996
+Validation Accuracy: 0.7699
+Epoch: 16
+Validation Average Loss: 0.003111802339553833
+Validation Accuracy: 0.8747
+Epoch: 17
+Validation Average Loss: 0.0033390815302729608
+Validation Accuracy: 0.8647
+Epoch: 18
+Validation Average Loss: 0.004763423085212708
+Validation Accuracy: 0.8069
+Epoch: 19
+Validation Average Loss: 0.0033832249283790587
+Validation Accuracy: 0.8631
+Epoch: 20
+Validation Average Loss: 0.0032923281252384188
+Validation Accuracy: 0.8692
+Epoch: 21
+Validation Average Loss: 0.003316622403264046
+Validation Accuracy: 0.8688
+Epoch: 22
+Validation Average Loss: 0.003947682377696037
+Validation Accuracy: 0.8392
+Epoch: 23
+Validation Average Loss: 0.003822850997745991
+Validation Accuracy: 0.8428
+Epoch: 24
+Validation Average Loss: 0.0031359238117933275
+Validation Accuracy: 0.8764
+Epoch: 25
+Validation Average Loss: 0.0031930733144283296
+Validation Accuracy: 0.8757
+Epoch: 26
+Validation Average Loss: 0.003308438387513161
+Validation Accuracy: 0.8722
+Epoch: 27
+Validation Average Loss: 0.0034264660641551018
+Validation Accuracy: 0.8687
+Epoch: 28
+Validation Average Loss: 0.0032997694566845896
+Validation Accuracy: 0.8689
+Epoch: 29
+Validation Average Loss: 0.003290750266611576
+Validation Accuracy: 0.8771
+Epoch: 30
+Validation Average Loss: 0.0032890498265624045
+Validation Accuracy: 0.8753
+Epoch: 31
+Validation Average Loss: 0.0034046768099069593
+Validation Accuracy: 0.8664
+Epoch: 32
+Validation Average Loss: 0.0037210482597351074
+Validation Accuracy: 0.8536
+Epoch: 33
+Validation Average Loss: 0.003502822148799896
+Validation Accuracy: 0.861
+Epoch: 34
+Validation Average Loss: 0.003210348379611969
+Validation Accuracy: 0.8735
+Epoch: 35
+Validation Average Loss: 0.0038884124755859373
+Validation Accuracy: 0.851
+Epoch: 36
+Validation Average Loss: 0.003285875229537487
+Validation Accuracy: 0.8669
+Epoch: 37
+Validation Average Loss: 0.0036113498955965043
+Validation Accuracy: 0.8647
+Epoch: 38
+Validation Average Loss: 0.0034586164712905884
+Validation Accuracy: 0.8666
+Epoch: 39
+Validation Average Loss: 0.0032841743379831314
+Validation Accuracy: 0.8731
+Epoch: 40
+Validation Average Loss: 0.0031383742570877077
+Validation Accuracy: 0.8764
+Epoch: 41
+Validation Average Loss: 0.003884795269370079
+Validation Accuracy: 0.8442
+Epoch: 42
+Validation Average Loss: 0.004081014940142631
+Validation Accuracy: 0.838
+Epoch: 43
+Validation Average Loss: 0.0035224634684622286
+Validation Accuracy: 0.8665
+Epoch: 44
+Validation Average Loss: 0.003381319659948349
+Validation Accuracy: 0.8691
+Epoch: 45
+Validation Average Loss: 0.0035128848791122435
+Validation Accuracy: 0.8671
+Epoch: 46
+Validation Average Loss: 0.0034561434142291545
+Validation Accuracy: 0.8676
+Epoch: 47
+Validation Average Loss: 0.0034329652920365335
+Validation Accuracy: 0.8682
+Epoch: 48
+Validation Average Loss: 0.0034324575185775757
+Validation Accuracy: 0.8671
+Epoch: 49
+Validation Average Loss: 0.003920555272698402
+Validation Accuracy: 0.8434
+Epoch: 50
+Validation Average Loss: 0.004007385262846947
+Validation Accuracy: 0.8511
+Epoch: 51
+Validation Average Loss: 0.005154704946279526
+Validation Accuracy: 0.7994
+Epoch: 52
+Validation Average Loss: 0.0033485398948192597
+Validation Accuracy: 0.8683
+Epoch: 53
+Validation Average Loss: 0.0033189169391989706
+Validation Accuracy: 0.8712
+Epoch: 54
+Validation Average Loss: 0.0033617185145616534
+Validation Accuracy: 0.8673
+Epoch: 55
+Validation Average Loss: 0.0038207974046468736
+Validation Accuracy: 0.8492
+Epoch: 56
+Validation Average Loss: 0.003306312894821167
+Validation Accuracy: 0.8666
+Epoch: 57
+Validation Average Loss: 0.003846327093243599
+Validation Accuracy: 0.8429
+Epoch: 58
+Validation Average Loss: 0.0032667134955525396
+Validation Accuracy: 0.8759
+Epoch: 59
+Validation Average Loss: 0.003272274747490883
+Validation Accuracy: 0.8728
+Epoch: 60
+Validation Average Loss: 0.0034997256010770796
+Validation Accuracy: 0.8649
+Epoch: 61
+Validation Average Loss: 0.0046681009739637375
+Validation Accuracy: 0.8124
+Epoch: 62
+Validation Average Loss: 0.0035068124651908873
+Validation Accuracy: 0.8606
+Epoch: 63
+Validation Average Loss: 0.00321087783575058
+Validation Accuracy: 0.8753
+Epoch: 64
+Validation Average Loss: 0.0043490517675876614
+Validation Accuracy: 0.831
+Epoch: 65
+Validation Average Loss: 0.003446714299917221
+Validation Accuracy: 0.8641
+Epoch: 66
+Validation Average Loss: 0.003746814656257629
+Validation Accuracy: 0.8526
+Epoch: 67
+Validation Average Loss: 0.003268734708428383
+Validation Accuracy: 0.8739
+Epoch: 68
+Validation Average Loss: 0.003306398420035839
+Validation Accuracy: 0.8684
+Epoch: 69
+Validation Average Loss: 0.0037816446781158445
+Validation Accuracy: 0.8585
+Epoch: 70
+Validation Average Loss: 0.003284553687274456
+Validation Accuracy: 0.8723
+Epoch: 71
+Validation Average Loss: 0.004889480391144753
+Validation Accuracy: 0.8158
+Epoch: 72
+Validation Average Loss: 0.004675418598949909
+Validation Accuracy: 0.813
+Epoch: 73
+Validation Average Loss: 0.004017289412021637
+Validation Accuracy: 0.8387
+Epoch: 74
+Validation Average Loss: 0.003414179988205433
+Validation Accuracy: 0.8643
+Epoch: 75
+Validation Average Loss: 0.0039310883849859235
+Validation Accuracy: 0.8446
+Epoch: 76
+Validation Average Loss: 0.0033363705515861513
+Validation Accuracy: 0.8705
+Epoch: 77
+Validation Average Loss: 0.0034831566393375398
+Validation Accuracy: 0.8657
+Epoch: 78
+Validation Average Loss: 0.0034093230694532393
+Validation Accuracy: 0.8671
+Epoch: 79
+Validation Average Loss: 0.0034104118406772612
+Validation Accuracy: 0.8677
+Epoch: 80
+Validation Average Loss: 0.0038218382954597475
+Validation Accuracy: 0.8565
+Epoch: 81
+Validation Average Loss: 0.003359293304383755
+Validation Accuracy: 0.8688
+Epoch: 82
+Validation Average Loss: 0.00412359252423048
+Validation Accuracy: 0.8334
+Epoch: 83
+Validation Average Loss: 0.0032753450363874437
+Validation Accuracy: 0.873
+Epoch: 84
+Validation Average Loss: 0.003304172170162201
+Validation Accuracy: 0.8733
+Epoch: 85
+Validation Average Loss: 0.0035831660866737364
+Validation Accuracy: 0.8622
+Epoch: 86
+Validation Average Loss: 0.0033673333168029785
+Validation Accuracy: 0.8743
+Epoch: 87
+Validation Average Loss: 0.003928091080486774
+Validation Accuracy: 0.845
+Epoch: 88
+Validation Average Loss: 0.004668917095661164
+Validation Accuracy: 0.8138
+Epoch: 89
+Validation Average Loss: 0.0035650068253278732
+Validation Accuracy: 0.8611
+Epoch: 90
+Validation Average Loss: 0.004918099582195282
+Validation Accuracy: 0.8142
+Epoch: 91
+Validation Average Loss: 0.003567059341073036
+Validation Accuracy: 0.8621
+Epoch: 92
+Validation Average Loss: 0.0031793086767196656
+Validation Accuracy: 0.8792
+Epoch: 93
+Validation Average Loss: 0.003710251605510712
+Validation Accuracy: 0.8583
+Epoch: 94
+Validation Average Loss: 0.003398677723109722
+Validation Accuracy: 0.8739
+Epoch: 95
+Validation Average Loss: 0.0032141224443912506
+Validation Accuracy: 0.873
+Epoch: 96
+Validation Average Loss: 0.0032093639343976975
+Validation Accuracy: 0.8734
+Epoch: 97
+Validation Average Loss: 0.003363266685605049
+Validation Accuracy: 0.8712
+Epoch: 98
+Validation Average Loss: 0.003394709675014019
+Validation Accuracy: 0.866
+Epoch: 99
+Validation Average Loss: 0.0035164755895733834
+Validation Accuracy: 0.867
+Epoch: 100
+Validation Average Loss: 0.003353808590769768
+Validation Accuracy: 0.8753
+##############################################
+Number_of_parameters: 44426
+type: LeNet
+intrinsic_dim: 180
+Epoch: 1
+Validation Average Loss: 0.01802855236530304
+Validation Accuracy: 0.3844
+Epoch: 2
+Validation Average Loss: 0.00484912106692791
+Validation Accuracy: 0.8064
+Epoch: 3
+Validation Average Loss: 0.0038699910908937454
+Validation Accuracy: 0.8435
+Epoch: 4
+Validation Average Loss: 0.0034036689817905424
+Validation Accuracy: 0.8635
+Epoch: 5
+Validation Average Loss: 0.0031705873996019365
+Validation Accuracy: 0.8758
+Epoch: 6
+Validation Average Loss: 0.002937713158130646
+Validation Accuracy: 0.8822
+Epoch: 7
+Validation Average Loss: 0.003755240420997143
+Validation Accuracy: 0.853
+Epoch: 8
+Validation Average Loss: 0.0031875294923782347
+Validation Accuracy: 0.8759
+Epoch: 9
+Validation Average Loss: 0.003351670664548874
+Validation Accuracy: 0.8674
+Epoch: 10
+Validation Average Loss: 0.003121080259978771
+Validation Accuracy: 0.8791
+Epoch: 11
+Validation Average Loss: 0.003278231756389141
+Validation Accuracy: 0.8703
+Epoch: 12
+Validation Average Loss: 0.0029023662492632866
+Validation Accuracy: 0.8836
+Epoch: 13
+Validation Average Loss: 0.0028537257611751556
+Validation Accuracy: 0.8873
+Epoch: 14
+Validation Average Loss: 0.0034943189829587935
+Validation Accuracy: 0.8623
+Epoch: 15
+Validation Average Loss: 0.0029230391286313535
+Validation Accuracy: 0.8836
+Epoch: 16
+Validation Average Loss: 0.0028446822974830866
+Validation Accuracy: 0.8866
+Epoch: 17
+Validation Average Loss: 0.0035841016799211503
+Validation Accuracy: 0.8559
+Epoch: 18
+Validation Average Loss: 0.0030974107444286347
+Validation Accuracy: 0.8755
+Epoch: 19
+Validation Average Loss: 0.00449974736571312
+Validation Accuracy: 0.8246
+Epoch: 20
+Validation Average Loss: 0.003249197408556938
+Validation Accuracy: 0.8707
+Epoch: 21
+Validation Average Loss: 0.0032565469652414323
+Validation Accuracy: 0.8672
+Epoch: 22
+Validation Average Loss: 0.0036921382427215575
+Validation Accuracy: 0.8555
+Epoch: 23
+Validation Average Loss: 0.002969413311779499
+Validation Accuracy: 0.8814
+Epoch: 24
+Validation Average Loss: 0.003115771579742432
+Validation Accuracy: 0.8732
+Epoch: 25
+Validation Average Loss: 0.003515989837050438
+Validation Accuracy: 0.8598
+Epoch: 26
+Validation Average Loss: 0.0033691162690520286
+Validation Accuracy: 0.8669
+Epoch: 27
+Validation Average Loss: 0.0032344876006245612
+Validation Accuracy: 0.8679
+Epoch: 28
+Validation Average Loss: 0.002931753247976303
+Validation Accuracy: 0.8846
+Epoch: 29
+Validation Average Loss: 0.0033619953110814093
+Validation Accuracy: 0.863
+Epoch: 30
+Validation Average Loss: 0.003122048571705818
+Validation Accuracy: 0.8778
+Epoch: 31
+Validation Average Loss: 0.003971356463432312
+Validation Accuracy: 0.8383
+Epoch: 32
+Validation Average Loss: 0.003534677456319332
+Validation Accuracy: 0.8612
+Epoch: 33
+Validation Average Loss: 0.0032052625194191934
+Validation Accuracy: 0.8729
+Epoch: 34
+Validation Average Loss: 0.002916095262765884
+Validation Accuracy: 0.8851
+Epoch: 35
+Validation Average Loss: 0.0030779255509376527
+Validation Accuracy: 0.8774
+Epoch: 36
+Validation Average Loss: 0.003021562257409096
+Validation Accuracy: 0.8825
+Epoch: 37
+Validation Average Loss: 0.0030052132442593576
+Validation Accuracy: 0.8836
+Epoch: 38
+Validation Average Loss: 0.0030393888488411906
+Validation Accuracy: 0.878
+Epoch: 39
+Validation Average Loss: 0.002800791227817535
+Validation Accuracy: 0.8898
+Epoch: 40
+Validation Average Loss: 0.003811921435594559
+Validation Accuracy: 0.846
+Epoch: 41
+Validation Average Loss: 0.0029460983261466026
+Validation Accuracy: 0.8811
+Epoch: 42
+Validation Average Loss: 0.0029046974197030066
+Validation Accuracy: 0.886
+Epoch: 43
+Validation Average Loss: 0.0028825014997273684
+Validation Accuracy: 0.8838
+Epoch: 44
+Validation Average Loss: 0.003964683455228805
+Validation Accuracy: 0.8397
+Epoch: 45
+Validation Average Loss: 0.003076839615404606
+Validation Accuracy: 0.8809
+Epoch: 46
+Validation Average Loss: 0.0032234023481607435
+Validation Accuracy: 0.8749
+Epoch: 47
+Validation Average Loss: 0.00305917562097311
+Validation Accuracy: 0.8771
+Epoch: 48
+Validation Average Loss: 0.002897757874429226
+Validation Accuracy: 0.8836
+Epoch: 49
+Validation Average Loss: 0.002916913762688637
+Validation Accuracy: 0.8889
+Epoch: 50
+Validation Average Loss: 0.0037248454838991166
+Validation Accuracy: 0.8517
+Epoch: 51
+Validation Average Loss: 0.003922072649002076
+Validation Accuracy: 0.8456
+Epoch: 52
+Validation Average Loss: 0.0030091363027691842
+Validation Accuracy: 0.8782
+Epoch: 53
+Validation Average Loss: 0.0030307619288563728
+Validation Accuracy: 0.8807
+Epoch: 54
+Validation Average Loss: 0.003478326725959778
+Validation Accuracy: 0.8656
+Epoch: 55
+Validation Average Loss: 0.00377119981944561
+Validation Accuracy: 0.8471
+Epoch: 56
+Validation Average Loss: 0.0030267987579107283
+Validation Accuracy: 0.8771
+Epoch: 57
+Validation Average Loss: 0.0030101102843880655
+Validation Accuracy: 0.8792
+Epoch: 58
+Validation Average Loss: 0.003171200053393841
+Validation Accuracy: 0.8755
+Epoch: 59
+Validation Average Loss: 0.0029276891514658926
+Validation Accuracy: 0.8821
+Epoch: 60
+Validation Average Loss: 0.004081589698791504
+Validation Accuracy: 0.8356
+Epoch: 61
+Validation Average Loss: 0.0030275049477815627
+Validation Accuracy: 0.8792
+Epoch: 62
+Validation Average Loss: 0.003120565439760685
+Validation Accuracy: 0.8775
+Epoch: 63
+Validation Average Loss: 0.003110239212214947
+Validation Accuracy: 0.8747
+Epoch: 64
+Validation Average Loss: 0.003179786330461502
+Validation Accuracy: 0.8746
+Epoch: 65
+Validation Average Loss: 0.0028121548742055893
+Validation Accuracy: 0.8891
+Epoch: 66
+Validation Average Loss: 0.0035554688572883605
+Validation Accuracy: 0.853
+Epoch: 67
+Validation Average Loss: 0.004247861102223396
+Validation Accuracy: 0.8286
+Epoch: 68
+Validation Average Loss: 0.002853917707502842
+Validation Accuracy: 0.8915
+Epoch: 69
+Validation Average Loss: 0.002831567580997944
+Validation Accuracy: 0.8878
+Epoch: 70
+Validation Average Loss: 0.0032278114214539526
+Validation Accuracy: 0.8775
+Epoch: 71
+Validation Average Loss: 0.0030804810747504232
+Validation Accuracy: 0.8797
+Epoch: 72
+Validation Average Loss: 0.00307441029548645
+Validation Accuracy: 0.8744
+Epoch: 73
+Validation Average Loss: 0.002791491937637329
+Validation Accuracy: 0.8921
+Epoch: 74
+Validation Average Loss: 0.003084160162508488
+Validation Accuracy: 0.8817
+Epoch: 75
+Validation Average Loss: 0.0029415316969156266
+Validation Accuracy: 0.8827
+Epoch: 76
+Validation Average Loss: 0.0028629302069544792
+Validation Accuracy: 0.8871
+Epoch: 77
+Validation Average Loss: 0.003151413694024086
+Validation Accuracy: 0.8733
+Epoch: 78
+Validation Average Loss: 0.0032096774145960807
+Validation Accuracy: 0.8688
+Epoch: 79
+Validation Average Loss: 0.00285091657936573
+Validation Accuracy: 0.8931
+Epoch: 80
+Validation Average Loss: 0.002840416869521141
+Validation Accuracy: 0.8907
+Epoch: 81
+Validation Average Loss: 0.0031841941848397256
+Validation Accuracy: 0.8755
+Epoch: 82
+Validation Average Loss: 0.002922988073527813
+Validation Accuracy: 0.8834
+Epoch: 83
+Validation Average Loss: 0.002990541818737984
+Validation Accuracy: 0.8822
+Epoch: 84
+Validation Average Loss: 0.0029625233106315135
+Validation Accuracy: 0.8853
+Epoch: 85
+Validation Average Loss: 0.003209330826997757
+Validation Accuracy: 0.8693
+Epoch: 86
+Validation Average Loss: 0.003037043034285307
+Validation Accuracy: 0.8828
+Epoch: 87
+Validation Average Loss: 0.0029844075530767442
+Validation Accuracy: 0.8843
+Epoch: 88
+Validation Average Loss: 0.0035004146337509153
+Validation Accuracy: 0.8563
+Epoch: 89
+Validation Average Loss: 0.0030616716518998147
+Validation Accuracy: 0.8804
+Epoch: 90
+Validation Average Loss: 0.0032093803733587267
+Validation Accuracy: 0.8741
+Epoch: 91
+Validation Average Loss: 0.003753357742726803
+Validation Accuracy: 0.8457
+Epoch: 92
+Validation Average Loss: 0.0031171279720962047
+Validation Accuracy: 0.8792
+Epoch: 93
+Validation Average Loss: 0.0029435618743300436
+Validation Accuracy: 0.8816
+Epoch: 94
+Validation Average Loss: 0.0032151780784130096
+Validation Accuracy: 0.8683
+Epoch: 95
+Validation Average Loss: 0.002952902676165104
+Validation Accuracy: 0.8834
+Epoch: 96
+Validation Average Loss: 0.0036120853811502456
+Validation Accuracy: 0.8593
+Epoch: 97
+Validation Average Loss: 0.0030398889869451525
+Validation Accuracy: 0.8826
+Epoch: 98
+Validation Average Loss: 0.0041349286235868934
+Validation Accuracy: 0.8368
+Epoch: 99
+Validation Average Loss: 0.0029367156207561495
+Validation Accuracy: 0.8832
+Epoch: 100
+Validation Average Loss: 0.003435966156423092
+Validation Accuracy: 0.8682

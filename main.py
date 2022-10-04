@@ -72,7 +72,12 @@ if __name__ == "__main__":
     
     if args.intrinsic_dim > 0:
         # project the model on the subspace of dimension equal to intrinsic dimension
-        model_intrinsic = DenseWrap(model, args.intrinsic_dim, device)
+        if args.projection == "dense":
+            model_intrinsic = DenseWrap(model, args.intrinsic_dim, device)
+        elif args.projection == "fastfood":
+            model_intrinsic = FastfoodWrapper(model, args.intrinsic_dim, device)
+        else:
+            raise Exception("Name of projection not in: [dense, fastfood]")
     else:
         model_intrinsic = model
 
@@ -135,7 +140,7 @@ if __name__ == "__main__":
     with open(json_file, "w") as f:
         if args.architecture == "fcn":
             j[
-                f"{args.architecture}_model_h{args.hidden_dim}_id{args.intrinsic_dim}_lay{args.num_layers}"
+                f"{args.architecture}_model_h{args.hidden_dim}_id{args.intrinsic_dim}_lay{args.num_layers}_lr{args.learning_rate}"
             ] = {
                 "number_parameter": num_params,
                 "hidden_dimension": args.hidden_dim,

@@ -1,4 +1,4 @@
-$dims = 185,190,195,205,210
+$dims = 180,170,165,160,150
 foreach ($dim in $dims)
 {
     Write-Host training network with intrinsic dimension: $dim ...

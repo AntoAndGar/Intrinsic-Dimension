@@ -101,5 +101,12 @@ def get_input_args():
         help="a string for the file to save the training results",
         default="results.txt",
     )
+    parser.add_argument(
+        "-p",
+        "--projection",
+        type=str,
+        help="a string for the projection method, can be in [dense, fastfood]",
+        default="dense",
+    )
 
     return parser.parse_args()

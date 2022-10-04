@@ -67,7 +67,7 @@ def test(model, test_loader, epoch, device):
             output = model(data)
             test_loss += F.cross_entropy(output, target).item()  # sum up batch loss
             # get the index of the max probability
-            pred = output.max(1, keepdim=True)[1]
+            pred = output.max(1, keepdim=True)[1] # equal to argmax
             correct += pred.eq(target.view_as(pred)).cpu().sum().item()
             tqdm_iterator.set_description(
                 f"Test Epoch: {epoch} [{batch_idx * len(data)}/{len_ts_dl_ds} \tLoss: {test_loss:.6f}, Accuracy: {correct}/{len_ts_dl_ds} ({100.0 * correct / len_ts_dl_ds}%)"

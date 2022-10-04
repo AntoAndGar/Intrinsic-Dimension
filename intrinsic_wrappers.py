@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
+# most of the code is from https://github.com/jgamper/intrinsic-dimensionality
 
 class DenseWrap(nn.Module):
     def __init__(self, module, intrinsic_dimension, device):
