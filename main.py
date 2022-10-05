@@ -31,27 +31,18 @@ if __name__ == "__main__":
 
     args = get_input_args()
 
-    # load the dataset
-    train_dataset, test_dataset = build_dataset(
+    # load the dataset and all the cooresponding parameters
+    (
+        train_dataset,
+        test_dataset,
+        CHANNEL_IN,
+        INPUT_DIM,
+        OUTPUT_DIM,
+        VAL_GLOBAL_ACCURACY,
+    ) = build_dataset(
         dataset_name=args.dataset.upper(),
         img_transform=transforms.Compose([transforms.ToTensor()]),
     )
-
-    # set information on the dataset
-    if args.dataset == "mnist":
-        # MNIST dataset
-        CHANNEL_IN = 1
-        INPUT_DIM = 28 * 28 * CHANNEL_IN
-        OUTPUT_DIM = 10
-        VAL_GLOBAL_ACCURACY = 0.90
-    elif args.dataset == "cifar10":
-        # CIFAR10 dataset
-        CHANNEL_IN = 3
-        INPUT_DIM = 32 * 32 * CHANNEL_IN
-        OUTPUT_DIM = 10
-        VAL_GLOBAL_ACCURACY = 0.46
-    else:
-        raise Exception("Name of dataset not in: [MNIST, CIFAR10]")
 
     # Create the file for logging training result, if it does not exist
     if not os.path.exists(args.training_result_file):
@@ -69,16 +60,21 @@ if __name__ == "__main__":
         args.dataset,
         device,
     )
-    
+
+    # it is a little bit ugly but 0 hidden dimension means that we do not want to use the intrinsic dimension method to train our network and we use a normal training
     if args.intrinsic_dim > 0:
         # project the model on the subspace of dimension equal to intrinsic dimension
         if args.projection == "dense":
+            # dense projection
             model_intrinsic = DenseWrap(model, args.intrinsic_dim, device)
         elif args.projection == "fastfood":
+            # fastfood projection
             model_intrinsic = FastfoodWrapper(model, args.intrinsic_dim, device)
+            # TODO: add the other projection methods like sparse and others
         else:
             raise Exception("Name of projection not in: [dense, fastfood]")
     else:
+        # standard training
         model_intrinsic = model
 
     count_params(model=model_intrinsic, msg="Number of intrinsic parameters: ")
@@ -101,7 +97,7 @@ if __name__ == "__main__":
         shuffle=True,
         num_workers=4,
         pin_memory=True,
-        persistent_workers=True, # on Winzoz system this is needed, if you don't want wait forever for the creation of he worker at each epoch 
+        persistent_workers=True,  # on Winzoz system this is needed, if you don't want wait forever for the creation of the workers at each epoch
     )
     test_dataloader = DataLoader(
         test_dataset,
@@ -109,7 +105,7 @@ if __name__ == "__main__":
         shuffle=True,
         num_workers=2,
         pin_memory=True,
-        persistent_workers=True, # on Winzoz system this is needed, if you don't want wait forever for the creation of he worker at each epoch 
+        persistent_workers=True,  # on Winzoz system this is needed, if you don't want wait forever for the creation of the workers at each epoch
     )
 
     model_intrinsic.to(device)
@@ -125,9 +121,8 @@ if __name__ == "__main__":
         VAL_GLOBAL_ACCURACY,
     )
 
-    result_path = (
-                    f"./{args.model_result_path}/{args.architecture}/"
-                )
+    # Create the path to save the results of training
+    result_path = f"./{args.model_result_path}/{args.architecture}/"
     if not os.path.exists(result_path):
         os.makedirs(result_path)
 
@@ -138,7 +133,7 @@ if __name__ == "__main__":
         f.write("{}")
         f.close()
 
-    # save the results
+    # save the results of training
     j = None
     with open(json_file, "r") as f:
         j = json.load(f)
@@ -146,7 +141,7 @@ if __name__ == "__main__":
     with open(json_file, "w") as f:
         if args.architecture == "fcn":
             j[
-                f"{args.architecture}_model_h{args.hidden_dim}_id{args.intrinsic_dim}_lay{args.num_layers}_lr{args.learning_rate}"
+                f"{args.architecture}_model_h{args.hidden_dim}_id{args.intrinsic_dim}_lay{args.num_layers}_lr{args.learning_rate}_proj_{args.projection}_opt{args.optimizer}"
             ] = {
                 "number_parameter": num_params,
                 "hidden_dimension": args.hidden_dim,
@@ -160,7 +155,7 @@ if __name__ == "__main__":
             }
         else:
             j[
-                f"{args.architecture}_model_id{args.intrinsic_dim}_lr{args.learning_rate}"
+                f"{args.architecture}_model_id{args.intrinsic_dim}_lr{args.learning_rate}_proj_{args.projection}_opt{args.optimizer}"
             ] = {
                 "number_parameter": num_params,
                 "intrinsic_dimension": args.intrinsic_dim,
