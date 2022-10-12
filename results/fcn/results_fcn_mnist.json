@@ -5608,5 +5608,71 @@
         "learning_rate": 0.001,
         "best_epoch": 99,
         "best_accuracy": 0.9151
+    },
+    "fcn_model_h200_id525_lay1_lr0.1_proj_dense_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 525,
+        "epoch": 100,
+        "validation_accuracy": 0.884,
+        "learning_rate": 0.1,
+        "best_epoch": 29,
+        "best_accuracy": 0.8862
+    },
+    "fcn_model_h200_id550_lay1_lr0.1_proj_dense_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 550,
+        "epoch": 100,
+        "validation_accuracy": 0.8736,
+        "learning_rate": 0.1,
+        "best_epoch": 40,
+        "best_accuracy": 0.889
+    },
+    "fcn_model_h200_id575_lay1_lr0.1_proj_dense_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 575,
+        "epoch": 100,
+        "validation_accuracy": 0.8181,
+        "learning_rate": 0.1,
+        "best_epoch": 56,
+        "best_accuracy": 0.8935
+    },
+    "fcn_model_h200_id0_lay1_lr0.1_proj_dense_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 0,
+        "epoch": 100,
+        "validation_accuracy": 0.9814,
+        "learning_rate": 0.1,
+        "best_epoch": 80,
+        "best_accuracy": 0.9817
+    },
+    "fcn_model_h200_id50_lay1_lr0.05_proj_dense_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 50,
+        "epoch": 100,
+        "validation_accuracy": 0.4695,
+        "learning_rate": 0.05,
+        "best_epoch": 29,
+        "best_accuracy": 0.4863
+    },
+    "fcn_model_h200_id10_lay1_lr0.01_proj_dense_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 10,
+        "epoch": 100,
+        "validation_accuracy": 0.2169,
+        "learning_rate": 0.01,
+        "best_epoch": 27,
+        "best_accuracy": 0.2289
     }
 }

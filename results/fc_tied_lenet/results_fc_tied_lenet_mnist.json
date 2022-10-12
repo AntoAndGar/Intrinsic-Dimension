@@ -1,5 +1,32 @@
 {
-    "fc_tied_lenet_model_id100_lr0.01": {
+    "fc_tied_lenet_model_id0_lr0.01_proj_dense_opt_sgd": {
+        "number_parameter": 193370,
+        "intrinsic_dimension": 0,
+        "epoch": 100,
+        "validation_accuracy": 0.9884,
+        "learning_rate": 0.01,
+        "best_epoch": 85,
+        "best_accuracy": 0.989
+    },
+    "fc_tied_lenet_model_id10_lr0.01_proj_dense_opt_sgd": {
+        "number_parameter": 193370,
+        "intrinsic_dimension": 10,
+        "epoch": 100,
+        "validation_accuracy": 0.188,
+        "learning_rate": 0.01,
+        "best_epoch": 31,
+        "best_accuracy": 0.2285
+    },
+    "fc_tied_lenet_model_id50_lr0.01_proj_dense_opt_sgd": {
+        "number_parameter": 193370,
+        "intrinsic_dimension": 50,
+        "epoch": 100,
+        "validation_accuracy": 0.4316,
+        "learning_rate": 0.01,
+        "best_epoch": 21,
+        "best_accuracy": 0.5198
+    },
+    "fc_tied_lenet_model_id100_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 100,
         "epoch": 100,
@@ -8,7 +35,7 @@
         "best_epoch": 84,
         "best_accuracy": 0.6856
     },
-    "fc_tied_lenet_model_id200_lr0.01": {
+    "fc_tied_lenet_model_id200_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 200,
         "epoch": 100,
@@ -17,7 +44,7 @@
         "best_epoch": 87,
         "best_accuracy": 0.8362
     },
-    "fc_tied_lenet_model_id300_lr0.01": {
+    "fc_tied_lenet_model_id300_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 300,
         "epoch": 100,
@@ -26,7 +53,7 @@
         "best_epoch": 51,
         "best_accuracy": 0.882
     },
-    "fc_tied_lenet_model_id400_lr0.01": {
+    "fc_tied_lenet_model_id400_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 400,
         "epoch": 100,
@@ -35,7 +62,7 @@
         "best_epoch": 68,
         "best_accuracy": 0.9036
     },
-    "fc_tied_lenet_model_id500_lr0.01": {
+    "fc_tied_lenet_model_id500_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 500,
         "epoch": 100,
@@ -44,7 +71,7 @@
         "best_epoch": 78,
         "best_accuracy": 0.9207
     },
-    "fc_tied_lenet_model_id600_lr0.01": {
+    "fc_tied_lenet_model_id600_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 600,
         "epoch": 100,
@@ -53,7 +80,7 @@
         "best_epoch": 64,
         "best_accuracy": 0.9348
     },
-    "fc_tied_lenet_model_id700_lr0.01": {
+    "fc_tied_lenet_model_id700_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 700,
         "epoch": 100,
@@ -62,7 +89,7 @@
         "best_epoch": 100,
         "best_accuracy": 0.9375
     },
-    "fc_tied_lenet_model_id800_lr0.01": {
+    "fc_tied_lenet_model_id800_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 800,
         "epoch": 100,
@@ -71,7 +98,7 @@
         "best_epoch": 92,
         "best_accuracy": 0.9456
     },
-    "fc_tied_lenet_model_id900_lr0.01": {
+    "fc_tied_lenet_model_id900_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 900,
         "epoch": 100,
@@ -80,7 +107,7 @@
         "best_epoch": 99,
         "best_accuracy": 0.9476
     },
-    "fc_tied_lenet_model_id1000_lr0.01": {
+    "fc_tied_lenet_model_id1000_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 1000,
         "epoch": 100,
@@ -89,7 +116,7 @@
         "best_epoch": 96,
         "best_accuracy": 0.9516
     },
-    "fc_tied_lenet_model_id1100_lr0.01": {
+    "fc_tied_lenet_model_id1100_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 1100,
         "epoch": 100,
@@ -98,7 +125,7 @@
         "best_epoch": 94,
         "best_accuracy": 0.9563
     },
-    "fc_tied_lenet_model_id1200_lr0.01": {
+    "fc_tied_lenet_model_id1200_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 1200,
         "epoch": 100,
@@ -107,7 +134,7 @@
         "best_epoch": 62,
         "best_accuracy": 0.9565
     },
-    "fc_tied_lenet_model_id1300_lr0.01": {
+    "fc_tied_lenet_model_id1300_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 1300,
         "epoch": 100,
@@ -116,7 +143,7 @@
         "best_epoch": 93,
         "best_accuracy": 0.9578
     },
-    "fc_tied_lenet_model_id1400_lr0.01": {
+    "fc_tied_lenet_model_id1400_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 193370,
         "intrinsic_dimension": 1400,
         "epoch": 100,

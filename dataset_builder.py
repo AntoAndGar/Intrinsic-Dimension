@@ -16,7 +16,8 @@ def build_dataset(dataset_name, img_transform):
         # set information on the dataset
         # MNIST dataset parameters
         CHANNEL_IN = 1
-        INPUT_DIM = 28 * 28 * CHANNEL_IN
+        INPUT_HEIGHT = 28
+        INPUT_WIDTH = 28
         OUTPUT_DIM = 10
         VAL_GLOBAL_ACCURACY = 0.90
     elif dataset_name == "CIFAR10":
@@ -30,7 +31,8 @@ def build_dataset(dataset_name, img_transform):
         # set information on the dataset
         # CIFAR10 dataset parameters
         CHANNEL_IN = 3
-        INPUT_DIM = 32 * 32 * CHANNEL_IN
+        INPUT_HEIGHT = 32
+        INPUT_WIDTH = 32
         OUTPUT_DIM = 10
         VAL_GLOBAL_ACCURACY = 0.46
     else:
@@ -40,7 +42,8 @@ def build_dataset(dataset_name, img_transform):
         train_dataset,
         test_dataset,
         CHANNEL_IN,
-        INPUT_DIM,
+        INPUT_HEIGHT,
+        INPUT_WIDTH,
         OUTPUT_DIM,
         VAL_GLOBAL_ACCURACY,
     )

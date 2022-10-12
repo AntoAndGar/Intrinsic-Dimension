@@ -18,11 +18,11 @@ def write_info(file, num_params, network_type, hidden_dim = None, num_layers = N
             f.write(f"\ntype: {net_ty_frmt}")
     f.close()
 
-def build_model(network_type, input_dim, hidden_dim, output_dim, num_layers, channel_in, result_file, dataset, device, verbose=True):
+def build_model(network_type, input_height, input_width, hidden_dim, output_dim, num_layers, channel_in, result_file, dataset, device, verbose=True):
     model = None
     num_params = 0
     if network_type == "fcn":
-        model = FullyConnectedNetwork(input_dim, hidden_dim, output_dim, num_layers)
+        model = FullyConnectedNetwork(input_height* input_width * channel_in, hidden_dim, output_dim, num_layers)
         num_params = count_params(model, verbose=verbose)
 
         #save information to file
@@ -34,19 +34,19 @@ def build_model(network_type, input_dim, hidden_dim, output_dim, num_layers, cha
         #save information to file
         write_info(result_file, num_params, network_type, net_ty_frmt="LeNet")
     elif network_type == "untied_lenet":
-        model = Untied_LeNet(channel_in, output_dim)
+        model = Untied_LeNet(channel_in, output_dim, input_height, input_width)
         num_params = count_params(model, verbose=verbose)
         
         #save information to file
         write_info(result_file, num_params, network_type, net_ty_frmt="Untied_LeNet")
     elif network_type == "fc_lenet":
-        model = FcLeNet(input_dim, output_dim)
+        model = FcLeNet(input_height* input_width * channel_in, output_dim, input_height, input_width)
         num_params = count_params(model, verbose=verbose)
 
         #save information to file
         write_info(result_file, num_params, network_type, net_ty_frmt="FcLeNet")
     elif network_type == "fc_tied_lenet":
-        model = FCTied_LeNet(channel_in, output_dim)
+        model = FCTied_LeNet(channel_in, output_dim, input_height, input_width)
         num_params = count_params(model, verbose=verbose)
 
         #save information to file

@@ -105,7 +105,7 @@ class LocallyConnected2d(nn.Module):
         self.stride = _pair(stride)
 
     def forward(self, x):
-        #_, c, h, w = x.size()
+        # _, c, h, w = x.size()
         kh, kw = self.kernel_size
         dh, dw = self.stride
         x = x.unfold(2, kh, dh).unfold(3, kw, dw)
@@ -117,8 +117,8 @@ class LocallyConnected2d(nn.Module):
         return out
 
 
-# Class for Untied LeNet Network
-class Untied_LeNet(nn.Module):
+# Class for Untied LeNet Network MNIST
+""" class Untied_LeNet(nn.Module):
     def __init__(self, input_dim, output_dim):
         super(Untied_LeNet, self).__init__()
         # 6 kernels 5x5, output size 24x24
@@ -151,10 +151,58 @@ class Untied_LeNet(nn.Module):
         # x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
         x = self.fc3(x)
+        return x """
+
+# Class for general Untied LeNet Network
+class Untied_LeNet(nn.Module):
+    def __init__(self, input_dim, output_dim, input_height, input_width):
+        super(Untied_LeNet, self).__init__()
+        # 6 kernels 5x5, output size 24x24 MNIST, output size 28x28 CIFAR10
+        self.kernel_size = 5
+        self.pool_kernel_size = 2
+        self.out_conv1 = (
+            input_height - (self.kernel_size - 1),
+            input_width - (self.kernel_size - 1),
+        )
+        self.conv1 = LocallyConnected2d(input_dim, 6, self.out_conv1, self.kernel_size)
+        # max-pooling over 2x2
+        self.pool1 = nn.MaxPool2d(self.pool_kernel_size, stride=2)
+        # 16 kernels 5x5 output size 8x8, output size 10x10 CIFAR10
+        self.out_conv2 = (
+            int(self.out_conv1[0] / self.pool_kernel_size) - (self.kernel_size - 1),
+            int(self.out_conv1[1] / self.pool_kernel_size) - (self.kernel_size - 1),
+        )
+        self.conv2 = LocallyConnected2d(6, 16, self.out_conv2, self.kernel_size)
+        # max-pooling over 2x2
+        self.pool2 = nn.MaxPool2d(self.pool_kernel_size, stride=2)
+        # 120 kernels 4x4 to match the dimensionality of the fully connected network and obtain an output size of 1x1 for MNIST and kernels 5x5 for CIFAR10
+        self.conv3 = LocallyConnected2d(
+            16, 120, (1, 1), int(self.out_conv2[0] / self.pool_kernel_size)
+        )
+        # 120 fully connected neurons, too many parameter in this case w.r.t. the paper
+        # self.fc1 = nn.Linear(16 * 5 * 5, 120,)
+        self.flat = nn.Flatten(start_dim=1)
+        # 84 fully connected neurons
+        self.fc2 = nn.Linear(120, 84)
+        # 10 fully connected neurons
+        self.fc3 = nn.Linear(
+            84,
+            output_dim,
+        )
+
+    def forward(self, x):
+        # x = x.view(-1, 1, 28, 28)
+        x = self.pool1(F.relu(self.conv1(x)))
+        x = self.pool2(F.relu(self.conv2(x)))
+        x = F.relu(self.conv3(x))
+        x = self.flat(x)
+        # x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
         return x
 
 
-# Class for FC-LeNet Network
+""" # Class for FC-LeNet Network for MNIST
 class FcLeNet(nn.Module):
     def __init__(self, input_dim, output_dim):
         super(FcLeNet, self).__init__()
@@ -189,14 +237,95 @@ class FcLeNet(nn.Module):
         # x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
         x = self.fc3(x)
+        return x """
+
+# Class for general FC-LeNet Network
+class FcLeNet(nn.Module):
+    def __init__(self, input_dim, output_dim, input_height, input_width):
+        super(FcLeNet, self).__init__()
+        #
+        self.input_height = input_height
+        self.input_width = input_width
+        self.kernel_size = 5
+        self.pool_kernel_size = 2
+        self.out_fcconv1 = (
+            input_height - (self.kernel_size - 1),
+            input_width - (self.kernel_size - 1),
+        )
+        self.fcconv1 = nn.Linear(
+            input_dim, 6 * self.out_fcconv1[0] * self.out_fcconv1[1]
+        )
+        # max-pooling over 2x2
+        self.pool1 = nn.MaxPool2d(self.pool_kernel_size, stride=2)
+        # 16 kernels 5x5
+        self.out_fcconv2 = (
+            int(self.out_fcconv1[0] / self.pool_kernel_size) - (self.kernel_size - 1),
+            int(self.out_fcconv1[1] / self.pool_kernel_size) - (self.kernel_size - 1),
+        )
+        self.fcconv2 = nn.Linear(
+            6
+            * int(self.out_fcconv1[0] / self.pool_kernel_size)
+            * int(self.out_fcconv1[1] / self.pool_kernel_size),
+            16 * self.out_fcconv2[0] * self.out_fcconv2[1],
+        )
+        # max-pooling over 2x2
+        self.pool2 = nn.MaxPool2d(self.pool_kernel_size, stride=2)
+        # 120 kernels 4x4 to match the dimensionality of the fully connected network
+        self.fcconv3 = nn.Linear(
+            16
+            * int(self.out_fcconv2[0] / self.pool_kernel_size)
+            * int(self.out_fcconv2[1] / self.pool_kernel_size),
+            120,
+        )
+        # 120 fully connected neurons, too many parameter in this case w.r.t. the paper
+        # self.fc1 = nn.Linear(16 * 5 * 5, 120,)
+        self.flat = nn.Flatten(start_dim=1)
+        # 84 fully connected neurons
+        self.fc2 = nn.Linear(120, 84)
+        # 10 fully connected neurons
+        self.fc3 = nn.Linear(
+            84,
+            output_dim,
+        )
+
+    def forward(self, x):
+        x = self.flat(x)
+        x = self.pool1(
+            F.relu(self.fcconv1(x)).view(
+                -1,
+                6,
+                self.input_height - (self.kernel_size - 1),
+                self.input_width - (self.kernel_size - 1),
+            )
+        )
+        x = self.flat(x)
+        x = self.pool2(
+            F.relu(self.fcconv2(x)).view(
+                -1,
+                16,
+                int(
+                    (self.input_height - (self.kernel_size - 1)) / self.pool_kernel_size
+                )
+                - (self.kernel_size - 1),
+                int(
+                    (self.input_width - (self.kernel_size - 1)) / self.pool_kernel_size
+                )
+                - (self.kernel_size - 1),
+            )
+        )
+        x = self.flat(x)
+        x = F.relu(self.fcconv3(x))
+        # x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
         return x
 
 
-# Class for FCTied-LeNet
+""" # Class for FCTied-LeNet for MNIST
 class FCTied_LeNet(nn.Module):
     def __init__(self, input_dim, output_dim):
         super(FCTied_LeNet, self).__init__()
-        # 6 kernels 5x5
+        # 6 kernels 55x55
         self.conv1 = nn.Conv2d(
             input_dim,
             6,
@@ -205,11 +334,11 @@ class FCTied_LeNet(nn.Module):
         )
         # max-pooling over 2x2
         self.pool1 = nn.MaxPool2d(2, stride=2)
-        # 16 kernels 5x5
+        # 16 kernels 27x27
         self.conv2 = nn.Conv2d(6, 16, 27, padding="same")
         # max-pooling over 2x2
         self.pool2 = nn.MaxPool2d(2, stride=2)
-        # 120 kernels 4x4 to match the dimensionality of the fully connected network
+        # 120 kernels 7x7 to match the dimensionality of the fully connected network
         self.conv3 = nn.Conv2d(
             16,
             120,
@@ -227,7 +356,52 @@ class FCTied_LeNet(nn.Module):
         )
 
     def forward(self, x):
-        #x = x.view(-1, 1, 28, 28)
+        # x = x.view(-1, 1, 28, 28)
+        x = self.pool1(F.relu(self.conv1(x)))
+        x = self.pool2(F.relu(self.conv2(x)))
+        x = F.relu(self.conv3(x))
+        x = self.flat(x)
+        # x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
+        return x """
+
+# Class for general FCTied-LeNet
+class FCTied_LeNet(nn.Module):
+    def __init__(self, input_dim, output_dim, input_height, input_width):
+        super(FCTied_LeNet, self).__init__()
+        # 6 kernels (2*H-1)x(2*H-1)
+        self.conv1 = nn.Conv2d(
+            input_dim,
+            6,
+            2 * input_height - 1,
+            padding="same",
+        )
+        # max-pooling over 2x2
+        self.pool1 = nn.MaxPool2d(2, stride=2)
+        # 16 kernels (H-1)x(H-1)
+        self.conv2 = nn.Conv2d(6, 16, input_height - 1, padding="same")
+        # max-pooling over 2x2
+        self.pool2 = nn.MaxPool2d(2, stride=2)
+        # 120 kernels 7x7 to match the dimensionality of the fully connected network
+        self.conv3 = nn.Conv2d(
+            16,
+            120,
+            int(input_height/4),  # this may work only for mnist and cifar10
+        )
+        # 120 fully connected neurons, too many parameter in this case w.r.t. the paper
+        # self.fc1 = nn.Linear(16 * 5 * 5, 120,)
+        self.flat = nn.Flatten(start_dim=1)
+        # 84 fully connected neurons
+        self.fc2 = nn.Linear(120, 84)
+        # 10 fully connected neurons
+        self.fc3 = nn.Linear(
+            84,
+            output_dim,
+        )
+
+    def forward(self, x):
+        # x = x.view(-1, 1, 28, 28)
         x = self.pool1(F.relu(self.conv1(x)))
         x = self.pool2(F.relu(self.conv2(x)))
         x = F.relu(self.conv3(x))

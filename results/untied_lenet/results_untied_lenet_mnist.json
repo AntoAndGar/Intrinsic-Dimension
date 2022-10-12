@@ -1,5 +1,5 @@
 {
-    "untied_lenet_model_id100_lr0.01": {
+    "untied_lenet_model_id100_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 100,
         "epoch": 100,
@@ -8,7 +8,7 @@
         "best_epoch": 69,
         "best_accuracy": 0.7273
     },
-    "untied_lenet_model_id200_lr0.01": {
+    "untied_lenet_model_id200_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 200,
         "epoch": 100,
@@ -17,7 +17,7 @@
         "best_epoch": 71,
         "best_accuracy": 0.8412
     },
-    "untied_lenet_model_id300_lr0.01": {
+    "untied_lenet_model_id300_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 300,
         "epoch": 100,
@@ -26,7 +26,7 @@
         "best_epoch": 100,
         "best_accuracy": 0.8769
     },
-    "untied_lenet_model_id400_lr0.01": {
+    "untied_lenet_model_id400_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 400,
         "epoch": 100,
@@ -35,7 +35,7 @@
         "best_epoch": 93,
         "best_accuracy": 0.9077
     },
-    "untied_lenet_model_id500_lr0.01": {
+    "untied_lenet_model_id500_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 500,
         "epoch": 100,
@@ -44,7 +44,7 @@
         "best_epoch": 93,
         "best_accuracy": 0.916
     },
-    "untied_lenet_model_id600_lr0.01": {
+    "untied_lenet_model_id600_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 600,
         "epoch": 100,
@@ -53,7 +53,7 @@
         "best_epoch": 92,
         "best_accuracy": 0.9303
     },
-    "untied_lenet_model_id700_lr0.01": {
+    "untied_lenet_model_id700_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 700,
         "epoch": 100,
@@ -62,7 +62,7 @@
         "best_epoch": 98,
         "best_accuracy": 0.9376
     },
-    "untied_lenet_model_id800_lr0.01": {
+    "untied_lenet_model_id800_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 800,
         "epoch": 100,
@@ -71,7 +71,7 @@
         "best_epoch": 89,
         "best_accuracy": 0.9387
     },
-    "untied_lenet_model_id900_lr0.01": {
+    "untied_lenet_model_id900_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 900,
         "epoch": 100,
@@ -80,7 +80,7 @@
         "best_epoch": 90,
         "best_accuracy": 0.9431
     },
-    "untied_lenet_model_id1000_lr0.01": {
+    "untied_lenet_model_id1000_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 1000,
         "epoch": 100,
@@ -89,7 +89,7 @@
         "best_epoch": 93,
         "best_accuracy": 0.9463
     },
-    "untied_lenet_model_id1100_lr0.01": {
+    "untied_lenet_model_id1100_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 1100,
         "epoch": 100,
@@ -98,7 +98,7 @@
         "best_epoch": 96,
         "best_accuracy": 0.9524
     },
-    "untied_lenet_model_id1200_lr0.01": {
+    "untied_lenet_model_id1200_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 1200,
         "epoch": 100,
@@ -107,7 +107,7 @@
         "best_epoch": 94,
         "best_accuracy": 0.9498
     },
-    "untied_lenet_model_id1300_lr0.01": {
+    "untied_lenet_model_id1300_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 1300,
         "epoch": 100,
@@ -125,7 +125,7 @@
         "best_epoch": 55,
         "best_accuracy": 0.9868
     },
-    "untied_lenet_model_id50_lr0.01": {
+    "untied_lenet_model_id50_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 50,
         "epoch": 100,
@@ -134,7 +134,7 @@
         "best_epoch": 99,
         "best_accuracy": 0.527
     },
-    "untied_lenet_model_id10_lr0.01": {
+    "untied_lenet_model_id10_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 286334,
         "intrinsic_dimension": 10,
         "epoch": 100,
@@ -142,5 +142,23 @@
         "learning_rate": 0.01,
         "best_epoch": 78,
         "best_accuracy": 0.1758
+    },
+    "untied_lenet_model_id350_lr0.01_proj_dense_opt_sgd": {
+        "number_parameter": 286334,
+        "intrinsic_dimension": 350,
+        "epoch": 100,
+        "validation_accuracy": 0.8954,
+        "learning_rate": 0.01,
+        "best_epoch": 94,
+        "best_accuracy": 0.9003
+    },
+    "untied_lenet_model_id450_lr0.01_proj_dense_opt_sgd": {
+        "number_parameter": 286334,
+        "intrinsic_dimension": 450,
+        "epoch": 100,
+        "validation_accuracy": 0.9022,
+        "learning_rate": 0.01,
+        "best_epoch": 89,
+        "best_accuracy": 0.9142
     }
 }

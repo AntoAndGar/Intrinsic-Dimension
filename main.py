@@ -1,14 +1,12 @@
 import torch
 import torch.optim as optim
 from torchvision import transforms
-import numpy as np
 from torch.utils.data import DataLoader
 import json
 import os
 
 from train import fit
 from intrinsic_wrappers import *
-from networks_arch import *
 from utils import get_input_args
 from model_builder import *
 from dataset_builder import build_dataset
@@ -36,7 +34,8 @@ if __name__ == "__main__":
         train_dataset,
         test_dataset,
         CHANNEL_IN,
-        INPUT_DIM,
+        INPUT_HEIGHT,
+        INPUT_WIDTH,
         OUTPUT_DIM,
         VAL_GLOBAL_ACCURACY,
     ) = build_dataset(
@@ -51,17 +50,18 @@ if __name__ == "__main__":
     # load the model
     model, num_params = build_model(
         args.architecture,
-        INPUT_DIM,
+        INPUT_HEIGHT,
+        INPUT_WIDTH,
         args.hidden_dim,
         OUTPUT_DIM,
         args.num_layers,
         CHANNEL_IN,
         args.training_result_file,
         args.dataset,
-        device,
+        device, # the function already push the model to specific device!
     )
 
-    # it is a little bit ugly but 0 hidden dimension means that we do not want to use the intrinsic dimension method to train our network and we use a normal training
+    # it is a little bit ugly: 0 hidden dimension means that we do not want to use the intrinsic dimension method to train our network and we use a normal training
     if args.intrinsic_dim > 0:
         # project the model on the subspace of dimension equal to intrinsic dimension
         if args.projection == "dense":
@@ -81,6 +81,8 @@ if __name__ == "__main__":
     with open(args.training_result_file, "a") as f:
         f.write(f"\nintrinsic_dim: {args.intrinsic_dim}")
     f.close()
+
+    model_intrinsic.to(device)
 
     # load the optimizer
     if args.optimizer == "sgd":
@@ -107,8 +109,6 @@ if __name__ == "__main__":
         pin_memory=True,
         persistent_workers=True,  # on Winzoz system this is needed, if you don't want wait forever for the creation of the workers at each epoch
     )
-
-    model_intrinsic.to(device)
 
     # train the model
     epoch, best_epoch, accuracy, best_acc = fit(
@@ -141,7 +141,7 @@ if __name__ == "__main__":
     with open(json_file, "w") as f:
         if args.architecture == "fcn":
             j[
-                f"{args.architecture}_model_h{args.hidden_dim}_id{args.intrinsic_dim}_lay{args.num_layers}_lr{args.learning_rate}_proj_{args.projection}_opt{args.optimizer}"
+                f"{args.architecture}_model_h{args.hidden_dim}_id{args.intrinsic_dim}_lay{args.num_layers}_lr{args.learning_rate}_proj_{args.projection}_opt_{args.optimizer}"
             ] = {
                 "number_parameter": num_params,
                 "hidden_dimension": args.hidden_dim,
@@ -155,7 +155,7 @@ if __name__ == "__main__":
             }
         else:
             j[
-                f"{args.architecture}_model_id{args.intrinsic_dim}_lr{args.learning_rate}_proj_{args.projection}_opt{args.optimizer}"
+                f"{args.architecture}_model_id{args.intrinsic_dim}_lr{args.learning_rate}_proj_{args.projection}_opt_{args.optimizer}"
             ] = {
                 "number_parameter": num_params,
                 "intrinsic_dimension": args.intrinsic_dim,

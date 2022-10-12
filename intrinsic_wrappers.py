@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
-# most of the code is from https://github.com/jgamper/intrinsic-dimensionality
+# the code is from https://github.com/jgamper/intrinsic-dimensionality with minor fixes
 
 class DenseWrap(nn.Module):
     def __init__(self, module, intrinsic_dimension, device):
@@ -106,6 +106,7 @@ def fastfood_vars(DD, device=0):
         .normal_()
         .to(device)
     )
+    GG.to(device)
     GG.requires_grad = False
 
     divisor = torch.sqrt(LL * torch.sum(torch.pow(GG, 2)))
@@ -222,9 +223,9 @@ class FastfoodWrapper(nn.Module):
 
         # Parameter vector that is updated
         # Initialised with zeros as per text: \theta^{d}
-        V = nn.Parameter(torch.zeros((intrinsic_dimension)).to(device))
+        V = nn.Parameter(torch.zeros((intrinsic_dimension), device = device))#.to(device))
         self.register_parameter("V", V)
-        v_size = (intrinsic_dimension,)
+        V.to(device)
 
         # Iterate over layers in the module
         for name, param in module.named_parameters():

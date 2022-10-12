@@ -1,0 +1,83 @@
+{
+    "fc_lenet_model_id0_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 0,
+        "epoch": 100,
+        "validation_accuracy": 0.5097,
+        "learning_rate": 0.1,
+        "best_epoch": 91,
+        "best_accuracy": 0.5516
+    },
+    "fc_lenet_model_id5000_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 5000,
+        "epoch": 100,
+        "validation_accuracy": 0.4427,
+        "learning_rate": 0.1,
+        "best_epoch": 63,
+        "best_accuracy": 0.4513
+    },
+    "fc_lenet_model_id10_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 10,
+        "epoch": 100,
+        "validation_accuracy": 0.1129,
+        "learning_rate": 0.1,
+        "best_epoch": 55,
+        "best_accuracy": 0.1165
+    },
+    "fc_lenet_model_id500_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 500,
+        "epoch": 100,
+        "validation_accuracy": 0.3316,
+        "learning_rate": 0.1,
+        "best_epoch": 87,
+        "best_accuracy": 0.3628
+    },
+    "fc_lenet_model_id1000_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 1000,
+        "epoch": 100,
+        "validation_accuracy": 0.3853,
+        "learning_rate": 0.1,
+        "best_epoch": 78,
+        "best_accuracy": 0.3966
+    },
+    "fc_lenet_model_id2000_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 2000,
+        "epoch": 100,
+        "validation_accuracy": 0.4101,
+        "learning_rate": 0.1,
+        "best_epoch": 63,
+        "best_accuracy": 0.4221
+    },
+    "fc_lenet_model_id30000_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 30000,
+        "epoch": 100,
+        "validation_accuracy": 0.4622,
+        "learning_rate": 0.1,
+        "best_epoch": 62,
+        "best_accuracy": 0.5024
+    },
+    "fc_lenet_model_id15000_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 15000,
+        "epoch": 100,
+        "validation_accuracy": 0.4648,
+        "learning_rate": 0.1,
+        "best_epoch": 78,
+        "best_accuracy": 0.4891
+    },
+    "fc_lenet_model_id27000_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 27000,
+        "epoch": 100,
+        "validation_accuracy": 0.4796,
+        "learning_rate": 0.1,
+        "best_epoch": 49,
+        "best_accuracy": 0.5005
+    }
+}

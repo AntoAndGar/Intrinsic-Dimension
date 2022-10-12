@@ -126,12 +126,12 @@ def fit(
                 if args.architecture == "fcn":
                     torch.save(
                         model_intrinsic.state_dict(),
-                        f"{saving_path}{args.architecture}_h{args.hidden_dim}_id{args.intrinsic_dim}_lay{args.num_layers}.pt",
+                        f"{saving_path}{args.architecture}_h{args.hidden_dim}_id{args.intrinsic_dim}_lay{args.num_layers}_lr{args.learning_rate}_proj_{args.projection}_opt_{args.optimizer}.pt",
                     )
                 else:
                     torch.save(
                         model_intrinsic.state_dict(),
-                        f"{saving_path}{args.architecture}_{args.dataset.lower()}_id{args.intrinsic_dim}_lr{args.learning_rate}.pt",
+                        f"{saving_path}{args.architecture}_id{args.intrinsic_dim}_lr{args.learning_rate}_proj_{args.projection}_opt_{args.optimizer}.pt",
                     )
 
     return epoch, best_epoch, accuracy, best_acc
