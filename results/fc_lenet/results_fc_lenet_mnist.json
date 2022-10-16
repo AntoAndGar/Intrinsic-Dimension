@@ -115,5 +115,23 @@
         "learning_rate": 0.01,
         "best_epoch": 99,
         "best_accuracy": 0.9159
+    },
+    "fc_lenet_model_id50_lr0.01_proj_fastfood_opt_sgd": {
+        "number_parameter": 3640574,
+        "intrinsic_dimension": 50,
+        "epoch": 100,
+        "validation_accuracy": 0.1135,
+        "learning_rate": 0.01,
+        "best_epoch": 1,
+        "best_accuracy": 0.1135
+    },
+    "fc_lenet_model_id100_lr0.01_proj_fastfood_opt_sgd": {
+        "number_parameter": 3640574,
+        "intrinsic_dimension": 100,
+        "epoch": 100,
+        "validation_accuracy": 0.1649,
+        "learning_rate": 0.01,
+        "best_epoch": 98,
+        "best_accuracy": 0.1823
     }
 }

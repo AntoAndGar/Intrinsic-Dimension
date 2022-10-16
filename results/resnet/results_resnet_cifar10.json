@@ -1,0 +1,74 @@
+{
+    "resnet_model_id100_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 100,
+        "epoch": 100,
+        "validation_accuracy": 0.3109,
+        "learning_rate": 0.1,
+        "best_epoch": 42,
+        "best_accuracy": 0.3198
+    },
+    "resnet_model_id1000_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 1000,
+        "epoch": 100,
+        "validation_accuracy": 0.5305,
+        "learning_rate": 0.1,
+        "best_epoch": 93,
+        "best_accuracy": 0.5571
+    },
+    "resnet_model_id0_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 0,
+        "epoch": 100,
+        "validation_accuracy": 0.8213,
+        "learning_rate": 0.1,
+        "best_epoch": 54,
+        "best_accuracy": 0.825
+    },
+    "resnet_model_id10_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 10,
+        "epoch": 100,
+        "validation_accuracy": 0.1502,
+        "learning_rate": 0.1,
+        "best_epoch": 48,
+        "best_accuracy": 0.1609
+    },
+    "resnet_model_id10000_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 10000,
+        "epoch": 100,
+        "validation_accuracy": 0.721,
+        "learning_rate": 0.1,
+        "best_epoch": 51,
+        "best_accuracy": 0.7361
+    },
+    "resnet_model_id0_lr0.1_proj_dense_opt_sgd": {
+        "number_parameter": 11689512,
+        "intrinsic_dimension": 0,
+        "epoch": 100,
+        "validation_accuracy": 0.7533,
+        "learning_rate": 0.1,
+        "best_epoch": 98,
+        "best_accuracy": 0.7564
+    },
+    "resnet_model_id100_lr0.1_proj_dense_opt_sgd": {
+        "number_parameter": 11689512,
+        "intrinsic_dimension": 100,
+        "epoch": 100,
+        "validation_accuracy": 0.0082,
+        "learning_rate": 0.1,
+        "best_epoch": 10,
+        "best_accuracy": 0.0592
+    },
+    "resnet_model_id0_lr0.01_proj_fastfood_opt_sgd": {
+        "number_parameter": 11689512,
+        "intrinsic_dimension": 0,
+        "epoch": 100,
+        "validation_accuracy": 0.6553,
+        "learning_rate": 0.01,
+        "best_epoch": 72,
+        "best_accuracy": 0.6567
+    }
+}

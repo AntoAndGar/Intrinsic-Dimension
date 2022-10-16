@@ -1,13 +1,4 @@
 {
-    "fc_tied_lenet_model_id0_lr0.1_proj_dense_opt_sgd": {
-        "number_parameter": 297734,
-        "intrinsic_dimension": 0,
-        "epoch": 100,
-        "validation_accuracy": 0.4584,
-        "learning_rate": 0.1,
-        "best_epoch": 18,
-        "best_accuracy": 0.505
-    },
     "fc_tied_lenet_model_id10_lr0.01_proj_dense_opt_sgd": {
         "number_parameter": 297734,
         "intrinsic_dimension": 10,
@@ -205,5 +196,23 @@
         "learning_rate": 0.01,
         "best_epoch": 98,
         "best_accuracy": 0.4507
+    },
+    "fc_tied_lenet_model_id15000_lr0.01_proj_fastfood_opt_sgd": {
+        "number_parameter": 297734,
+        "intrinsic_dimension": 15000,
+        "epoch": 100,
+        "validation_accuracy": 0.5231,
+        "learning_rate": 0.01,
+        "best_epoch": 95,
+        "best_accuracy": 0.5346
+    },
+    "fc_tied_lenet_model_id0_lr0.1_proj_dense_opt_sgd": {
+        "number_parameter": 297734,
+        "intrinsic_dimension": 0,
+        "epoch": 100,
+        "validation_accuracy": 0.4584,
+        "learning_rate": 0.1,
+        "best_epoch": 18,
+        "best_accuracy": 0.505
     }
 }
