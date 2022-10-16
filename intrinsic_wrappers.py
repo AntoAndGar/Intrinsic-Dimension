@@ -28,7 +28,7 @@ class DenseWrap(nn.Module):
         self.random_matrix = dict()
 
         # Parameter vector that is updated, initialised with zeros as per text: \theta^{d}
-        V = nn.Parameter(torch.zeros((intrinsic_dimension, 1)).to(device))
+        V = nn.Parameter(torch.zeros((intrinsic_dimension, 1)).to(device, non_blocking=True))
         self.register_parameter("V", V)
         v_size = (intrinsic_dimension,)
 
@@ -40,7 +40,7 @@ class DenseWrap(nn.Module):
                 # Saves the initial values of the initialised parameters from param.data and sets them to no grad.
                 # (initial values are the 'origin' of the search)
                 self.initial_value[name] = v0 = (
-                    param.clone().detach().requires_grad_(False).to(device)
+                    param.clone().detach().requires_grad_(False).to(device, non_blocking=True)
                 )
 
                 # If v0.size() is [4, 3], then below operation makes it [4, 3, v_size]
@@ -48,7 +48,7 @@ class DenseWrap(nn.Module):
 
                 # Generates random projection matrices P, sets them to no grad
                 self.random_matrix[name] = (
-                    torch.randn(matrix_size, requires_grad=False).to(device)
+                    torch.randn(matrix_size, requires_grad=False).to(device, non_blocking=True)
                     / intrinsic_dimension**0.5
                 )
 
@@ -91,11 +91,11 @@ def fastfood_vars(DD, device=0):
 
     # Binary scaling matrix where $B_{i,i} \in \{\pm 1 \}$ drawn iid
     BB = torch.FloatTensor(LL).uniform_(0, 2).type(torch.LongTensor)
-    BB = (BB * 2 - 1).type(torch.FloatTensor).to(device)
+    BB = (BB * 2 - 1).type(torch.FloatTensor).to(device, non_blocking=True)
     BB.requires_grad = False
 
     # Random permutation matrix
-    Pi = torch.LongTensor(np.random.permutation(LL)).to(device)
+    Pi = torch.LongTensor(np.random.permutation(LL)).to(device, non_blocking=True)
     Pi.requires_grad = False
 
     # Gaussian scaling matrix, whose elements $G_{i,i} \sim \mathcal{N}(0, 1)$
@@ -104,9 +104,9 @@ def fastfood_vars(DD, device=0):
             LL,
         )
         .normal_()
-        .to(device)
+        .to(device, non_blocking=True)
     )
-    GG.to(device)
+    GG.to(device, non_blocking=True)
     GG.requires_grad = False
 
     divisor = torch.sqrt(LL * torch.sum(torch.pow(GG, 2)))
@@ -225,7 +225,7 @@ class FastfoodWrapper(nn.Module):
         # Initialised with zeros as per text: \theta^{d}
         V = nn.Parameter(torch.zeros((intrinsic_dimension), device = device))#.to(device))
         self.register_parameter("V", V)
-        V.to(device)
+        V.to(device, non_blocking=True)
 
         # Iterate over layers in the module
         for name, param in module.named_parameters():
@@ -235,7 +235,7 @@ class FastfoodWrapper(nn.Module):
                 # Saves the initial values of the initialised parameters from param.data and sets them to no grad.
                 # (initial values are the 'origin' of the search)
                 self.initial_value[name] = v0 = (
-                    param.clone().detach().requires_grad_(False).to(device)
+                    param.clone().detach().requires_grad_(False).to(device, non_blocking=True)
                 )
 
                 # Generate fastfood parameters

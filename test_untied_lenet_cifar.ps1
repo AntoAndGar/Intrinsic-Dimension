@@ -1,6 +1,7 @@
-$dims = 1000, 1300, 1600, 3600, 3300, 3000, 2600, 2300, 2000, 700, 500
+$dims = 30000, 35000, 40000
+#20000, 25000, 12500, 5000, 2000, 1000, 100, 10, 7000, 500 
 
 foreach ($dim in $dims) {
     Write-Host training network with intrinsic dimension: $dim ...
-    python ./main.py -id $dim -opt 'sgd' -lr 0.1 -arch untied_lenet -ds 'cifar10' -p 'fastfood' -trf 'results_cifar.txt'
+    python ./main.py -id $dim -opt 'sgd' -lr 0.5 -arch untied_lenet -ds 'cifar10' -p 'fastfood' -trf 'results_cifar.txt'
 }

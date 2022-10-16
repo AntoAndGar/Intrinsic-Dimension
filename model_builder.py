@@ -52,7 +52,8 @@ def build_model(network_type, input_height, input_width, hidden_dim, output_dim,
         #save information to file
         write_info(result_file, num_params, network_type, net_ty_frmt="FCTied_LeNet")
     elif network_type == "resnet":
-        model = resnet18(weights=None) # weights=None to avoid loading pretrained weights
+        #model = resnet18(pretrained=False) # False to avoid loading pretrained weights
+        model = ResNet(ResidualBlock, [3, 3, 3], channel_in, output_dim)
         num_params = count_params(model, verbose=verbose)
 
         #save information to file

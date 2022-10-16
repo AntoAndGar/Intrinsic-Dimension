@@ -1,4 +1,4 @@
-$dims = 45000, 35000, 40000 
+$dims = 55000, 50000
 foreach ($dim in $dims)
 {
     Write-Host training network with hidden dimension: $dim ...
