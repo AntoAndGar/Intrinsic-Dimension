@@ -1,4 +1,4 @@
-$dims = 15000
+$dims = 5000
 foreach ($dim in $dims)
 {
     Write-Host training network with intrinsic dimension: $dim ...

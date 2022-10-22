@@ -70,5 +70,23 @@
         "learning_rate": 0.01,
         "best_epoch": 72,
         "best_accuracy": 0.6567
+    },
+    "resnet_model_id12000_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 12000,
+        "epoch": 100,
+        "validation_accuracy": 0.7322,
+        "learning_rate": 0.1,
+        "best_epoch": 37,
+        "best_accuracy": 0.748
+    },
+    "resnet_model_id5000_lr0.1_proj_fastfood_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 5000,
+        "epoch": 100,
+        "validation_accuracy": 0.6929,
+        "learning_rate": 0.1,
+        "best_epoch": 78,
+        "best_accuracy": 0.7094
     }
 }
