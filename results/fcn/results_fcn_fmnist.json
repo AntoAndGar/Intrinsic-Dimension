@@ -1,0 +1,79 @@
+{
+    "fcn_model_h200_id0_lay1_lr0.01_proj_dense_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 0,
+        "epoch": 100,
+        "validation_accuracy": 0.8801,
+        "learning_rate": 0.01,
+        "best_epoch": 97,
+        "best_accuracy": 0.8815
+    },
+    "fcn_model_h200_id10_lay1_lr0.01_proj_dense_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 10,
+        "epoch": 100,
+        "validation_accuracy": 0.2474,
+        "learning_rate": 0.01,
+        "best_epoch": 27,
+        "best_accuracy": 0.2923
+    },
+    "fcn_model_h200_id100_lay1_lr0.01_proj_dense_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 100,
+        "epoch": 100,
+        "validation_accuracy": 0.6699,
+        "learning_rate": 0.01,
+        "best_epoch": 21,
+        "best_accuracy": 0.6886
+    },
+    "fcn_model_h200_id500_lay1_lr0.01_proj_dense_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 500,
+        "epoch": 100,
+        "validation_accuracy": 0.8026,
+        "learning_rate": 0.01,
+        "best_epoch": 77,
+        "best_accuracy": 0.8215
+    },
+    "fcn_model_h200_id750_lay1_lr0.01_proj_dense_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 750,
+        "epoch": 100,
+        "validation_accuracy": 0.8314,
+        "learning_rate": 0.01,
+        "best_epoch": 94,
+        "best_accuracy": 0.8321
+    },
+    "fcn_model_h200_id1000_lay1_lr0.01_proj_dense_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 1000,
+        "epoch": 100,
+        "validation_accuracy": 0.8225,
+        "learning_rate": 0.01,
+        "best_epoch": 82,
+        "best_accuracy": 0.8421
+    },
+    "fcn_model_h200_id1500_lay1_lr0.01_proj_dense_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 1500,
+        "epoch": 100,
+        "validation_accuracy": 0.8451,
+        "learning_rate": 0.01,
+        "best_epoch": 82,
+        "best_accuracy": 0.8491
+    }
+}

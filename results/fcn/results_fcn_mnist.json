@@ -5674,5 +5674,27 @@
         "learning_rate": 0.01,
         "best_epoch": 27,
         "best_accuracy": 0.2289
+    },
+    "fcn_model_h200_id100_lay1_lr0.01_proj_sparse_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 100,
+        "epoch": 100,
+        "validation_accuracy": 0.6434,
+        "learning_rate": 0.01,
+        "best_epoch": 61,
+        "best_accuracy": 0.6528
+    },
+    "fcn_model_h200_id10_lay1_lr0.01_proj_sparse_opt_sgd": {
+        "number_parameter": 199210,
+        "hidden_dimension": 200,
+        "number_layers": 1,
+        "intrinsic_dimension": 10,
+        "epoch": 100,
+        "validation_accuracy": 0.2027,
+        "learning_rate": 0.01,
+        "best_epoch": 19,
+        "best_accuracy": 0.2354
     }
 }

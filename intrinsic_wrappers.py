@@ -5,6 +5,7 @@ import numpy as np
 
 # the code is from https://github.com/jgamper/intrinsic-dimensionality with minor fixes
 
+
 class DenseWrap(nn.Module):
     def __init__(self, module, intrinsic_dimension, device):
         """
@@ -28,7 +29,9 @@ class DenseWrap(nn.Module):
         self.random_matrix = dict()
 
         # Parameter vector that is updated, initialised with zeros as per text: \theta^{d}
-        V = nn.Parameter(torch.zeros((intrinsic_dimension, 1)).to(device, non_blocking=True))
+        V = nn.Parameter(
+            torch.zeros((intrinsic_dimension, 1)).to(device, non_blocking=True)
+        )
         self.register_parameter("V", V)
         v_size = (intrinsic_dimension,)
 
@@ -40,7 +43,10 @@ class DenseWrap(nn.Module):
                 # Saves the initial values of the initialised parameters from param.data and sets them to no grad.
                 # (initial values are the 'origin' of the search)
                 self.initial_value[name] = v0 = (
-                    param.clone().detach().requires_grad_(False).to(device, non_blocking=True)
+                    param.clone()
+                    .detach()
+                    .requires_grad_(False)
+                    .to(device, non_blocking=True)
                 )
 
                 # If v0.size() is [4, 3], then below operation makes it [4, 3, v_size]
@@ -48,7 +54,9 @@ class DenseWrap(nn.Module):
 
                 # Generates random projection matrices P, sets them to no grad
                 self.random_matrix[name] = (
-                    torch.randn(matrix_size, requires_grad=False).to(device, non_blocking=True)
+                    torch.randn(matrix_size, requires_grad=False).to(
+                        device, non_blocking=True
+                    )
                     / intrinsic_dimension**0.5
                 )
 
@@ -223,7 +231,9 @@ class FastfoodWrapper(nn.Module):
 
         # Parameter vector that is updated
         # Initialised with zeros as per text: \theta^{d}
-        V = nn.Parameter(torch.zeros((intrinsic_dimension), device = device))#.to(device))
+        V = nn.Parameter(
+            torch.zeros((intrinsic_dimension), device=device)
+        )  # .to(device))
         self.register_parameter("V", V)
         V.to(device, non_blocking=True)
 
@@ -235,7 +245,10 @@ class FastfoodWrapper(nn.Module):
                 # Saves the initial values of the initialised parameters from param.data and sets them to no grad.
                 # (initial values are the 'origin' of the search)
                 self.initial_value[name] = v0 = (
-                    param.clone().detach().requires_grad_(False).to(device, non_blocking=True)
+                    param.clone()
+                    .detach()
+                    .requires_grad_(False)
+                    .to(device, non_blocking=True)
                 )
 
                 # Generate fastfood parameters
@@ -258,10 +271,270 @@ class FastfoodWrapper(nn.Module):
             init_shape = self.initial_value[name].size()
             DD = np.prod(init_shape)
 
-            # Fastfood transform te replace dence P
+            # Fastfood transform replace dense P
             ray = fastfood_torched(self.V, DD, self.fastfood_params[name]).view(
                 init_shape
             )
+
+            param = self.initial_value[name] + ray
+
+            setattr(base, localname, param)
+
+        # Pass through the model, by getting hte module from a list self.m
+        module = self.m[0]
+        x = module(x)
+        return x
+
+
+class SparseWrap(nn.Module):
+    def __init__(self, module, intrinsic_dimension, device):
+        """
+        Wrapper to estimate the intrinsic dimensionality of the
+        objective landscape for a specific task given a specific model
+        :param module: pytorch nn.Module
+        :param intrinsic_dimension: dimensionality within which we search for solution
+        :param device: cuda device id
+        """
+        super(SparseWrap, self).__init__()
+
+        # Hide this from inspection by get_parameters()
+        self.m = [module]
+
+        self.name_base_localname = []
+
+        # Stores the initial value: \theta_{0}^{D}
+        self.initial_value = dict()
+
+        # Stores the randomly generated projection matrix P
+        self.random_matrix = dict()
+
+        # Parameter vector that is updated, initialised with zeros as per text: \theta^{d}
+        V = nn.Parameter(
+            torch.zeros((intrinsic_dimension, 1)).to(device, non_blocking=True)
+        )
+        self.register_parameter("V", V)
+        v_size = (intrinsic_dimension,)
+
+        # Iterates over layers in the Neural Network
+        for name, param in module.named_parameters():
+            # If the parameter requires gradient update
+            if param.requires_grad:
+
+                # Saves the initial values of the initialised parameters from param.data and sets them to no grad.
+                # (initial values are the 'origin' of the search)
+                self.initial_value[name] = v0 = (
+                    param.clone()
+                    .detach()
+                    .requires_grad_(False)
+                    .to(device, non_blocking=True)
+                )
+
+                # If v0.size() is [4, 3], then below operation makes it [4, 3, v_size]
+                matrix_size = v0.size() + v_size
+
+                # Generates random projection matrices P, sets them to no grad
+                self.random_matrix[name] = (
+                    torch.randn(matrix_size, requires_grad=False)
+                    .to_sparse()
+                    .to(device, non_blocking=True)
+                    / intrinsic_dimension**0.5
+                )
+                self.random_matrix[name].coalesce()
+
+                base, localname = module, name
+                while "." in localname:
+                    prefix, localname = localname.split(".", 1)
+                    base = base.__getattr__(prefix)
+                self.name_base_localname.append((name, base, localname))
+
+        for name, base, localname in self.name_base_localname:
+            delattr(base, localname)
+
+    def forward(self, x):
+        # Iterate over the layers
+        for name, base, localname in self.name_base_localname:
+
+            # Sparse Product between matrix P and \theta^{d}
+            if len(self.random_matrix[name].shape) <= 2:
+                # sparse mm for bias vectors
+                ray = torch.mm(self.random_matrix[name], self.V)
+            else:
+                # sparse bmm for weight matrices
+                ray = torch.bmm(
+                    self.random_matrix[name],
+                    self.V.broadcast_to(
+                        (
+                            self.random_matrix[name].shape[0],
+                            self.V.shape[0],
+                            self.V.shape[-1],
+                        )
+                    ),
+                )
+
+            self.random_matrix[name].coalesce()
+
+            # Add the \theta_{0}^{D} to P \dot \theta^{d}
+            # in the sparse case (sparse + dense) is supported but not (dense + sparse)
+            param = torch.squeeze(ray, -1) + self.initial_value[name]
+
+            setattr(base, localname, param)
+
+        # Pass through the model, by getting the module from a list self.m
+        module = self.m[0]
+        x = module(x)
+        return x
+
+
+def rademacher(shape, device=0):
+    """Creates a random tensor of shape under the Rademacher distribution (P(x=1) == P(x=-1) == 0.5)"""
+    x = torch.empty(shape, device=device, requires_grad=False).random_(
+        0, 2
+    )  # Creates random tensor of 0 and 1
+    x[x == 0] = -1  # Turn the 0s into -1
+    return x
+
+
+def fastJL_vars(DD, d, device=0):
+    """
+    Returns parameters for fast food transform
+    :param DD: desired dimension
+    :return:
+    """
+    epsilon = 0.1
+    ll = int(np.ceil(np.log2(d)))
+    LL = 2**ll
+
+    # random reflection given by the diagonal matrix D ∈ R^d×d where Dii are independent Rademacher random variables
+    D = torch.diag(rademacher(LL, device=device)).to(device, non_blocking=True)
+    D.requires_grad = False
+
+    n = np.log(60000)
+    k = int(np.ceil(n / epsilon**2))
+    # print("k: ", k)
+    # Pij ≡ bijxrij , where bij ∼ Bernoulli(q) and rij ∼ N (0, q−1) are independent random variables
+    q = min(n / epsilon * LL, 1)
+    B = torch.empty(
+        (k, LL), dtype=torch.float32, device=device, requires_grad=False
+    ).bernoulli_(q)
+
+    R = torch.empty(
+        (k, LL), dtype=torch.float32, device=device, requires_grad=False
+    ).normal_(0, 1 / q)
+
+    PP = torch.mul(B, R)
+    PP.requires_grad = False
+    PP.to(device, non_blocking=True)
+    # print("PP: ", PP.shape)
+
+    return [D, PP, LL]
+
+
+def fastJL_torched(x, DD, param_list=None, device=0):
+    """
+    Fastfood transform
+    :param x: array of dd dimension
+    :param DD: desired dimension
+    :return:
+    """
+    dd = x.size(0)
+    # print("dd: ", dd)
+
+    if not param_list:
+
+        D, PP, LL = fastJL_vars(DD, dd, device=device)
+
+    else:
+
+        D, PP, LL = param_list
+
+    # Padd x if needed
+    dd_pad = F.pad(x, pad=(0, LL - dd), value=0, mode="constant")
+
+    # From left to right (1/k)PH(Dx), where H is Walsh-Hadamard matrix
+    mul_1 = torch.mul(D, dd_pad)
+    # print("mul_1: ", mul_1.shape)
+
+    # (1/k)P(HDx)
+    mul_2 = fast_walsh_hadamard_torched(mul_1, 0, normalize=False)
+    # print("mul_2: ", mul_2.shape)
+
+    # (1/k)(PHDx)
+    mul_3 = torch.mm(PP, mul_2).flatten()
+    # print("mul_3: ", mul_3.shape)
+
+    ret = 1 / dd * mul_3[:DD]
+
+    return ret
+
+
+class FastJLWrapper(nn.Module):
+    def __init__(self, module, intrinsic_dimension, device):
+        """
+        Wrapper to estimate the intrinsic dimensionality of the
+        objective landscape for a specific task given a specific model using FastJL transform
+        :param module: pytorch nn.Module
+        :param intrinsic_dimension: dimensionality within which we search for solution
+        :param device: cuda device id
+        """
+        super(FastJLWrapper, self).__init__()
+
+        # Hide this from inspection by get_parameters()
+        self.m = [module]
+
+        self.name_base_localname = []
+
+        # Stores the initial value: \theta_{0}^{D}
+        self.initial_value = dict()
+
+        # Fastfood parameters
+        self.fastJL_params = {}
+
+        # Parameter vector that is updated
+        # Initialised with zeros as per text: \theta^{d}
+        V = nn.Parameter(
+            torch.zeros((intrinsic_dimension), device=device)
+        )  # .to(device))
+        self.register_parameter("V", V)
+        V.to(device, non_blocking=True)
+
+        # Iterate over layers in the module
+        for name, param in module.named_parameters():
+            # If param requires grad update
+            if param.requires_grad:
+
+                # Saves the initial values of the initialised parameters from param.data and sets them to no grad.
+                # (initial values are the 'origin' of the search)
+                self.initial_value[name] = v0 = (
+                    param.clone()
+                    .detach()
+                    .requires_grad_(False)
+                    .to(device, non_blocking=True)
+                )
+
+                # Generate fastJL parameters
+                DD = np.prod(v0.size())
+                self.fastJL_params[name] = fastJL_vars(DD, V.size(0), device)
+
+                base, localname = module, name
+                while "." in localname:
+                    prefix, localname = localname.split(".", 1)
+                    base = base.__getattr__(prefix)
+                self.name_base_localname.append((name, base, localname))
+
+        for name, base, localname in self.name_base_localname:
+            delattr(base, localname)
+
+    def forward(self, x):
+        # Iterate over layers
+        for name, base, localname in self.name_base_localname:
+
+            init_shape = self.initial_value[name].size()
+            # print("init_shape: ", init_shape)
+            DD = np.prod(init_shape)
+            # print("DD: ", DD)
+
+            # FastJL transform replace dense P
+            ray = fastJL_torched(self.V, DD, self.fastJL_params[name]).view(init_shape)
 
             param = self.initial_value[name] + ray
 

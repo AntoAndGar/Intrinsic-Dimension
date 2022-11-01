@@ -49,7 +49,7 @@ def get_input_args():
         "-ds",
         "--dataset",
         type=str,
-        help="a string for the dataset, can be in ['mnist', 'cifar10']",
+        help="a string for the dataset, can be in ['mnist', 'cifar10', 'fmnist']",
         default="mnist",
     )
     parser.add_argument(
@@ -105,7 +105,7 @@ def get_input_args():
         "-p",
         "--projection",
         type=str,
-        help="a string for the projection method, can be in [dense, fastfood]",
+        help="a string for the projection method, can be in [dense, fastfood, sparse]",
         default="dense",
     )
     parser.add_argument(

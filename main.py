@@ -71,6 +71,9 @@ if __name__ == "__main__":
             # fastfood projection
             model_intrinsic = FastfoodWrapper(model, args.intrinsic_dim, device)
             # TODO: add the other projection methods like sparse and others
+        elif args.projection == "sparse":
+            # sparse projection
+            model_intrinsic = SparseWrap(model, args.intrinsic_dim, device)
         else:
             raise Exception("Name of projection not in: [dense, fastfood]")
     else:
@@ -97,17 +100,17 @@ if __name__ == "__main__":
         train_dataset,
         batch_size=args.batch_size,
         shuffle=True,
-        num_workers=4,
+        num_workers=0,
         pin_memory=True,
-        persistent_workers=True,  # on Winzoz system this is needed, if you don't want wait forever for the creation of the workers at each epoch
+        #persistent_workers=True,  # on Winzoz system this is needed, if you don't want wait forever for the creation of the workers at each epoch
     )
     test_dataloader = DataLoader(
         test_dataset,
         batch_size=args.batch_size,
         shuffle=True,
-        num_workers=2,
+        num_workers=0,
         pin_memory=True,
-        persistent_workers=True,  # on Winzoz system this is needed, if you don't want wait forever for the creation of the workers at each epoch
+        #persistent_workers=True,  # on Winzoz system this is needed, if you don't want wait forever for the creation of the workers at each epoch
     )
 
     # train the model

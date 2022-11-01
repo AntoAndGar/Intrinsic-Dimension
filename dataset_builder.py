@@ -1,4 +1,4 @@
-from torchvision.datasets import MNIST, CIFAR10
+from torchvision.datasets import MNIST, CIFAR10, FashionMNIST
 
 
 def build_dataset(dataset_name, img_transform):
@@ -35,6 +35,21 @@ def build_dataset(dataset_name, img_transform):
         INPUT_WIDTH = 32
         OUTPUT_DIM = 10
         VAL_GLOBAL_ACCURACY = 0.46
+    elif dataset_name == "FMNIST":
+        # download and load Fashion MNIST Dataset
+        train_dataset = FashionMNIST(
+            root="./data/FashionMNIST", download=True, train=True, transform=img_transform
+        )
+        test_dataset = FashionMNIST(
+            root="./data/FashionMNIST", download=True, train=False, transform=img_transform
+        )
+        # set information on the dataset
+        # FMNIST dataset parameters
+        CHANNEL_IN = 1
+        INPUT_HEIGHT = 28
+        INPUT_WIDTH = 28
+        OUTPUT_DIM = 10
+        VAL_GLOBAL_ACCURACY = 0.88
     else:
         raise Exception("Name of dataset not in: [MNIST, CIFAR10]")
 
