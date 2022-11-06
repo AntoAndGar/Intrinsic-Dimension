@@ -8,7 +8,6 @@
         "best_epoch": 94,
         "best_accuracy": 0.5984
     },
-
     "untied_lenet_model_id10000_lr0.5_proj_fastfood_opt_sgd": {
         "number_parameter": 658238,
         "intrinsic_dimension": 10000,
@@ -152,5 +151,86 @@
         "learning_rate": 0.5,
         "best_epoch": 77,
         "best_accuracy": 0.5178
+    },
+    "untied_lenet_model_id35000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 658238,
+        "intrinsic_dimension": 35000,
+        "epoch": 100,
+        "validation_accuracy": 0.525,
+        "learning_rate": 0.1,
+        "best_epoch": 41,
+        "best_accuracy": 0.5575
+    },
+    "untied_lenet_model_id50000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 658238,
+        "intrinsic_dimension": 50000,
+        "epoch": 100,
+        "validation_accuracy": 0.5301,
+        "learning_rate": 0.1,
+        "best_epoch": 42,
+        "best_accuracy": 0.5544
+    },
+    "untied_lenet_model_id20000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 658238,
+        "intrinsic_dimension": 20000,
+        "epoch": 100,
+        "validation_accuracy": 0.5262,
+        "learning_rate": 0.1,
+        "best_epoch": 45,
+        "best_accuracy": 0.5399
+    },
+    "untied_lenet_model_id10000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 658238,
+        "intrinsic_dimension": 10000,
+        "epoch": 100,
+        "validation_accuracy": 0.5207,
+        "learning_rate": 0.1,
+        "best_epoch": 81,
+        "best_accuracy": 0.5249
+    },
+    "untied_lenet_model_id5000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 658238,
+        "intrinsic_dimension": 5000,
+        "epoch": 100,
+        "validation_accuracy": 0.5023,
+        "learning_rate": 0.1,
+        "best_epoch": 100,
+        "best_accuracy": 0.5023
+    },
+    "untied_lenet_model_id2000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 658238,
+        "intrinsic_dimension": 2000,
+        "epoch": 100,
+        "validation_accuracy": 0.455,
+        "learning_rate": 0.1,
+        "best_epoch": 100,
+        "best_accuracy": 0.455
+    },
+    "untied_lenet_model_id1000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 658238,
+        "intrinsic_dimension": 1000,
+        "epoch": 100,
+        "validation_accuracy": 0.4137,
+        "learning_rate": 0.1,
+        "best_epoch": 96,
+        "best_accuracy": 0.4163
+    },
+    "untied_lenet_model_id500_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 658238,
+        "intrinsic_dimension": 500,
+        "epoch": 100,
+        "validation_accuracy": 0.1317,
+        "learning_rate": 0.1,
+        "best_epoch": 70,
+        "best_accuracy": 0.1564
+    },
+    "untied_lenet_model_id100_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 658238,
+        "intrinsic_dimension": 100,
+        "epoch": 100,
+        "validation_accuracy": 0.1,
+        "learning_rate": 0.1,
+        "best_epoch": 1,
+        "best_accuracy": 0.1
     }
 }

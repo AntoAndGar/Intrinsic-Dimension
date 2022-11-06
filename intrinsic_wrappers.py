@@ -384,15 +384,17 @@ class SparseWrap(nn.Module):
         x = module(x)
         return x
 
-
 def rademacher(shape, device=0):
     """Creates a random tensor of shape under the Rademacher distribution (P(x=1) == P(x=-1) == 0.5)"""
-    x = torch.empty(shape, device=device, requires_grad=False).random_(
-        0, 2
-    )  # Creates random tensor of 0 and 1
-    x[x == 0] = -1  # Turn the 0s into -1
+    x = torch.empty(shape, device=device, requires_grad=False).random_(0, 2) # Creates random tensor of 0 and 1
+    if device == torch.device("cuda"):
+        s = torch.cuda.Stream()  # Create a new stream.
+        with torch.cuda.stream(s):
+            # this op may start execution before normal_() finishes!
+            x[x == 0] = -1  # Turn the 0s into -1
+    else:
+        x[x == 0] = -1  # Turn the 0s into -1
     return x
-
 
 def fastJL_vars(DD, d, device=0):
     """
@@ -400,31 +402,37 @@ def fastJL_vars(DD, d, device=0):
     :param DD: desired dimension
     :return:
     """
-    epsilon = 0.1
-    ll = int(np.ceil(np.log2(d)))
-    LL = 2**ll
+    #epsilon = 0.1
+    ll = int(np.ceil(np.log2(DD)))
+    LL = int(np.power(2,ll))
 
     # random reflection given by the diagonal matrix D ∈ R^d×d where Dii are independent Rademacher random variables
-    D = torch.diag(rademacher(LL, device=device)).to(device, non_blocking=True)
+    #D = torch.diag(rademacher(LL, device=device)).to(device, non_blocking=True)
+    D = rademacher(LL, device=device)
     D.requires_grad = False
+    D.to(device, non_blocking=True)
 
-    n = np.log(60000)
-    k = int(np.ceil(n / epsilon**2))
-    # print("k: ", k)
-    # Pij ≡ bijxrij , where bij ∼ Bernoulli(q) and rij ∼ N (0, q−1) are independent random variables
-    q = min(n / epsilon * LL, 1)
-    B = torch.empty(
-        (k, LL), dtype=torch.float32, device=device, requires_grad=False
-    ).bernoulli_(q)
+    n = np.log(60000)**2 # n in the paper is the dataset size, but we use the desired dimension of the projection instead
+    #k=int(np.ceil(n/epsilon**2)) # k in the paper is the subspace dimension, because in this work we are estimating it our k depends on the projection/subspace dimension 
 
-    R = torch.empty(
-        (k, LL), dtype=torch.float32, device=device, requires_grad=False
-    ).normal_(0, 1 / q)
-
-    PP = torch.mul(B, R)
+    # Pij ≡ bijxrij , where bij ∼ Bernoulli(q) and rij ∼ N (0, q^−1) are independent random variables
+    q = min(n/d, 1)
+    #print(q)
+    B = torch.empty(LL, dtype=torch.float32, device=device, requires_grad=False).bernoulli_(1-q)
+    #print("B: ", B)
+    
+    R = torch.empty(LL, dtype=torch.float32, device=device, requires_grad=False).normal_(0,1/q)
+    #print("R: ", R)
+    if device == torch.device("cuda"):
+        s = torch.cuda.Stream()  # Create a new stream.
+        with torch.cuda.stream(s):
+            PP = torch.mul(B, R)
+    else:
+        PP = torch.mul(B, R)
+        PP.to(device, non_blocking=True)
     PP.requires_grad = False
-    PP.to(device, non_blocking=True)
-    # print("PP: ", PP.shape)
+    #print(PP)
+    #print(PP.shape)
 
     return [D, PP, LL]
 
@@ -437,7 +445,7 @@ def fastJL_torched(x, DD, param_list=None, device=0):
     :return:
     """
     dd = x.size(0)
-    # print("dd: ", dd)
+    #print("dd: ", dd)
 
     if not param_list:
 
@@ -449,20 +457,26 @@ def fastJL_torched(x, DD, param_list=None, device=0):
 
     # Padd x if needed
     dd_pad = F.pad(x, pad=(0, LL - dd), value=0, mode="constant")
+    dd_pad.to(device, non_blocking=True)
 
     # From left to right (1/k)PH(Dx), where H is Walsh-Hadamard matrix
     mul_1 = torch.mul(D, dd_pad)
-    # print("mul_1: ", mul_1.shape)
+    mul_1.to(device, non_blocking=True)
+    #print("mul_1: ", mul_1.shape)
 
     # (1/k)P(HDx)
     mul_2 = fast_walsh_hadamard_torched(mul_1, 0, normalize=False)
-    # print("mul_2: ", mul_2.shape)
+    mul_2.to(device, non_blocking=True)
+    #print("mul_2: ", mul_2.shape)
 
     # (1/k)(PHDx)
-    mul_3 = torch.mm(PP, mul_2).flatten()
-    # print("mul_3: ", mul_3.shape)
+    mul_3 = torch.mul(PP, mul_2)#.flatten()
+    mul_3.to(device, non_blocking=True)
+    #print("PP: ", PP.shape)
+    #print("mul_3: ", mul_3.shape)
 
-    ret = 1 / dd * mul_3[:DD]
+    ret = 1/dd * mul_3[:DD]
+    ret.to(device, non_blocking=True)
 
     return ret
 
@@ -491,9 +505,7 @@ class FastJLWrapper(nn.Module):
 
         # Parameter vector that is updated
         # Initialised with zeros as per text: \theta^{d}
-        V = nn.Parameter(
-            torch.zeros((intrinsic_dimension), device=device)
-        )  # .to(device))
+        V = nn.Parameter(torch.zeros((intrinsic_dimension), device = device))#.to(device))
         self.register_parameter("V", V)
         V.to(device, non_blocking=True)
 
@@ -505,10 +517,7 @@ class FastJLWrapper(nn.Module):
                 # Saves the initial values of the initialised parameters from param.data and sets them to no grad.
                 # (initial values are the 'origin' of the search)
                 self.initial_value[name] = v0 = (
-                    param.clone()
-                    .detach()
-                    .requires_grad_(False)
-                    .to(device, non_blocking=True)
+                    param.clone().detach().requires_grad_(False).to(device, non_blocking=True)
                 )
 
                 # Generate fastJL parameters
@@ -529,12 +538,14 @@ class FastJLWrapper(nn.Module):
         for name, base, localname in self.name_base_localname:
 
             init_shape = self.initial_value[name].size()
-            # print("init_shape: ", init_shape)
+            #print("init_shape: ", init_shape)
             DD = np.prod(init_shape)
-            # print("DD: ", DD)
+            #print("DD: ", DD)
 
             # FastJL transform replace dense P
-            ray = fastJL_torched(self.V, DD, self.fastJL_params[name]).view(init_shape)
+            ray = fastJL_torched(self.V, DD, self.fastJL_params[name]).view(
+                init_shape
+            )
 
             param = self.initial_value[name] + ray
 

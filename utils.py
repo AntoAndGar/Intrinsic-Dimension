@@ -105,7 +105,7 @@ def get_input_args():
         "-p",
         "--projection",
         type=str,
-        help="a string for the projection method, can be in [dense, fastfood, sparse]",
+        help="a string for the projection method, can be in [dense, fastfood, sparse, fastJL]",
         default="dense",
     )
     parser.add_argument(

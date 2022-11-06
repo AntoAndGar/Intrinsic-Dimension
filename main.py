@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
     # load the model
     model, num_params = build_model(
-        args.architecture,
+        args.architecture.lower(),
         INPUT_HEIGHT,
         INPUT_WIDTH,
         args.hidden_dim,
@@ -74,8 +74,11 @@ if __name__ == "__main__":
         elif args.projection == "sparse":
             # sparse projection
             model_intrinsic = SparseWrap(model, args.intrinsic_dim, device)
+        elif args.projection == "fastJL":
+            # fast JL projection
+            model_intrinsic = FastJLWrapper(model, args.intrinsic_dim, device)
         else:
-            raise Exception("Name of projection not in: [dense, fastfood]")
+            raise Exception("Name of projection not in: [dense, fastfood, sparse, fastJL]")
     else:
         # standard training
         model_intrinsic = model
@@ -100,17 +103,17 @@ if __name__ == "__main__":
         train_dataset,
         batch_size=args.batch_size,
         shuffle=True,
-        num_workers=0,
+        num_workers= 4, # to set to 0 for sparse projection
         pin_memory=True,
-        #persistent_workers=True,  # on Winzoz system this is needed, if you don't want wait forever for the creation of the workers at each epoch
+        persistent_workers=True,  # on Winzoz system this is needed, if you don't want wait forever for the creation of the workers at each epoch. Not compatible with sparse
     )
     test_dataloader = DataLoader(
         test_dataset,
         batch_size=args.batch_size,
         shuffle=True,
-        num_workers=0,
+        num_workers=2, # to set to 0 for sparse projection
         pin_memory=True,
-        #persistent_workers=True,  # on Winzoz system this is needed, if you don't want wait forever for the creation of the workers at each epoch
+        persistent_workers=True,  # on Winzoz system this is needed, if you don't want wait forever for the creation of the workers at each epoch. Not compatible with sparse
     )
 
     # train the model

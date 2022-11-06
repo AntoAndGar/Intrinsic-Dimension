@@ -124,5 +124,86 @@
         "learning_rate": 0.1,
         "best_epoch": 53,
         "best_accuracy": 0.5127
+    },
+    "fc_lenet_model_id35000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 35000,
+        "epoch": 100,
+        "validation_accuracy": 0.4405,
+        "learning_rate": 0.1,
+        "best_epoch": 48,
+        "best_accuracy": 0.4764
+    },
+    "fc_lenet_model_id50000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 50000,
+        "epoch": 100,
+        "validation_accuracy": 0.4447,
+        "learning_rate": 0.1,
+        "best_epoch": 66,
+        "best_accuracy": 0.4822
+    },
+    "fc_lenet_model_id20000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 20000,
+        "epoch": 100,
+        "validation_accuracy": 0.4351,
+        "learning_rate": 0.1,
+        "best_epoch": 60,
+        "best_accuracy": 0.4704
+    },
+    "fc_lenet_model_id10000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 10000,
+        "epoch": 100,
+        "validation_accuracy": 0.424,
+        "learning_rate": 0.1,
+        "best_epoch": 84,
+        "best_accuracy": 0.4522
+    },
+    "fc_lenet_model_id5000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 5000,
+        "epoch": 100,
+        "validation_accuracy": 0.3977,
+        "learning_rate": 0.1,
+        "best_epoch": 98,
+        "best_accuracy": 0.4423
+    },
+    "fc_lenet_model_id2000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 2000,
+        "epoch": 100,
+        "validation_accuracy": 0.4023,
+        "learning_rate": 0.1,
+        "best_epoch": 32,
+        "best_accuracy": 0.4163
+    },
+    "fc_lenet_model_id1000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 1000,
+        "epoch": 100,
+        "validation_accuracy": 0.3763,
+        "learning_rate": 0.1,
+        "best_epoch": 89,
+        "best_accuracy": 0.4018
+    },
+    "fc_lenet_model_id500_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 500,
+        "epoch": 100,
+        "validation_accuracy": 0.3379,
+        "learning_rate": 0.1,
+        "best_epoch": 98,
+        "best_accuracy": 0.3732
+    },
+    "fc_lenet_model_id100_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 16397726,
+        "intrinsic_dimension": 100,
+        "epoch": 100,
+        "validation_accuracy": 0.1,
+        "learning_rate": 0.1,
+        "best_epoch": 1,
+        "best_accuracy": 0.1
     }
 }
