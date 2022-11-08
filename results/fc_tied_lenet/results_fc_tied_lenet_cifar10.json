@@ -219,10 +219,10 @@
         "number_parameter": 297734,
         "intrinsic_dimension": 10000,
         "epoch": 100,
-        "validation_accuracy": 0.4615,
+        "validation_accuracy": 0.196,
         "learning_rate": 0.1,
-        "best_epoch": 29,
-        "best_accuracy": 0.483
+        "best_epoch": 100,
+        "best_accuracy": 0.196
     },
     "fc_tied_lenet_model_id5000_lr0.1_proj_fastJL_opt_sgd": {
         "number_parameter": 297734,
@@ -241,5 +241,68 @@
         "learning_rate": 0.1,
         "best_epoch": 26,
         "best_accuracy": 0.4736
+    },
+    "fc_tied_lenet_model_id11000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 297734,
+        "intrinsic_dimension": 11000,
+        "epoch": 100,
+        "validation_accuracy": 0.1974,
+        "learning_rate": 0.1,
+        "best_epoch": 100,
+        "best_accuracy": 0.1974
+    },
+    "fc_tied_lenet_model_id12000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 297734,
+        "intrinsic_dimension": 12000,
+        "epoch": 100,
+        "validation_accuracy": 0.188,
+        "learning_rate": 0.1,
+        "best_epoch": 100,
+        "best_accuracy": 0.188
+    },
+    "fc_tied_lenet_model_id10_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 297734,
+        "intrinsic_dimension": 10,
+        "epoch": 100,
+        "validation_accuracy": 0.1,
+        "learning_rate": 0.1,
+        "best_epoch": 1,
+        "best_accuracy": 0.1
+    },
+    "fc_tied_lenet_model_id100_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 297734,
+        "intrinsic_dimension": 100,
+        "epoch": 100,
+        "validation_accuracy": 0.1,
+        "learning_rate": 0.1,
+        "best_epoch": 1,
+        "best_accuracy": 0.1
+    },
+    "fc_tied_lenet_model_id500_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 297734,
+        "intrinsic_dimension": 500,
+        "epoch": 100,
+        "validation_accuracy": 0.1,
+        "learning_rate": 0.1,
+        "best_epoch": 1,
+        "best_accuracy": 0.1
+    },
+    "fc_tied_lenet_model_id1000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 297734,
+        "intrinsic_dimension": 1000,
+        "epoch": 100,
+        "validation_accuracy": 0.1005,
+        "learning_rate": 0.1,
+        "best_epoch": 99,
+        "best_accuracy": 0.1005
+    },
+    "fc_tied_lenet_model_id2000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 297734,
+        "intrinsic_dimension": 2000,
+        "epoch": 100,
+        "validation_accuracy": 0.1476,
+        "learning_rate": 0.1,
+        "best_epoch": 97,
+        "best_accuracy": 0.1479
     }
 }

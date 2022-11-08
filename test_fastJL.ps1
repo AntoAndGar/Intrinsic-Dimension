@@ -9,7 +9,7 @@
 #     }
 # }
             
-$dims = 10000, 11000, 12000, 10, 100, 500, 1000, 2000, 5000, 8000 #15000
+$dims =  5000, 8000, 20000 #15000, 10000, 11000, 12000, 10, 100, 500, 1000, 2000,
 foreach ($dim in $dims)
 {
     Write-Host training network with intrinsic dimension: $dim ...
