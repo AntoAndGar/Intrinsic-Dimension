@@ -8,6 +8,29 @@ All the results follow the most similar implementation of the specific architect
 
 # MNIST Results
 
+$Baseline$ | $Network$  | $D$  | $d_{int90}$  |
+|:---|:---:|:---:|---:|
+|Author Global| FC  | 199210  | 750  |
+|Author Local | FC  | 199210  | ?  |
+|Global| FC  | 199210  | 600  |
+|Local | FC  | 199210  | 600  |
+|Author Global|LeNet|  44426  | 290 |
+|Author Local |LeNet|  44426  | 275 |
+|Global|LeNet|  44426  | 170 |
+|Local |LeNet|  44426  | 170 |
+|Author Global| Untied LeNet  | 286334  | 600  |
+|Author Local | Untied LeNet  | 286334  | 450  |
+|Global| Untied LeNet  | 286334  | 350  |
+|Local | Untied LeNet  | 286334  | 350  |
+|Author Global| FC LeNet  |  3640574 | 2000  |
+|Author Local | FC LeNet  | 3640574  | 1400  |
+|Global| FC LeNet  | 3640574  | 900  |
+|Local | FC LeNet  | 3640574  | 900  |
+|Author Global| FCTied LeNet  |  ? | 425  |
+|Author Local | FCTied LeNet  |  ? | 400  |
+|Global| FCTied LeNet  | 193370  | 400  |
+|Local | FCTied LeNet  | 193370  | 400  |
+
 ## Fully Connected - Global Baseline
 ![MNIST Fully Connected - Global Baseline](figures/MNIST_FC_global.png "MNIST Fully Connected - Global Baseline")
 
@@ -39,6 +62,33 @@ All the results follow the most similar implementation of the specific architect
 ![MNIST FC Tied LeNet - Local Baseline](figures/MNIST_FC_Tied_LeNet_local.png "MNIST FC Tied LeNet - Local Baseline")
 
 # CIFAR10
+
+$Baseline$ | $Network$  | $D$  | $d_{int90}$  |
+|:---|:---:|:---:|---:|
+|Author Global| FC  | 1055610  | 9000  |
+|Author Local | FC  | 1055610  | 8000  |
+|Global| FC  | 656810  | >12000  |
+|Local | FC  | 656810  | 4000  |
+|Author Global|LeNet|  62006 | 1000 |
+|Author Local |LeNet|  62006 | 2900 |
+|Global|LeNet|  62006  | 2100 |
+|Local |LeNet|  62006  | 1700 |
+|Author Global| Untied LeNet  |  658238 | 9000 ? 2750  |
+|Author Local | Untied LeNet  |  658238 | 15000 |
+|Global| Untied LeNet  | 658238  | 40000  |
+|Local | Untied LeNet  | 658238  | >40000  |
+|Author Global| FC LeNet  | 16397726  | 35000  |
+|Author Local | FC LeNet  | 16397726  |  >100000 |
+|Global| FC LeNet  | 16397726  | 70000  |
+|Local | FC LeNet  | 16397726  | 27000  |
+|Author Global| FCTied LeNet  |  ? | 2500  |
+|Author Local | FCTied LeNet  |  ? | 4500  |
+|Global| FCTied LeNet  |  297734 | 12000  |
+|Local | FCTied LeNet  |  297734 | 8000  |
+|Author Global| ResNet  | 280000?  | 1000-2000  |
+|Author Local | ResNet  | 280000?  | 20000-50000  |
+|Global| ResNet  | 292954 | 1000  |
+|Local | ResNet  | 292954 | 12000  |
 
 ## Fully Connected - Global Baseline
 Unable to reproduce results for this case
