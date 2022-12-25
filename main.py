@@ -90,7 +90,7 @@ if __name__ == "__main__":
 
     model_intrinsic.to(device)
 
-    # load the optimizer
+    # load the optimizer, now the support is only for SGD and Adam
     if args.optimizer == "sgd":
         optimizer = optim.SGD(model_intrinsic.parameters(), lr=args.learning_rate)
     elif args.optimizer == "adam":
@@ -103,7 +103,7 @@ if __name__ == "__main__":
         train_dataset,
         batch_size=args.batch_size,
         shuffle=True,
-        num_workers= 4, # to set to 0 for sparse projection
+        num_workers= 4, # must be set to 0 for sparse projection
         pin_memory=True,
         persistent_workers=True,  # on Winzoz system this is needed, if you don't want wait forever for the creation of the workers at each epoch. Not compatible with sparse
     )
@@ -111,7 +111,7 @@ if __name__ == "__main__":
         test_dataset,
         batch_size=args.batch_size,
         shuffle=True,
-        num_workers=2, # to set to 0 for sparse projection
+        num_workers=2, # must be set to 0 for sparse projection
         pin_memory=True,
         persistent_workers=True,  # on Winzoz system this is needed, if you don't want wait forever for the creation of the workers at each epoch. Not compatible with sparse
     )

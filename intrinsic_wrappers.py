@@ -386,14 +386,15 @@ class SparseWrap(nn.Module):
 
 def rademacher(shape, device=0):
     """Creates a random tensor of shape under the Rademacher distribution (P(x=1) == P(x=-1) == 0.5)"""
-    x = torch.empty(shape, device=device, requires_grad=False).random_(0, 2) # Creates random tensor of 0 and 1
-    if device == torch.device("cuda"):
-        s = torch.cuda.Stream()  # Create a new stream.
-        with torch.cuda.stream(s):
-            # this op may start execution before normal_() finishes!
-            x[x == 0] = -1  # Turn the 0s into -1
-    else:
-        x[x == 0] = -1  # Turn the 0s into -1
+    x = torch.randint(low=0, high=2, size=(shape,), device=device, requires_grad=False)  # Creates random tensor of 0 and 1 without empty only for shape > 1D
+    # torch.empty(shape, device=device, requires_grad=False).random_(0, 2) # Creates random tensor of 0 and 1
+    # if device == torch.device("cuda"):
+    #     s = torch.cuda.Stream()  # Create a new stream.
+    #     with torch.cuda.stream(s):
+    #         # this op may start execution before random_() finishes!
+    #         x[x == 0] = -1  # Turn the 0s into -1
+    # else:
+    x[x == 0] = -1  # Turn the 0s into -1
     return x
 
 def fastJL_vars(DD, d, device=0):
@@ -402,7 +403,14 @@ def fastJL_vars(DD, d, device=0):
     :param DD: desired dimension
     :return:
     """
-    #epsilon = 0.1
+    epsilon = 0.1
+    c1 = 2
+
+    if d >= 8500:
+        K = np.log(d)
+    else:
+        K = np.sqrt(d)
+
     ll = int(np.ceil(np.log2(DD)))
     LL = int(np.power(2,ll))
 
@@ -412,29 +420,31 @@ def fastJL_vars(DD, d, device=0):
     D.requires_grad = False
     D.to(device, non_blocking=True)
 
-    n = np.log(60000)**2 # n in the paper is the dataset size, but we use the desired dimension of the projection instead
+    n = (np.log(60000))**2 # n in the paper is the dataset size
     #k=int(np.ceil(n/epsilon**2)) # k in the paper is the subspace dimension, because in this work we are estimating it our k depends on the projection/subspace dimension 
 
     # Pij ≡ bijxrij , where bij ∼ Bernoulli(q) and rij ∼ N (0, q^−1) are independent random variables
-    q = min(n/d, 1)
+    q = min((c1*n)/((np.log(d))**3), 1)
     #print(q)
-    B = torch.empty(LL, dtype=torch.float32, device=device, requires_grad=False).bernoulli_(1-q)
+    B = torch.bernoulli(torch.full(size=(LL,), fill_value=float(q), dtype=torch.float32, requires_grad=False, device=device))
+    #torch.empty(LL, dtype=torch.float32, device=device, requires_grad=False).bernoulli_(p=1-q) #1-q
     #print("B: ", B)
     
-    R = torch.empty(LL, dtype=torch.float32, device=device, requires_grad=False).normal_(0,1/q)
+    R = torch.normal(mean=0., std=float(np.power(q,-1/2)), size=(LL,), dtype=torch.float32, requires_grad=False, device=device)
+    #torch.empty(LL, dtype=torch.float32, device=device, requires_grad=False).normal_(mean=0,std=q**-(1/2))
     #print("R: ", R)
-    if device == torch.device("cuda"):
-        s = torch.cuda.Stream()  # Create a new stream.
-        with torch.cuda.stream(s):
-            PP = torch.mul(B, R)
-    else:
-        PP = torch.mul(B, R)
-        PP.to(device, non_blocking=True)
+    # if device == torch.device("cuda"):
+    #     s = torch.cuda.Stream()  # Create a new stream.
+    #     with torch.cuda.stream(s):
+    #         PP = torch.mul(B, R)
+    # else:
+    PP = torch.mul(B, R)
+    PP.to(device, non_blocking=True)
     PP.requires_grad = False
     #print(PP)
     #print(PP.shape)
 
-    return [D, PP, LL]
+    return [D, PP, LL, K]
 
 
 def fastJL_torched(x, DD, param_list=None, device=0):
@@ -449,11 +459,11 @@ def fastJL_torched(x, DD, param_list=None, device=0):
 
     if not param_list:
 
-        D, PP, LL = fastJL_vars(DD, dd, device=device)
+        D, PP, LL, K = fastJL_vars(DD, dd, device=device)
 
     else:
 
-        D, PP, LL = param_list
+        D, PP, LL, K = param_list
 
     # Padd x if needed
     dd_pad = F.pad(x, pad=(0, LL - dd), value=0, mode="constant")
@@ -475,7 +485,7 @@ def fastJL_torched(x, DD, param_list=None, device=0):
     #print("PP: ", PP.shape)
     #print("mul_3: ", mul_3.shape)
 
-    ret = 1/dd * mul_3[:DD]
+    ret = 1/K * mul_3[:DD]
     ret.to(device, non_blocking=True)
 
     return ret

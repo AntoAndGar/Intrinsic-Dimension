@@ -447,7 +447,7 @@ class ResidualBlock(nn.Module):
 
 # ResNet 18 for cifar10 similar to the one the main paper tells us (280k parameters), 
 # equal to the one presented in https://arxiv.org/pdf/1512.03385.pdf,
-# instead the torchvision variant implement another version of ResNet 18 with 11M parameters.
+# instead, the torchvision variant implement another version of ResNet 18 with 11M parameters.
 # This specific implementation result in 293k parameters (not 280k as the paper says, 
 # but it is close enough, and I think is because of BN in residual blocks, that in paper is not present)
 class ResNet(nn.Module):

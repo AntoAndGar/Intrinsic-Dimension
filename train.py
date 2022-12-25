@@ -4,7 +4,7 @@ import numpy as np
 from tqdm import tqdm
 import os
 
-# torch.autograd.set_detect_anomaly(True) #this line can have huge performance impact
+# torch.autograd.set_detect_anomaly(True) #this line can have huge/enormous performance impact
 # train the model
 
 # training step
@@ -113,7 +113,7 @@ def fit(
             f.write(f"\nValidation Average Loss: {val_avg_loss}")
             f.write(f"\nValidation Accuracy: {accuracy}")
         f.close()
-        # save the model if it reach validation global accuracy > 90% of the actual SOTA model
+        # save the model if it reach validation accuracy > 90% of the actual chosen global accuracy
         if accuracy > best_acc:
             best_acc = accuracy
             best_epoch = epoch
