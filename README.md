@@ -10,6 +10,8 @@ As you can see from the plots there is no mean or std for the measured data and 
 
 # MNIST Results
 
+![MNIST Results](figures/MNIST_general.png "MNIST Results")
+
 ## Fully Connected
 $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
 |:---|:---:|:---:|---:|
@@ -17,6 +19,7 @@ $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
 |Author Local | FC  | 199210  | ?  |
 |Global| FC  | 199210  | 600  |
 |Local | FC  | 199210  | 525  |
+
 ### Fully Connected - Global Baseline
 ![MNIST Fully Connected - Global Baseline](figures/MNIST_FC_global.png "MNIST Fully Connected - Global Baseline")
 
@@ -34,7 +37,7 @@ $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
 ### Lenet - Global Baseline
 ![MNIST LeNet - Global Baseline](figures/MNIST_LeNet_global.png "MNIST LeNet - Global Baseline")
 
-## LeNet - Local Baseline
+### LeNet - Local Baseline
 ![MNIST LeNet - Local Baseline](figures/MNIST_LeNet_global.png "MNIST LeNet - Local Baseline")
 
 ## Untied LeNet
@@ -79,7 +82,9 @@ $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
 ### FC Tied LeNet - Local Baseline
 ![MNIST FC Tied LeNet - Local Baseline](figures/MNIST_FC_Tied_LeNet_local.png "MNIST FC Tied LeNet - Local Baseline")
 
-# CIFAR10
+# CIFAR10 Results
+
+![CIFAR10 Results](figures/CIFAR10_general.png "CIFAR10 Results")
 
 ## Fully Connected
 $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
@@ -88,7 +93,7 @@ $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
 |Author Local | FC  | 1055610  | 8000  |
 |Global| FC  | 1051930  | 5000  |
 |Local | FC  | 1051930  | 10000  |
-|FastJL | FC  | 1051930  | 20000  |
+|FastJL | FC  | 1051930  | 4000  |
 
 ### Fully Connected - Global Baseline
 The results for this case are different due to problems of unnmatching dimension for the architecture (I tried various dimension and used the one that is more similar).
@@ -98,20 +103,26 @@ The results for this case are different due to problems of unnmatching dimension
 ### Fully Connected - Local Baseline
 ![CIFAR10 Fully Connected - Local Baseline](figures/CIFAR10_FC_local.png "CIFAR10 Fully Connected - Local Baseline")
 
+### Fully Connected - FastJL
+![CIFAR10 Fully Connected - FastJL](figures/CIFAR10_FC_FastJL.png "CIFAR10 Fully Connected - FastJL")
+
 ## LeNet
 $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
 |:---|:---:|:---:|---:|
 |Author Global|LeNet|  62006 | 1000 |
 |Author Local |LeNet|  62006 | 2900 |
 |Global|LeNet|  62006  | 600 |
-|Local |LeNet|  62006  | 1700 |
-|FastJL |LeNet|  62006  | 1500 |
+|Local|LeNet|  62006  | 1700 |
+|FastJL |LeNet|  62006  | 1250 |
 
 ### LeNet - Global Baseline
 ![CIFAR10 LeNet - Global Baseline](figures/CIFAR10_LeNet_global.png "CIFAR10 LeNet - Global Baseline")
 
 ### LeNet - Local Baseline
 ![CIFAR10 LeNet - Local Baseline](figures/CIFAR10_LeNet_local.png "CIFAR10 LeNet - Local Baseline")
+
+### LeNet - FastJL
+![CIFAR10 LeNet - FastJL](figures/CIFAR10_LeNet_FastJL.png "CIFAR10 LeNet - FastJL")
 
 ## Untied LeNet
 $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
@@ -132,6 +143,12 @@ Unable to reproduce results, because my local implementation performs better tha
 
 ![CIFAR10 Untied LeNet - Local Baseline](figures/CIFAR10_Untied_LeNet_local.png "CIFAR10 Untied LeNet - Local Baseline")
 
+### Untied LeNet - FastJL
+
+Little sparsification and variance problems after the drop in performance
+
+![CIFAR10 Untied LeNet - FastJL](figures/CIFAR10_Untied_LeNet_FastJL.png "CIFAR10 Untied LeNet - FastJL")
+
 ## FC LeNet
 $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
 |:---|:---:|:---:|---:|
@@ -139,7 +156,7 @@ $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
 |Author Local | FC LeNet  | 16397726  |  >100000 |
 |Global| FC LeNet  | 16397726  | 5000  |
 |Local | FC LeNet  | 16397726  | 27000  |
-|FastJL | FC LeNet  | 16397726  | 10000  |
+|FastJL | FC LeNet  | 16397726  | 5000  |
 
 Here the results are very different!
 
@@ -150,6 +167,10 @@ Here the results are very different!
 ### FC LeNet - Local Baseline
 ![CIFAR10 FC LeNet - Local Baseline](figures/CIFAR10_FC_LeNet_local.png "CIFAR10 FC LeNet - Local Baseline")
 
+### FC LeNet - FastJL
+![CIFAR10 FC LeNet - FastJL](figures/CIFAR10_FC_LeNet_FastJL.png "CIFAR10 FC LeNet - FastJL")
+
+
 ## FC Tied LeNet
 $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
 |:---|:---:|:---:|---:|
@@ -157,13 +178,18 @@ $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
 |Author Local | FCTied LeNet  |  ? | 4500  |
 |Global| FCTied LeNet  |  297734 | 3000  |
 |Local | FCTied LeNet  |  297734 | 8000  |
-|FastJL | FCTied LeNet  |  297734 | ??  |
+|FastJL | FCTied LeNet  |  297734 | 2500  |
+
 
 ### FC Tied LeNet - Global Baseline
 ![CIFAR10 FC Tied LeNet - Global Baseline](figures/CIFAR10_FC_Tied_LeNet_global.png "CIFAR10 FC Tied LeNet - Global Baseline")
 
 ### FC Tied LeNet - Local Baseline
 ![CIFAR10 FC Tied LeNet - Local Baseline](figures/CIFAR10_FC_Tied_LeNet_local.png "CIFAR10 FC Tied LeNet - Local Baseline")
+
+### FC Tied LeNet - FastJL
+Here the results of FastJL are very unstable the architecture reach the intrinsic dimension and then drop, I think because the sparsification and the difference in parameter's variance here play an important role.
+![CIFAR10 FC Tied LeNet - FastJL](figures/CIFAR10_FC_Tied_LeNet_FastJL.png "CIFAR10 FC Tied LeNet - FastJL")
 
 ## ResNet
 $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
@@ -172,15 +198,20 @@ $Baseline$ | $Network$  | $D$  | $d_{int90}$  |
 |Author Local | ResNet  | 280000?  | 20000-50000  |
 |Global| ResNet  | 292954 | 1000  |
 |Local | ResNet  | 292954 | 12000  |
-|FastJL | ResNet  | 292954 | ??  |
+|FastJL | ResNet  | 292954 | 1000  |
+
+The implementation of this architecture is very hard to match so the results are a bit different from the paper!
 
 ### ResNet - Global Baseline
-The implementation of this architecture is very hard to match so the results are a bit different from the paper!
 
 ![CIFAR10 Resnet - Global Baseline](figures/CIFAR10_Resnet_global.png "CIFAR10 Resnet - Global Baseline")
 
 ### ResNet - Local Baseline
 ![CIFAR10 Resnet - Local Baseline](figures/CIFAR10_Resnet_local.png "CIFAR10 Resnet - Local Baseline")
+
+### ResNet - FastJL
+![CIFAR10 Resnet - FastJL](figures/CIFAR10_Resnet_FastJL.png "CIFAR10 Resnet - FastJL")
+
 
 # Reference
 1. https://www.uber.com/en-IT/blog/intrinsic-dimension/
