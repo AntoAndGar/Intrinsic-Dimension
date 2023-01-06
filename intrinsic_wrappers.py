@@ -406,7 +406,7 @@ def fastJL_vars(DD, d, device=0):
     epsilon = 0.1
     c1 = 2
 
-    if d >= 8500:
+    if d > 6000:
         K = np.log(d)
     else:
         K = np.sqrt(d)
@@ -430,7 +430,7 @@ def fastJL_vars(DD, d, device=0):
     #torch.empty(LL, dtype=torch.float32, device=device, requires_grad=False).bernoulli_(p=1-q) #1-q
     #print("B: ", B)
     
-    R = torch.normal(mean=0., std=float(np.power(q,-1/2)), size=(LL,), dtype=torch.float32, requires_grad=False, device=device)
+    R = torch.normal(mean=0., std=float(np.power(q,-1/3)), size=(LL,), dtype=torch.float32, requires_grad=False, device=device)
     #torch.empty(LL, dtype=torch.float32, device=device, requires_grad=False).normal_(mean=0,std=q**-(1/2))
     #print("R: ", R)
     # if device == torch.device("cuda"):
@@ -485,7 +485,7 @@ def fastJL_torched(x, DD, param_list=None, device=0):
     #print("PP: ", PP.shape)
     #print("mul_3: ", mul_3.shape)
 
-    ret = 1/K * mul_3[:DD]
+    ret = (1/K) * mul_3[:DD]
     ret.to(device, non_blocking=True)
 
     return ret

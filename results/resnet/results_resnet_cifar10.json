@@ -88,5 +88,77 @@
         "learning_rate": 0.1,
         "best_epoch": 78,
         "best_accuracy": 0.7094
+    },
+    "resnet_model_id500_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 500,
+        "epoch": 100,
+        "validation_accuracy": 0.4546,
+        "learning_rate": 0.1,
+        "best_epoch": 78,
+        "best_accuracy": 0.455
+    },
+    "resnet_model_id10000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 10000,
+        "epoch": 100,
+        "validation_accuracy": 0.6845,
+        "learning_rate": 0.1,
+        "best_epoch": 78,
+        "best_accuracy": 0.6997
+    },
+    "resnet_model_id1000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 1000,
+        "epoch": 100,
+        "validation_accuracy": 0.5207,
+        "learning_rate": 0.1,
+        "best_epoch": 78,
+        "best_accuracy": 0.5279
+    },
+    "resnet_model_id7000_lr0.1_proj_fastJL_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 7000,
+        "epoch": 100,
+        "validation_accuracy": 0.6999,
+        "learning_rate": 0.1,
+        "best_epoch": 72,
+        "best_accuracy": 0.7023
+    },
+    "resnet_model_id10_lr0.01_proj_fastJL_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 10,
+        "epoch": 100,
+        "validation_accuracy": 0.1545,
+        "learning_rate": 0.01,
+        "best_epoch": 29,
+        "best_accuracy": 0.1704
+    },
+    "resnet_model_id100_lr0.01_proj_fastJL_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 100,
+        "epoch": 100,
+        "validation_accuracy": 0.282,
+        "learning_rate": 0.01,
+        "best_epoch": 6,
+        "best_accuracy": 0.2921
+    },
+    "resnet_model_id750_lr0.01_proj_fastJL_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 750,
+        "epoch": 100,
+        "validation_accuracy": 0.4843,
+        "learning_rate": 0.01,
+        "best_epoch": 84,
+        "best_accuracy": 0.4894
+    },
+    "resnet_model_id4000_lr0.01_proj_fastJL_opt_sgd": {
+        "number_parameter": 292954,
+        "intrinsic_dimension": 4000,
+        "epoch": 100,
+        "validation_accuracy": 0.6252,
+        "learning_rate": 0.01,
+        "best_epoch": 77,
+        "best_accuracy": 0.6277
     }
 }
