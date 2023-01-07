@@ -1,12 +1,14 @@
 # Measuring the Intrinsic Dimension of Objective Landscapes
 Code implementing the paper ["Measuring the Intrinsic Dimension of Objective Landscapes"](https://arxiv.org/pdf/1804.08838.pdf).
 
-I can reproduce, with minor variations, the overall results from the paper, in Pytorch, and extend the research to a different projection matrix. As part of this work, I have provided the results obtained from this implementation and almost all the references (and resurces that I find useful) utilized to complete it.
+I can reproduce, with minor variations, the overall results from the paper, in Pytorch, and extend the research to a different projection matrix. As part of this work, I have provided the results obtained from this implementation and almost all the references (and resources that I find useful) utilized to complete it.
 
 All the results follow the most similar implementation of the specific architecture shown in the paper. The projection used to obtain those results are the **Dense** and **Fastfood** ones following the same rule of the paper.
 
-As you can see from the plots there is no mean or std for the measured data and this is first because the released code is provided with seed and I really hope reproducible, and second because provide those data means run all the computation at least 3 times and the computation of some of these architecture are very time consuming and with limited computing resources at my disposal this is the best I can do.
+As you can see from the plots there is no mean or std for the measured data. This is first because the released code is provided with seed (I really hope reproducible) and second, because providing those data means running all the computations at least 3 times and the computations of some of these architectures are very time-consuming and with limited computing resources at my disposal this is the best I can do.
 
+All plots below can be investigated further by the code in id_plots.ipynb.
+All the training can be started in windows systems utilizing the *.ps1 or if you have a *nix system all the .ps1 can be easily translated to .sh as the one provided in the example.
 
 # MNIST Results
 
