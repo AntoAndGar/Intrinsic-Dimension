@@ -236,4 +236,5 @@ The implementation of this architecture is very hard to match so the results are
 18. https://johnthickstun.com/docs/fast_jlt.pdf
 19. https://www.cs.technion.ac.il/~nailon/fjlt.pdf
 20. https://arxiv.org/pdf/2204.01800.pdf
+21. https://github.com/pytorch/pytorch/issues/88053
 
