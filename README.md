@@ -238,3 +238,18 @@ The implementation of this architecture is very hard to match so the results are
 20. https://arxiv.org/pdf/2204.01800.pdf
 21. https://github.com/pytorch/pytorch/issues/88053
 
+# Future works (time permitting)
+
+- [ ] Using a beautiful projection like: https://arxiv.org/abs/1202.3033
+- Try other datasets:
+    - [x] FMNIST
+    - [ ] EMNIST
+    - [ ] FLOWERS102
+    - [ ] ImageNet
+- Try other architectures:
+    - [ ] RNN
+    - [ ] LSTM
+    - [ ] Transformer
+    - [ ] Inception
+- [ ] Implementing RL tasks
+- [ ] Evaluate performace with Regularization and Dropout
