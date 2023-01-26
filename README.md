@@ -1,14 +1,22 @@
 # Measuring the Intrinsic Dimension of Objective Landscapes
 Code implementing the paper ["Measuring the Intrinsic Dimension of Objective Landscapes"](https://arxiv.org/pdf/1804.08838.pdf).
 
-I can reproduce, with minor variations, the overall results from the paper, in Pytorch, and extend the research to a different projection matrix. As part of this work, I have provided the results obtained from this implementation and almost all the references (and resources that I find useful) utilized to complete it.
+I can reproduce, with minor variations, the overall results from the paper in Pytorch, and extend the research to a different projection matrix. As part of this work, I have provided the results obtained from this implementation and almost all the references (and resources that I find useful) utilized to complete it (see also the report in pdf for other references).
 
-All the results follow the most similar implementation of the specific architecture shown in the paper. The projection used to obtain those results are the **Dense** and **Fastfood** ones following the same rule of the paper.
+All the results follow the most similar implementation of the specific architecture shown in the paper. The projection used to obtain those results are the **Dense** and **Fastfood** ones (sparse projections give me some problems in Pytorch, see an issue in the reference) following the same rules of the paper.
 
-As you can see from the plots there is no mean or std for the measured data. This is first because the released code is provided with seed (I really hope reproducible) and second, because providing those data means running all the computations at least 3 times and the computations of some of these architectures are very time-consuming and with limited computing resources at my disposal this is the best I can do.
+As you can see from the plots there is no mean or std for the measured data. This is first because the released code is provided with seed (I really hope reproducible) and second, because providing those data means running all the computations at least three times and the computations of some of these architectures are very time-consuming and with limited computing resources at my disposal this is the best I can do.
 
 All plots below can be investigated further by the code in id_plots.ipynb.
-All the training can be started in windows systems utilizing the *.ps1 or if you have a *nix system all the .ps1 can be easily translated to .sh as the one provided in the example.
+All the training can be started in windows systems utilizing the *.ps1 or if you have a *nix system all the .ps1 can be easily translated to .sh as the one provided in the example, I have moved all those scripts in the folder "automation_scripts" so to start one of this one can do copy the desired script in the main directory and start it from this point or modify the paths inside the script. Here there is some code to perform this operation:
+```sh
+# execute these line from the main directory
+cp automation_scripts/<name_of_script>.sh .
+
+# modify the scripts to run the specific version of id90 desired or change hyperparameters  
+<name_of_script>.sh
+
+```
 
 # MNIST Results
 
